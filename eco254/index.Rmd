@@ -1,11 +1,9 @@
 ---
-title: "index"
-author: "Simon Halliday"
-date: "2015-July -7"
 output: html_document
 ---
 
 #ECO254 - Behavioral Economics
+Professor: Simon Halliday
 
 #### [Syllabus](syllabus.html)
 
