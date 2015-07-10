@@ -1,5 +1,7 @@
 ---
-output: html_document
+output: 
+  html_document:
+    css: ../stylesheets/styles.css
 ---
 
 #ECO254 - Behavioral Economics
