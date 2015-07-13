@@ -1,0 +1,14 @@
+---
+title: "CVC Workshop Index"
+author: "Simon Halliday"
+date: "2015-July -13"
+output: html_document
+---
+
+#Index Page for my CVC stuff
+ 
+* My [CVC notes](cvc_workshop_notes). 
+* The [people](https://docs.google.com/document/d/1Zt5AYH7HsXTbIl5d6gjn0E_-e5m59IBmIo0jrIkLXsI/edit). 
+
+
+
