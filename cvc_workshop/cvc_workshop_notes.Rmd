@@ -40,10 +40,10 @@ These are tips I picked out (thus peculiar to my tastes)
 * When R outputs the error `object '[object name]' not found` that normally means you (or your student) have mis-spelt the variable name or dataframe name. (RP)
 
 * Pick your favorite way (command) for doing a job, don't show students too many methods. You'll overwhelm them if you give them too much. __Less volument, more creativity__. (RP)
-
 * Call tildes `~` 'wiggles'! Sounds funny and is less scary then tilde. (RP) 
-
 * Two most important questions: What do you want R to do? (goal) What must R know to do that? (RP) [me - why don't I call R a specific name? e.g. R = Rachel - What do I want Rachel to do? What must Rachel know to do that?]
+* Don't teach them all the bells & whistles in a lecture when _you_ want it. Rather, do it when they ask. (RP)
+* 
 
 ## Commonplace Book
 
@@ -61,8 +61,19 @@ xyplot(births ~ dayofyear, data = Births78)
 
 
 ```{r}
-
+library(mosaic)
+library(mosaicData)
+histogram(~ age, data = HELPrct) #histogram of age
+favstats(~ age, data = HELPrct) #My favorite statistics; it ignores NAs
+tally(~sex, data = HELPrct) #Count of gender
+tally(~sex, format = "percent", data = HELPrct) #Percents of gender
+tally(~sex, format = "proportion", data = HELPrct) #Proportions of gender
+tally(~substance, data = HELPrct) #Count of substance
+tally(~substance, format = "perc", data = HELPrct) #Percents of substance
+tally(sex ~ substance, data = HELPrct) #Cross-tab sex & substance
+tally(~ sex + substance, data = HELPrct) #Ditto, just a different format
 ```
 
+Also, always remember the `mplot` command for producing graphs and clicking on the 'Show Expression'. 
 
 
