@@ -17,7 +17,7 @@ medicare <- read.csv("medicare_fy2013.csv")
 #str(medicare)
 ```
 
-Trying to embed a badly thought-out plot using `ggvis`:
+Trying to embed a badly thought-out plot using the `ggvis` package:
 
 ```{r}
 library(dplyr)
@@ -35,8 +35,34 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 ##Teaching Tips
 These are tips I picked out (thus peculiar to my tastes)
 
-* __For teaching the idea of the command line and the script:__ How many of you had a [TI calculator](https://en.wikipedia.org/wiki/Comparison_of_Texas_Instruments_graphing_calculators)? (TI = Texas Instruments) Did you know how to use it on the very first day? What about on your final day of high school? 
+* __For teaching the idea of the command line and the script:__ How many of you had a [TI calculator](https://en.wikipedia.org/wiki/Comparison_of_Texas_Instruments_graphing_calculators)? (TI = Texas Instruments) Did you know how to use it on the very first day? What about on your final day of high school? (RP)
 
-* When R outputs the error `object '[object name]' not found` that normally means you (or your student) have mis-spelt the variable name or dataframe name. 
+* When R outputs the error `object '[object name]' not found` that normally means you (or your student) have mis-spelt the variable name or dataframe name. (RP)
+
+* Pick your favorite way (command) for doing a job, don't show students too many methods. You'll overwhelm them if you give them too much. __Less volument, more creativity__. (RP)
+
+* Call tildes `~` 'wiggles'! Sounds funny and is less scary then tilde. (RP) 
+
+* Two most important questions: What do you want R to do? (goal) What must R know to do that? (RP) [me - why don't I call R a specific name? e.g. R = Rachel - What do I want Rachel to do? What must Rachel know to do that?]
+
+## Commonplace Book
+
+* RP: "If your students find R to be the hardest part of your course, your R is too hard and your questions are too easy."
+
+
+## Commands to run
+Scatterplot with birth data:
+```{r}
+library(mosaic)
+library(mosaicData)
+xyplot(births ~ dayofyear, data = Births78)
+
+```
+
+
+```{r}
+
+```
+
 
 
