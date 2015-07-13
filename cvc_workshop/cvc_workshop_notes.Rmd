@@ -1,0 +1,42 @@
+---
+title: "CVC Workshop Notes"
+author: "Simon Halliday"
+date: "2015-July -13"
+output: 
+  html_document:
+    css: ../stylesheets/styles.css
+
+---
+
+
+Importing the medicare data... 
+```{r}
+#medicare <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/cvc_workshop/medicare_fy2013.csv")
+medicare <- read.csv("medicare_fy2013.csv")
+#head(medicare)
+#str(medicare)
+```
+
+Trying to embed a badly thought-out plot using `ggvis`:
+
+```{r}
+library(dplyr)
+library(ggvis)
+medicare %>% 
+  ggvis(~factor(Provider.State), ~Average.Covered.Charges) %>%
+  layer_bars()
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+##Teaching Tips
+These are tips I picked out (thus peculiar to my tastes)
+
+* __For teaching the idea of the command line and the script:__ How many of you had a [TI calculator](https://en.wikipedia.org/wiki/Comparison_of_Texas_Instruments_graphing_calculators)? (TI = Texas Instruments) Did you know how to use it on the very first day? What about on your final day of high school? 
+
+* When R outputs the error `object '[object name]' not found` that normally means you (or your student) have mis-spelt the variable name or dataframe name. 
+
+
