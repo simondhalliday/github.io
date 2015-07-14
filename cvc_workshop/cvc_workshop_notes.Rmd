@@ -182,8 +182,10 @@ HELPrct %>%
 ##Data Wrangling
 
 * We want to break the data wrangling up into small steps with simple rules to deal with simple 'chunks' at each point. 
-*We shall start with a sub-set of commands that are most useful and ignore much of the many things we often use when learning R (if you have familiarity), e.g. we'll ignore `$, [], [[]], `
-* there are 5 kinds  of things (objects) in R:
+* We shall start with a sub-set of commands that are most useful and ignore much of the many things we often use when learning R (if you have familiarity), e.g. we'll ignore `$, [], [[]], `
+
+There are 5 kinds  of things (objects) in R:
+
 1. data tables (aka dataframes), our convention is for first letter upper-case, e.g. `BabyNames`
 2. variables, i.e. the stuff in the tables,our convention is for first letter lower-case, e.g. `year`
 3. scalars, e.g. `"Treatment"` or `42` (thanks DA)
@@ -191,9 +193,10 @@ HELPrct %>%
 5. pipes: arrange sequences, `%>%` takes something and puts it as the/an input to a function, e.g. `something >%> function()` rather than `function(something, other stuff, ...)`.
 
 3 Main kinds of functions for Wrangling
-1. __Data verbs__ takes a data table as input, does something & gives a data table as output
-2. A __transformation function__ takes a variable and transforms it in some way; takes a variable as input and produces a variable as output (a la Sraffa?)
-3. __Reduction functions__ take a bunch of variables and turns it into a single variable, e.g. the mean, standard deviation, etc
+
+1. __Data verb__ takes a data table as input, does something & gives a data table as output
+2. __Transformation function__ takes a variable and transforms it in some way; takes a variable as input and produces a variable as output (a la Sraffa?)
+3. __Reduction function__ takes a bunch of variables and turns them into a single variable, e.g. the mean, max, standard deviation, etc
 
 To run the following you may need to install the packages `NHANES`, `dplyr`, and `babynames`. Run the command, e.g. `install.packages("NHANES")`. Remember to require these packages.
 
@@ -224,14 +227,15 @@ KidsFeetArea <- KidsFeet %>%
   head()
 ```
 
-`arrange` orders your cases in terms of the variable you select in __descending__ order, e.g. `arrange(area)`.
+`arrange` orders your cases in terms of the variable you select in __ascending__ order, e.g. `arrange(area)`.
 ```{r}
 KidsFeet %>% 
   mutate(area = length * width) %>% 
   arrange(area) %>% 
   head()
 ```
-To make it descending, you can add `desc()` within arrange. 
+
+To arrange in __descending__ order, you can add `desc()` within arrange. 
 ```{r}
 KidsFeet %>% 
   mutate(area = length * width) %>% 
@@ -247,14 +251,14 @@ KidsFeet %>%
   head(10)
 ```
 
-The Verb `summarise` creates 
+The Verb `summarise` creates a row with summary statistics that you select by defining them in functions with particular labels. 
 ```{r}
 NewThing <- KidsFeet %>% 
   mutate(area = length * width)
 AnotherNewThing <- NewThing %>% 
   summarise(ave_area = mean(area))
-NewThing
-AnotherNewThing
+head(NewThing)
+head(AnotherNewThing)
 ```
 The important feature of `summarise` is that it'll create one row with a variety of variables that you specify, i.e. other means, say the max of the variable, e.g. 
 ```{r}
