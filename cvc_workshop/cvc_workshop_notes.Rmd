@@ -11,8 +11,8 @@ output:
 ## Introduction to R and R studio
 Scatterplot with birth data:
 ```{r, message = FALSE}
-library(mosaic)
-library(mosaicData)
+require(mosaic)
+require(mosaicData)
 xyplot(births ~ dayofyear, data = Births78)
 
 ```
@@ -303,6 +303,46 @@ It's important to remain aware of the change in the __cases__ when you use group
 1. You have changed the cases from the cases _before_ `group_by`, e.g. the kids, and then you create a new case, e.g. a group of kids. 
 2. Not all the variables in the original data will appear in the output of `group_by`, the ones you group by and the ones you create will be there. 
 
+
+```{r}
+NHANES %>% favstats(BMI ~ Gender, data = .) #This works because I tell it to be put where the period is
+mean(BMI ~ Gender, na.rm = TRUE, data = NHANES) #We have to tell it to ignore NAs
+favstats(BMI ~ Gender, data = NHANES) #Ignores NAs
+NHANES %>% 
+  group_by(Gender) %>%
+  summarise(mean_bmi = mean(BMI, na.rm= TRUE), count = n())
+```
+
+What happens if we only want to look at 20-year-olds?
+```{r}
+NHANES %>% 
+  filter(Age == 20) %>%
+  group_by(Gender) %>%
+  summarise(mean_bmi = mean(BMI, na.rm= TRUE), count = n())
+```
+
+
+##Importing Data
+###Importing a .csv
+You can import data either with a csv or with a url of a csv. For example, we could import:
+http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/Activity.csv
+To remove an object (rather than using the broom icon to sweep them away), you can type `rm(ObjectName)` e.g. rm(Activity). 
+
+### Importing from Excel
+We need to use the package `readxl`. 
+```{r, message =  FALSE}
+require(readxl)
+Gender <- read_excel("Gender.xls", skip = 2)
+#glimpse(Gender[, 1:10])
+head(Gender, 3)
+```
+ 
+We also need to be able to save objects like Gender to an Rdata file. 
+`save(Gender, file = "Gender.Rdata")`. I didn't put this in a chunk because I didn't want to have R run this command. 
+
+A function `saverds()` can only save one object, saves it in an unnamed form, but you name it when you load it. 
+
+
 ##Teaching Tips
 These are tips I picked out (thus idiosyncratic):
 
@@ -349,8 +389,7 @@ medicare <- read.csv("medicare_fy2013.csv")
 Trying to embed a badly thought-out plot using the `ggvis` package:
 
 ```{r, message = FALSE}
-library(dplyr)
-library(ggvis)
+require(ggvis)
 medicare %>% 
   ggvis(~factor(Provider.State), ~Average.Covered.Charges) %>%
   layer_bars() %>%
