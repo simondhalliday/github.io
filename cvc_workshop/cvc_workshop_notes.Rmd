@@ -9,6 +9,8 @@ output:
 ---
 
 
+
+
 Importing the medicare data... 
 ```{r}
 #medicare <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/cvc_workshop/medicare_fy2013.csv")
@@ -19,12 +21,15 @@ medicare <- read.csv("medicare_fy2013.csv")
 
 Trying to embed a badly thought-out plot using the `ggvis` package:
 
-```{r}
+```{r, message = FALSE}
 library(dplyr)
 library(ggvis)
 medicare %>% 
   ggvis(~factor(Provider.State), ~Average.Covered.Charges) %>%
-  layer_bars()
+  layer_bars() %>%
+   add_axis("x", properties = axis_props(
+    labels = list(angle = 45, align = "left", fontSize = 10)
+   ))
 
 ```
 
@@ -36,14 +41,16 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 These are tips I picked out (thus peculiar to my tastes)
 
 * __For teaching the idea of the command line and the script:__ How many of you had a [TI calculator](https://en.wikipedia.org/wiki/Comparison_of_Texas_Instruments_graphing_calculators)? (TI = Texas Instruments) Did you know how to use it on the very first day? What about on your final day of high school? (RP)
-
 * When R outputs the error `object '[object name]' not found` that normally means you (or your student) have mis-spelt the variable name or dataframe name. (RP)
-
-* Pick your favorite way (command) for doing a job, don't show students too many methods. You'll overwhelm them if you give them too much. __Less volument, more creativity__. (RP)
+* Pick your favorite way (command) for doing a job, don't show students too many methods. You'll overwhelm them if you give them too much. __Less volume, more creativity__. (RP)
 * Call tildes `~` 'wiggles'! Sounds funny and is less scary then tilde. (RP) 
 * Two most important questions: What do you want R to do? (goal) What must R know to do that? (RP) [me - why don't I call R a specific name? e.g. R = Rachel - What do I want Rachel to do? What must Rachel know to do that?]
 * Don't teach them all the bells & whistles in a lecture when _you_ want it. Rather, do it when they ask. (RP)
-* 
+* Get students to adopt a __workflow__ such that students can reproduce their work again with new data. (NH) 
+* When you start a new Markdown file (Rmd), it means that you need to load each package in the Rmd file. Often it's useful to do so with the message include = FALSE to suppress the inclusion of that code in the output file. 
+* Students struggle to understand the ecological paradox (or )
+
+
 
 ## Commonplace Book
 
@@ -52,7 +59,7 @@ These are tips I picked out (thus peculiar to my tastes)
 
 ## Commands to run
 Scatterplot with birth data:
-```{r}
+```{r, message = FALSE}
 library(mosaic)
 library(mosaicData)
 xyplot(births ~ dayofyear, data = Births78)
@@ -60,9 +67,8 @@ xyplot(births ~ dayofyear, data = Births78)
 ```
 
 
+Other commands we've run during the workshop and some comments on them. 
 ```{r}
-library(mosaic)
-library(mosaicData)
 histogram(~ age, data = HELPrct) #histogram of age
 favstats(~ age, data = HELPrct) #My favorite statistics; it ignores NAs
 tally(~sex, data = HELPrct) #Count of gender
@@ -75,5 +81,28 @@ tally(~ sex + substance, data = HELPrct) #Ditto, just a different format
 ```
 
 Also, always remember the `mplot` command for producing graphs and clicking on the 'Show Expression'. 
+
+## Data Structures and Tidy Data
+
+Consider cases and variables
+
+* a __row__ is always a __case__
+* a __column__ is always a __variable__ 
+
+In tidy data: 
+
+* No units
+* No footnotes
+
+All of this goes into a codebook only. 
+
+
+
+
+### Working with some of my own data
+
+```{r}
+
+```
 
 

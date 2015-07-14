@@ -2,7 +2,9 @@
 title: "CVC Workshop Index"
 author: "Simon Halliday"
 date: "2015-July -13"
-output: html_document
+output: 
+  html_document:
+    css: ../stylesheets/styles.css
 ---
 
 #Index Page for my CVC stuff
