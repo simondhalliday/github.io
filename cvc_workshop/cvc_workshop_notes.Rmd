@@ -179,6 +179,126 @@ HELPrct %>%
 
 
 
+##Data Wrangling
+
+* We want to break the data wrangling up into small steps with simple rules to deal with simple 'chunks' at each point. 
+*We shall start with a sub-set of commands that are most useful and ignore much of the many things we often use when learning R (if you have familiarity), e.g. we'll ignore `$, [], [[]], `
+* there are 5 kinds  of things (objects) in R:
+1. data tables (aka dataframes), our convention is for first letter upper-case, e.g. `BabyNames`
+2. variables, i.e. the stuff in the tables,our convention is for first letter lower-case, e.g. `year`
+3. scalars, e.g. `"Treatment"` or `42` (thanks DA)
+4. functions & their arguments: e.g. positional arguments, named arguments (parentheses follow names of things if and only if those things are functions, e.g. `sd()`; multiple arguments separated with commas)
+5. pipes: arrange sequences, `%>%` takes something and puts it as the/an input to a function, e.g. `something >%> function()` rather than `function(something, other stuff, ...)`.
+
+3 Main kinds of functions for Wrangling
+1. __Data verbs__ takes a data table as input, does something & gives a data table as output
+2. A __transformation function__ takes a variable and transforms it in some way; takes a variable as input and produces a variable as output (a la Sraffa?)
+3. __Reduction functions__ take a bunch of variables and turns it into a single variable, e.g. the mean, standard deviation, etc
+
+To run the following you may need to install the packages `NHANES`, `dplyr`, and `babynames`. Run the command, e.g. `install.packages("NHANES")`. Remember to require these packages.
+
+Now we run some commands to start wrangling the data. 
+
+```{r, message = FALSE}
+require(NHANES)
+require(dplyr)
+require(babynames)
+NHANESmajors <- filter(NHANES, Age >= 21)
+nowsmoking <- select(NHANES, Age, SmokeNow)
+nowsmoking %>% 
+  head()
+group_by(babynames, name, year)  
+head(KidsFeet)
+select(KidsFeet, birthyear, domhand) %>% 
+  head()
+righties <- filter(KidsFeet, domhand == "R")
+head(righties)
+
+```
+
+The pipe (`%>%`)  makes it clear what the individual lines are doing. 
+
+```{r}
+KidsFeetArea <- KidsFeet %>% 
+  mutate(area = length * width) %>% 
+  head()
+```
+
+`arrange` orders your cases in terms of the variable you select in __descending__ order, e.g. `arrange(area)`.
+```{r}
+KidsFeet %>% 
+  mutate(area = length * width) %>% 
+  arrange(area) %>% 
+  head()
+```
+To make it descending, you can add `desc()` within arrange. 
+```{r}
+KidsFeet %>% 
+  mutate(area = length * width) %>% 
+  arrange(desc(area)) %>% 
+  head()
+```
+
+We can also add another argument to arrange to break ties, e.g. adding birthmonth (I'm going to head for 10 cases): 
+```{r}
+KidsFeet %>% 
+  mutate(area = length * width) %>% 
+  arrange(area, desc(birthmonth)) %>% 
+  head(10)
+```
+
+The Verb `summarise` creates 
+```{r}
+NewThing <- KidsFeet %>% 
+  mutate(area = length * width)
+AnotherNewThing <- NewThing %>% 
+  summarise(ave_area = mean(area))
+NewThing
+AnotherNewThing
+```
+The important feature of `summarise` is that it'll create one row with a variety of variables that you specify, i.e. other means, say the max of the variable, e.g. 
+```{r}
+AnotherNewThing <- NewThing %>% 
+  summarise(ave_area = mean(area), max_area = max(area))
+AnotherNewThing
+```
+
+We have looked at 5 commands so far: 
+
+1. `filter`
+2. `select`
+3. `mutate`
+4. `arrange`
+5. `summarise`
+
+We shall add another, more complex command,  `group_by`. 
+
+Let us 
+```{r}
+NewThing %>% 
+  group_by(sex) %>%
+  summarise(ave_area = mean(area), max_area = max(area))
+```
+Or we could just use KidsFeet rather than assigning things to dataframes like we did with `NewThing`.
+```{r}
+KidsFeet %>% 
+  mutate(area = length * width) %>% 
+  group_by(sex) %>%
+  summarise(ave_area = mean(area), max_area = max(area))
+```
+
+Or we could arrange by both dominant hand and birth year: 
+```{r}
+KidsFeet %>% 
+  mutate(area = length * width) %>% 
+  group_by(domhand, birthyear) %>%
+  summarise(ave_area = mean(area), max_area = max(area))
+```
+
+It's important to remain aware of the change in the __cases__ when you use group_by. 
+1. You have changed the cases from the cases _before_ `group_by`, e.g. the kids, and then you create a new case, e.g. a group of kids. 
+2. Not all the variables in the original data will appear in the output of `group_by`, the ones you group by and the ones you create will be there. 
+
 ##Teaching Tips
 These are tips I picked out (thus idiosyncratic):
 
@@ -189,9 +309,9 @@ These are tips I picked out (thus idiosyncratic):
 * Two most important questions: What do you want R to do? (goal) What must R know to do that? (RP) [me - why don't I call R a specific name? e.g. R = Rachel - What do I want Rachel to do? What must Rachel know to do that?]
 * Don't teach them all the bells & whistles in a lecture when _you_ want it. Rather, do it when they ask. (RP)
 * Get students to adopt a __workflow__ such that students can reproduce their work again with new data. (NH) 
-* When you start a new Markdown file (Rmd), it means that you need to load each package in the Rmd file. Often it's useful to do so with the message include = FALSE to suppress the inclusion of that code in the output file. 
-* Students struggle to understand the ecological paradox (relating to the fallacy of division; which is the complement of the fallacy of composition).
-* RP names dataframes with uppercase letters and variables with lowercase letters (unless the variables are a well known acronym)
+* When you start a new Markdown file (Rmd), it means that you need to load each package in the Rmd file. (NH) Often it's useful to do so with the message include = FALSE to suppress the inclusion of that code in the output file. 
+* Students struggle to understand the ecological paradox (DTK). (relates to the [fallacy of division](https://en.wikipedia.org/wiki/Fallacy_of_division); which is the complement of the [fallacy of composition](https://en.wikipedia.org/wiki/Fallacy_of_composition)).
+* To explain the magrittr pipe -- which we should read it as 'then' or 'and then' (taking the advice of Hadley and Garrett G). Or, we can talk about actual plumbing and piping: put some water (or a data table) in one end and send it out another. 
 
 
 
