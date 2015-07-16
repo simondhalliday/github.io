@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R and RStudio"
+title: "Lab 1: Introduction to R and RStudio"
 output:
   html_document:
     css: ../lab.css
@@ -14,7 +14,7 @@ texbook and also to analyze real data and come to informed conclusions. Let us c
 
 - R is the name of the programming language itself, and
 
-- RStudio is a convenient interface for you to use R easily.
+- RStudio is a convenient interface allowing you to use R easily.
 
 As the labs progress, you are encouraged to explore beyond what the labs dictate;
 a willingness to experiment will make you a much better programmer. Before we 
@@ -41,8 +41,21 @@ To get you started, enter the following command at the R prompt (i.e. right afte
 `>` on the console).  You can either type it in manually or copy and paste it
 from this document.
 
-```{r load-gabaix-data, eval=TRUE}
+```{r load-data, eval=TRUE}
 source("http://www.openintro.org/stat/data/arbuthnot.R")
+```
+
+```{r}
+require(dplyr)
+require(tidyr)
+Participation <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/labor_force_participation.csv")
+
+Participation <- 
+  Participation %>%
+  mutate(date = as.Date(date))
+  head(Participation)
+  nrow(Participation)
+  length(Participation$female)
 ```
 
 This command instructs R to access the OpenIntro website and fetch some data: 
@@ -114,11 +127,11 @@ by clicking on the *x* in the upper lefthand corner.
 Let's start to examine the data a little more closely. We can access the data in
 a single column of a data frame separately using a command like
 
-```{r view-boys, eval=FALSE}
-arbuthnot$boys
+```{r view-female, eval=FALSE}
+Participation$female #So they understand a vector and typing out the name of an object
 ```
 
-This command will only show the number of boys baptized each year.
+This command will only show the number of girls baptized each year.
 
 1.  What command would you use to extract just the counts of girls baptized? Try
     it!

@@ -448,9 +448,66 @@ These are tips I picked out (thus idiosyncratic):
 * To explain the magrittr pipe -- which we should read it as 'then' or 'and then' (taking the advice of Hadley and Garrett G). Or, we can talk about actual plumbing and piping: put some water (or a data table) in one end and send it out another. 
 
 
-
-
 ## Commonplace Book
 
 * RP: "If your students find R to be the hardest part of your course, your R is too hard and your questions are too easy."
 * RP: "You need to learn to see before you can see to learn." (As advice to professors to get them over the problem of assumed prior learning)
+
+
+
+```{r}
+require(mosaic)
+require(mosaicData)
+HELPrct %>%
+  ggplot(aes(x = i1, color = substance, linetype = sex)) +
+  geom_line(stat = "density")
+
+HELPrct %>% 
+ggplot(aes(x = i1, color = substance)) + 
+  geom_line(stat = "density") +
+  facet_grid(. ~sex) #the period means don't facet any of the 'y', but be sure to facet ont he x variable for sex;
+
+HELPrct %>% 
+ggplot(aes(x = age, color = substance, linetype = sex)) + 
+geom_line(stat = "density")
+
+HELPrct %>% 
+ggplot(aes(x = age, color = substance)) + 
+  geom_line(stat = "density", size = 1) + #NB: not here size is outside the aes and simpy put in geom_line to be set rather than mapped
+  facet_grid(. ~sex)
+  
+```
+
+If you want to have many, many facets, then you can use the command `facet_wrap` which will just create a facet for every single one. 
+
+
+Put things next to each other is called dodging: 
+```{r dodging}
+HELPrct %>%
+ggplot(aes(x = substance, y = age, color = sex)) + 
+  geom_boxplot(position = position_dodge(width = 1)) 
+```
+
+```{r pregnancy}
+require(NHANES)
+NHANES %>%
+  ggplot(aes(x = Height, y = Weight)) +
+  geom_density2d() +
+  facet_grid(Gender ~ PregnantNow)
+  
+```
+
+These plots with the hexes basically show different colours when there are more observations:
+```{r hex_plot}
+require(hexbin)
+NHANES %>%
+  ggplot(aes(x = Height, y = Weight)) +
+  geom_hex() +
+  facet_grid(Gender ~ PregnantNow)
+```
+
+
+```{r}
+
+```
+
