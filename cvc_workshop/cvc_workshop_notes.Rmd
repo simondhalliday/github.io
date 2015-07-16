@@ -322,6 +322,96 @@ NHANES %>%
 ```
 
 
+###Data Wrangling Cont. (Weds Morning)
+
+Some functions we used:
+*Sample_n() takes a random sample, like we did with the Babynames with NH.
+
+*What about functions that take two tables as input and produce one table as output? 
+*We often think about this as joining or merging data, and we can use a variety of commands to do this. 
+*But we should keep this separate from the idea of __concatenation__, which adds rows to an already existing data table. 
+
+
+Joining data 
+* __Inner Join__ Take the cases from the __left__ data table (what I would think of as the 'Master Data' from Stata) and join it to the cases on the __right__ data (what I would think of as the 'merging data')
+
+By default, it looks for a variable and uses that as the default. 
+BB recommends that we __always__ use the `by` condition. 
+
+[ME: Is there a way to generate unique identifiers algorithmically? That is, the thing I spent most of my time on was generating unique identifiers that worked because I have experience generating unique IDs.]
+
+```{r}
+grades <- read.csv("http://tiny.cc/mosaic/grades.csv",
+                   stringsAsFactors = FALSE)
+courses <- read.csv("http://tiny.cc/mosaic/courses.csv",
+                    stringsAsFactors = FALSE)
+grade_to_number <- read.csv("http://tiny.cc/mosaic/grade-to-number.csv",
+                            stringsAsFactors = FALSE)
+```
+
+
+We could join these if we wanted to. 
+
+##Randy - how to `gather` data
+Randy's notes are [here](http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.htm).
+
+
+We want:
+*a column that says country
+*a column that says year, and
+*a colum that has the proportion of HIV
+
+We want to re-shape data (as with `reshape` in Stata).
+
+We therefore need a way to convert data from wide into long (or long into wide)
+
+To go from wide to narrow (long) we 
+
+```{r}
+HIVdata <- read.csv("http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/HIV.csv", stringsAsFactors = FALSE)
+head(HIVdata)
+```
+
+We need to alter this to get rid of the terrible initial name: 
+```{r}
+HIVdata2 <- 
+  HIVdata %>% 
+  select(country = starts_with("Estimated"), starts_with("X"))
+#select lets you rename a variable, as we have done here with country = and called the thing starting with "Estimated" to country
+head(HIVdata2, 3)
+```
+
+We need to tell R the data table to work with.
+We need to tell R which variables get __repeated__ and which get `tipped' from wide to long. Computer scientists call these key-value pairs. 
+
+```{r}
+require(tidyr)
+HIVdata3 <-
+  HIVdata2 %>% gather( year, HIV.perc, -country)
+head(HIVdata3, 3)
+```
+notice that we have a `-` sign in front of the country because we want top tip everything __except__ the country column. 
+
+But we still need to remove the X from the years; to do that we use the command `extract_numeric()` which is a transformation function. 
+
+```{r}
+HIVdata4 <-
+  HIVdata3 %>% mutate( year = extract_numeric(year))
+head(HIVdata4, 3)
+```
+
+We want to graph the data now: 
+```{r}
+HIVdata4 %>%
+  filter(country %in% c("South Africa", "Kenya", "Uganda", "Botswana","Malawi", "Tanzania", "United States")) %>%
+  #Notice here that we only do data from 198 onwards
+  filter(year > 1988) %>%
+  ggplot(aes(x = year, y = HIV.perc, color = country)) +
+  geom_line(size=2, alpha=0.5) 
+```
+
+
+
 ##Importing Data
 ###Importing a .csv
 You can import data either with a csv or with a url of a csv. For example, we could import:
@@ -364,39 +454,3 @@ These are tips I picked out (thus idiosyncratic):
 
 * RP: "If your students find R to be the hardest part of your course, your R is too hard and your questions are too easy."
 * RP: "You need to learn to see before you can see to learn." (As advice to professors to get them over the problem of assumed prior learning)
-* 
-
-
-
-### Working with some of my own data
-
-```{r}
-
-```
-
-
-Importing the medicare data... 
-```{r}
-#medicare <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/cvc_workshop/medicare_fy2013.csv")
-medicare <- read.csv("medicare_fy2013.csv")
-#head(medicare)
-#str(medicare)
-```
-
-
-
-
-Trying to embed a badly thought-out plot using the `ggvis` package:
-
-```{r, message = FALSE}
-require(ggvis)
-medicare %>% 
-  ggvis(~factor(Provider.State), ~Average.Covered.Charges) %>%
-  layer_bars() %>%
-   add_axis("x", properties = axis_props(
-    labels = list(angle = 45, align = "left", fontSize = 10)
-   ))
-
-```
-
-

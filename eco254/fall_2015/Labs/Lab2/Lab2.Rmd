@@ -1,0 +1,65 @@
+---
+title: "ECO254 - Lab 2"
+author: "Simon Halliday"
+date: "2015-July -15"
+output: html_document
+---
+
+```{r requirements, message = FALSE}
+require(mosaic)
+require(dplyr)
+require(tidyr)
+```
+
+The Federal Reserve Bank, St. Louis has an economic research branch called "FRED". You can visit the website here:  [research.stlouisfed.org](https://research.stlouisfed.org). FRED makes a variety of fantastic data available to the public. As we saw in Chapter 2, many economists want to understand the behavioral responses of people to incentives, for example, what happens to labor supply when people are offered the opportunity to work, such as with women in the second half of the twentieth century. You can see the FRED graph of labor force participation rate at the following link: [research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#](https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#) (accessed on 2015.07.15.) The FRED graph is interactive, which is more advanced than we need right now. We simply want to look at the data for the moment and get a sense of the structure of the data. 
+
+
+The first thing you need to do is read in the data. To read in comma separated value (csv) data, we need to use one of two commands: 
+1. `read.csv()`
+2. `readr::read_csv()`
+In the parentheses we can call the url online where the file is or specify the filepath where the file is. the `readr` command is very useful for big csv files. 
+
+You should go through the following process: 
+1. Download the Excel file `labor_force_participation.xls` from the course website shalliday.github.io/eco254. 
+2. Open the file in MS Excel and save the file as a .csv file. 
+3. Import the data by assigning a name to the object, e.g. `Participation <- read.csv(YOUR FILE PATH HERE)` (notice how, because we are creating a data table, we have started it with an uppercase letter).
+
+Now you want to try to generate the plot that 
+```{r import, echo = FALSE}
+Participation <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/labor_force_participation.csv")
+
+Participation <- 
+  Participation %>%
+  mutate(date = as.Date(date))
+
+Participation %>%
+ggplot(aes(x = date, y = female)) +
+  geom_line()
+
+ Participation %>%
+ggplot(aes(x = date, y = male)) +
+  geom_line()
+
+```
+
+
+But, can't really superimpose the male and female graphs on each other. 
+```{r participation, echo = FALSE}
+Participation2 <-
+ Participation %>% 
+ gather(sex, rate, male, female)
+ head(Participation2)
+ 
+ Participation2 %>%
+   ggplot(aes(x = date, y = rate, color = sex)) +
+   geom_line()
+ 
+```
+
+
+
+Neumark and Postlethwaite look at data about the probability of a woman being employed and how it correlates with whether her sister works (and her sister's husband earns more than her husband) and whether her sister-in-law works. 
+
+
+
+
