@@ -115,10 +115,10 @@ symbol: `%>%`. The `%>%` symbol is called a __pipe__ in programming, statistics
 or econometrics. You should read the pipe as saying "Then" or "And then". 
 
 I like the to think of my programs that 
-include the pipe as stories told by a 6-year-old who says, </br>
-![4yearold](more/4yearold.jpg)\ "I went to school %>% (and then) </br>
-I saw my teacher %>% (and then) </br>
-I talked to my friend  %>% (and then)..." </br>
+include the pipe as stories told by a 6-year-old:
+
+<img src="more/and_then_kid.png" height="400px" width="300px" align="middle"/>
+
 That way, I don't get confused about what it means because I always
 get the functions in the right sequence that way. 
 
@@ -142,7 +142,19 @@ plot. To make a plot we have to specify a kind of `geom` for `ggplot`. A
 or "Make Me A Scatter Plot" or "Make Me a Density Plot". We shall use
 `geom_line` as a line graph is the one we want. 
 
-I have created the graph for women below. 
+Now, `ggplot` also needs you to end each line with a `+` sign. Think back 
+to the 6-year-old: she might say 'and' a lot. We have to treat ggplot like a
+6-year-old who says 'and' a lot. So it doesn't just want to be told what the
+x-axis and y-axis are, it also needs to be told "and I want a line plot".
+
+```{r}
+Participation %>% #Put in data data and then...
+  ggplot(aes(x = date, y = female)) + #ggplot x and y AND
+  geom_line() #I want a line plot
+```
+
+I have created the graph for women below again, but with a label for the 
+y-axis and a different background. 
 ```{r participation_female}
 #Female Partipction Rate Graph
 Participation %>%
@@ -280,4 +292,18 @@ Neumark and Postlethwaite look at data about the probability of a woman being
 employed and how it correlates with whether her sister works (and her sister's
 husband earns more than her husband) and whether her sister-in-law works. 
   
+## Bonus: Spreading your data  
+`spread` and `gather` are __complementary__ commands they go in opposite directions.
+Earlier, we took our data and `gather`ed it so that we had a male and a female rate of
+labor force participation for each year. If, for some odd reason, you wanted to go back
+to the original shape of the data, you can use the command `spread`, which spreads the
+data back to what it looked like previously. 
+
+Here is an example: 
+```{r spread}
+ParticipationSpread <- #assign the name  
+Participation2 %>% #Tell it to put in the data we used for the graphs
+  spread(sex, rate) #spread on the key `sex` with the value `rate`
+head(ParticipationSpread) #Check that the data looks like we want it to
+```
 
