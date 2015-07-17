@@ -17,41 +17,87 @@ require(xts)
 require(ggthemes)
 ```
 
-The Federal Reserve Bank, St. Louis has an economic research branch called "FRED". You can visit the website here:  [research.stlouisfed.org](https://research.stlouisfed.org). FRED makes a variety of fantastic data available to the public. As we saw in Chapter 2, many economists want to understand the behavioral responses of people to incentives, for example, what happens to labor supply when people are offered the opportunity to work, such as with women in the second half of the twentieth century. You can see the FRED graph of labor force participation rate at the following link: [research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#](https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#) (accessed on 2015.07.15.) The FRED graph is interactive, which is more advanced than we need right now. We simply want to look at the data for the moment and get a sense of the structure of the data. 
+The Federal Reserve Bank, St. Louis has an economic research branch called
+"FRED". You can visit the website here: 
+[research.stlouisfed.org](https://research.stlouisfed.org). FRED makes a
+variety of fantastic data available to the public. In Lab 1, we saw a table
+that had information about the total number of men and women employed in the
+United States. 
 
+```{r part_levels, echo  = FALSE}
+ParticipationLevels <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab1/more/labor_force_levels.csv") 
+ParticipationLevels <- 
+  ParticipationLevels %>%
+  mutate(Date = as.Date(Date))
+ParticipationLevels %>%
+head(10)
+```
 
-The first thing you need to do is read in the data. To read in comma separated value (csv) data, we need to use one of two commands: 
-1. `read.csv()`
-2. `readr::read_csv()`
-In the parentheses we can call the url online where the file is or specify the filepath where the file is. the `readr` command is very useful for big csv files. 
+As we saw in Chapter 2, many economists want to understand the behavioral
+responses of people to incentives, for example, what happens to labor supply
+when people are offered the opportunity to work, such as with women in the
+second half of the twentieth century. You can see the FRED graph of labor force
+participation rate at the following link:
+[research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#](https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#) 
+(accessed on 2015.07.15.) The FRED graph is interactive, which is more advanced
+than we need right now. We simply want to look at the data for the moment and
+get a sense of its structure. 
+
+The first thing you need to do is read in the data. To read in comma separated
+value (csv) data, we need to use one of two commands: 
+
+- `read.csv()`
+
+- `readr::read_csv()`
+
+In the parentheses we can call the url online where the file is or specify the
+filepath where the file is. the `readr` command is very useful for big csv
+files. 
 
 You should go through the following process: 
-1. Download the Excel file `labor_force_participation.xls` from the course website [simondhalliday.github.io/eco254](http://simondhalliday.github.io/eco254). 
-2. Open the file in MS Excel and save the file as a .csv file. 
-3. Import the data by assigning a name to the object, e.g. `Participation <- read.csv(YOUR FILE PATH HERE)` (notice how, because we are creating a data table, we have started it with an uppercase letter).
+
+- Download the Excel file `labor_force_participation.xls` from the course
+website 
+[simondhalliday.github.io/eco254](http://simondhalliday.github.io/eco254). 
+
+- Open the file in MS Excel and save the file as a .csv file. 
+
+- Import the data by assigning a name to the object, e.g. `Participation <-read.csv(YOUR FILE PATH HERE)` (notice how, because we are creating a data
+table, we have started it with an uppercase letter).
 
 Here's an example of how you might read in the .csv file:
 ```{r import}
-Participation <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/labor_force_participation.csv")
+Participation <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/more/labor_force_participation.csv")
 ```
 
-But, we face a problem. MS Excel does funny things to dates that most computer programs other than Excel dislike. This can be solved in a variety of different ways. We shall solve it using the function `mutate`:
+But, we face a problem. MS Excel does funny things to dates that most computer
+programs other than Excel dislike. This can be solved in a variety of different
+ways. We shall solve it using the function `mutate`:
 ```{r mutate_date}
 Participation <- 
   Participation %>%
   mutate(date = as.Date(date))
 ```
-We shall use the data to creat a variety of graphs using the command `ggplot`. At the end of the lab, you'll see that you can also create a graph that look startlingly similar to the one created by the Federal Reserve Bank. That'll be more than what you need to learn for now, but it's important to see to understand the power of R. 
+We shall use the data to creat a variety of graphs using the command `ggplot`.
+At the end of the lab, you'll see that you can also create a graph that look
+startlingly similar to the one created by the Federal Reserve Bank. That'll be
+more than what you need to learn for now, but it's important to see to
+understand the power of R. 
 
-Let's use these data to create two graphs, one for each of men and women. 
-```{r participation_each}
+Let's use these data to create two graphs, one for each of men and women. I
+have created the graph for women below. 
+```{r participation_female}
 #Female Partipction Rate Graph
 Participation %>%
   ggplot(aes(x = date, y = female)) +
   geom_line() +
   ylab("Female Labor Force Partipation Rate") +
   theme_bw()
+```
 
+-   Now it's your turn. Use the commands you've learned so far to create a graph for the labor force participation rate of men. Your graph should look like this: 
+
+```{r participation_male, echo  = FALSE}
 #Male Participation Rate Graph
 Participation %>%
 ggplot(aes(x = date, y = male)) +
@@ -60,16 +106,39 @@ ggplot(aes(x = date, y = male)) +
    theme_bw()
 ```
 
-But, as it stands, with that data, we can't really superimpose the male and female graphs on each other. _Aside, this could be me misunderstanding R data right now... we shall have to see during my presentation._
+As it stands, with the data as it exists in the way we get it from the Federal
+Reserve, we can create the graphs for male and female participation rate
+independently, but we have to stop there. We can't  superimpose the male and
+female graphs on each other or create facets of them in one command (more on
+faceting later). Why is that? As we learned previously, to construct useful
+visualizations and to conduct worthwhile models, our data ought to be __tidy__.
+Recall that  __tidy data__ typically has unique __variables__ in each column
+and unique __cases__ in each row. So let's take a moment to think about the
+data that we have.  
 
-To super-impose the two graphs, we shall change the shape of the data or `gather` it. `gather` is a very useful command in the `dplyr` package that allows us to change the cases and variables we're interested in analyzing. 
+`* * *`
+
+-   What is measured in each column in the existing data? 
+
+-   Does each column measure a unique variable? 
+
+-   What variable ought we to have in its own column? 
+
+
+To super-impose the two graphs, we shall change the shape of the data or
+`gather` it. `gather` is a very useful command in the `dplyr` package that
+allows us to change the cases and variables we're interested in analyzing. 
 
 When you use `gather` you need to be aware of several things:
 
 - gather wants a __key-value__ pair. 
-- the __key__ is a variable that you name which tells you what you're doing to the data; our key is __sex__ as we're interested in males and females. 
-- the __value__ is the labor force participation rate that we call __rate__. 
-- we then tell gather to gather up the male and female variables we had previously and stack them up on top of each other making the data __longer__ than it was before. 
+- the __key__ is a variable that you name which tells you what you're doing to
+the data; our key is __sex__ as we're interested in males and females. 
+- the __value__ is the labor force participation rate that we call __rate__ to
+corresponds to the labor force participation rate. 
+- we then tell gather to gather up the male and female variables we had
+previously and stack them up on top of each other making the data __longer__
+than it was before. 
 
 Let's run the code now: 
 ```{r participation_data_change}
@@ -80,22 +149,29 @@ Participation2 <-
 
 With our new data we shall superimpose the male and female participation rates on the same graph and give each 
 ```{r participation_both}
- Participation2 %>%
-   ggplot(aes(x = date, y = rate, color = sex)) +
-   geom_line(size = 0.8) +
-   ylim(0, NA) +
- ylab("Labor Force Participation Rate") +
- xlab("Date") +
- theme_bw()
+Participation2 %>%
+  ggplot(aes(x = date, y = rate, color = sex)) +
+  geom_line(size = 0.8) +
+  ylim(0, NA) +
+  ylab("Labor Force Participation Rate") +
+  xlab("Date") +
+  theme_bw()
 ```
 
-Notice that this graph includes zero (0) on the y-axis, whereas our previous graphs did not. 
+Notice that this graph includes zero (0) on the y-axis, whereas our previous
+graphs did not. 
 
-1. What changes when we add zero to the graph? 
-2. Why is zero important? 
+`* * *`
 
+-   What changes when we add zero to the graph? 
 
-Another way of presenting graphs is to present them in _facets_ that are side-by-side or above each other. `ggplot` allows you to do this easily with the option `facet_grid()`. In the ggplot below, we add the option `facet_grid(. ~sex)` to have R _facet_ the ggplots on the sex variable. 
+-   Why do you think zero is important to include in the graph?  
+
+Another way of presenting graphs is to present them in _facets_ that are
+side-by-side or above each other. `ggplot` allows you to do this easily with
+the option `facet_grid()`. In the ggplot below, we add the option
+`facet_grid(.~sex)` to have R _facet_ the ggplots on the sex variable. 
+
 ```{r participation_facet}
  Participation2 %>%
    ggplot(aes(x = date, y = rate)) +
@@ -107,8 +183,10 @@ Another way of presenting graphs is to present them in _facets_ that are side-by
  theme_bw()
 ```
 
-
-We'll leave it at that for now, but here you can see a lovely `dygraph` that can be generated using htmlwidgets (go to [www.htmlwidgets.org](http://www.htmlwidgets.org/) to see a variety of other advanced options for what you can do when you become and R Champion). 
+We'll leave it at that for now, but here you can see a lovely `dygraph` that
+can be generated using htmlwidgets (go to
+[www.htmlwidgets.org](http://www.htmlwidgets.org/) to see a variety of other
+advanced options for what you can do when you become and R Champion). 
 
 ```{r dygraph, echo = FALSE}
 Partdate <- as.Date(Participation$date)
@@ -129,9 +207,8 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
 ```
 
 
-Neumark and Postlethwaite look at data about the probability of a woman being employed and how it correlates with whether her sister works (and her sister's husband earns more than her husband) and whether her sister-in-law works. 
-    Participation$time
-    Participation$date <- parse_date_time(Participation$date, "%Y%m%d %H%M%S")
-
-
+Neumark and Postlethwaite look at data about the probability of a woman being
+employed and how it correlates with whether her sister works (and her sister's
+husband earns more than her husband) and whether her sister-in-law works. 
+  
 
