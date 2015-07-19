@@ -8,9 +8,37 @@ output:
   pdf_document: default
 ---
 
+
+```{r requirements, message = FALSE, echo = FALSE}
+require(mosaic)
+require(dplyr)
+require(tidyr)
+require(dygraphs)
+require(xts)
+require(ggthemes)
+```
+
+##Learning Outcomes
+
+At the end of today's lab you should be able to do the following: 
+
+- Demonstrate knowledge of how to interact with R using RStudio
+
+- Identify the basic strutures of a data frame: the number and names
+of variables and cases 
+
+- Create a new variable from existing variables in a data frame. 
+
+- Filter information out of a data frame and compare summary statistics across
+filtered observations
+
+- Select out one or more variables from all of the variables in a data frame. 
+
+##Basics
 The goal of this lab is to introduce you to R and RStudio, which you'll be using
-throughout the course both to revise the statistical concepts discussed in the 
-texbook and also to analyze real data and come to informed conclusions. Let us clarify which is which:
+throughout the course to revise the statistical concepts from ECO220 or MTH220 and
+discussed in the texbook and to analyze real data and come to informed conclusions. 
+Let us clarify which is which:
 
 - R is the name of the programming language itself, and
 
@@ -41,272 +69,374 @@ To get you started, enter the following command at the R prompt (i.e. right afte
 `>` on the console).  You can either type it in manually or copy and paste it
 from this document.
 
-```{r load-data, eval=TRUE}
-source("http://www.openintro.org/stat/data/arbuthnot.R")
+```{r load-data, eval=FALSE}
+ParticipationLevels <- source("http://.../ParticipationLevels.Rdata")
 ```
 
 ```{r}
-require(dplyr)
-require(tidyr)
-Participation <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/labor_force_participation.csv")
-
-Participation <- 
-  Participation %>%
+ParticipationLevels <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab1/more/labor_force_levels.csv")  %>%
   mutate(date = as.Date(date))
-  head(Participation)
-  nrow(Participation)
-  length(Participation$female)
 ```
 
-This command instructs R to access the OpenIntro website and fetch some data: 
-the Arbuthnot baptism counts for boys and girls. You should see that the 
-workspace area in the upper righthand corner of the RStudio window now lists a 
-data set called `arbuthnot` that has 82 observations on 3 variables. As you 
-interact with R, you will create a series of objects. Sometimes you load them as
-we have done here, and sometimes you create them yourself as the byproduct of a 
-computation or some analysis you have performed. Note that because you are 
-accessing data from the web, this command (and the entire assignment) will work 
+This command instructs R to access the website and fetch some data: 
+the Bureau of Labor Statistics' counts for men and women participating in the labor force
+each period. You should see that the workspace area in the upper righthand 
+corner of the RStudio window now lists a 
+data set called `ParticipationLevels` that has 810 observations of 3 variables. As you 
+interact with R, you will create a series of __objects__. Sometimes you load an object as
+we have done here, and sometimes you create an object yourself as the result of a 
+computation or some analysis you have performed. Because you 
+access the data from the web, this command (and the entire assignment) will work 
 in a computer lab, in the library, or in your dorm room; anywhere you have 
-access to the Internet.
+access to the internet.
 
-## The Data: Dr. Arbuthnot's Baptism Records
+## The Data: Bureau of Labor Statistics (BLS) counts of participants in the labor force
 
-The Arbuthnot data set refers to Dr. John Arbuthnot, an 18<sup>th</sup> century 
-physician, writer, and mathematician.  He was interested in the ratio of newborn
-boys to newborn girls, so he gathered the baptism records for children born in
-London for every year from 1629 to 1710.  We can take a look at the data by 
-typing its name into the console.
+The Bureau of Labor Statistics has collected data regularly since 1948 on the
+numbers of men and women who participate in the labor force. These days, the 
+counts are published monthly. The BLS needs to understand whether someone 
+participates in the labor force to come to judge employment in the US. 
+You might remember from ECO153 or ECO253 that the government measures 
+employment only from those people participating in the lbabor, that is, 
+either working or looking for work. Someone who does not have 
+a job and is not actively searching for work is not unemployed. Rather, they 
+are a __discouraged worker__. Discouraged worked do not participate in the 
+labor force. 
+
+We and the government are interested in understanding what percentages of men 
+and women are working at a given point in time. To calculate those proportions
+we need the counts. We shall use the percentages in later labs. For now, we
+want to understand the counts to get a sense of the how the data works. 
 
 ```{r view-data, eval=FALSE}
-arbuthnot
+ParticipationLevels
 ```
 
+You should see four columns of numbers, each row representing a 
+different date. The first entry in each row, corresponding the first column, 
+is simply the row number. The second column is the date which follows
+international conventions and is written as YYYY-MM-DD (note this is different
+to how many people write dates in the USA, where most people write dates as 
+MM-DD-YYYY. R is used internationally and so adheres to the international 
+scientific dating conventions. This system is often called 'unambiguous' 
+because of the order. The fully specified date and time, called a POSIX time 
+would be YYYY-MM-DD HH:MM:SS with a 24-hour clock, e.g. 2015-07-18 14:17:32). 
 
-What you should see are four columns of numbers, each row representing a 
-different year: the first entry in each row is simply the row number (an index 
-we can use to access the data from individual years if we want), the second is 
-the year, and the third and fourth are the numbers of boys and girls baptized 
-that year, respectively. Use the scrollbar on the right side of the console 
+The third and fourth columns are the numbers of men and women who participated
+in the labor force at the given date. Use the scrollbar on the right side of the console 
 window to examine the complete data set.
 
-Note that the row numbers in the first column are not part of Arbuthnot's data. 
+Note that the row numbers in the first column are not part of the BLS data. 
 R adds them as part of its printout to help you make visual comparisons. You can
 think of them as the index that you see on the left side of a spreadsheet. In 
 fact, the comparison to a spreadsheet will generally be helpful. R has stored 
-Arbuthnot's data in a kind of spreadsheet or table called a *data frame*.
+the BLS data in a kind of spreadsheet or table called a __data frame__ or __data table__. 
 
-You can see the dimensions of this data frame by typing:
+You would have seen that looking at the data frame in its entirety is quite
+cumbersome. We would probably rather just take a look at some portion of our
+data, such as the top or the bottom of the data. We can do this with the
+`head` and `tail` commands. Run them now to check out the first few rows 
+of the data. By default, head and tail show you 6 rows. You can change that by
+adding a command and a number after the the name of the data frame. 
 
-```{r dim-data, eval=TRUE}
-dim(arbuthnot)
+```{r}
+head(ParticipationLevels)
+head(ParticipationLevels, 8)
+tail(ParticipationLevels)
+tail(ParticipationLevels, 12)
 ```
 
-This command should output `[1] 82 3`, indicating that there are 82 rows and 3 
+
+You can see the dimensions (`dim`) of this data frame by typing:
+
+```{r dim-data, eval=TRUE}
+dim(ParticipationLevels)
+```
+
+This command should output `[1] 810 3`, indicating that there are 810 rows and 3 
 columns (we'll get to what the `[1]` means in a bit), just as it says next to 
-the object in your workspace. You can see the names of these columns (or 
+the object in your workspace. 
+
+You can see the names of these columns (or 
 variables) by typing:
 
 ```{r names-data, eval=TRUE}
-names(arbuthnot)
+names(ParticipationLevels)
 ```
 
-You should see that the data frame contains the columns `year`,  `boys`, and 
-`girls`. At this point, you might notice that many of the commands in R look a 
-lot like functions from math class; that is, invoking R commands means supplying
-a function with some number of arguments. The `dim` and `names` commands, for 
-example, each took a single argument, the name of a data frame. 
+You should see that the data frame contains the columns `date`,  `male`, and 
+`female`. 
+
+Another way to obtain similar information is to ask for the structure of the data using the command `str()`:
+```{r str-data}
+str(ParticipationLevels)
+```
+As we saw with the `dim` command, the `str` command tells us that the data has
+810 observations and 3 variables. As with the `names` command, `str` also tells
+us the names of the three variables (`date`, `male` and `female`) and the 
+format of these variables. It tells us that `date` has the format of a "Date". 
+It tells us that male and female have the format of "int", which is short for
+"integer".
+
+At this point, you might notice that many of the commands in R look a 
+lot like functions from math class. So, invoking R commands means supplying
+a function with some number of arguments that appear in parentheses. For
+example, when you say that a variable $$y$$ is a function of another variable 
+$$x$$ you write: $$y = f(x)$$. The `dim`, `names` and `str` commands
+each took a single argument, the name of a data frame `ParticipationLevels`. The idea
+of an R command working like a function will remain helpful in the future. 
 
 One advantage of RStudio is that it comes with a built-in data viewer. Click on
-the name `arbuthnot` in the *Environment* pane (upper right window) that lists 
+the name `ParticipationLevels` in the *Environment* pane (upper right window) that lists 
 the objects in your workspace. This will bring up an alternative display of the 
 data set in the *Data Viewer* (upper left window). You can close the data viewer
 by clicking on the *x* in the upper lefthand corner.
 
 ## Some Exploration
 
-Let's start to examine the data a little more closely. We can access the data in
-a single column of a data frame separately using a command like
-
-```{r view-female, eval=FALSE}
-Participation$female #So they understand a vector and typing out the name of an object
-```
-
-This command will only show the number of girls baptized each year.
-
-1.  What command would you use to extract just the counts of girls baptized? Try
-    it!
-
-Notice that the way R has printed these data is different. When we looked at the
-complete data frame, we saw 82 rows, one on each line of the display. These data
+<!--Notice that the way R has printed these data is different. When we looked at the
+complete data frame, we saw 810 rows, one on each line of the display. These data
 are no longer structured in a table with other variables, so they are displayed 
 one right after another. Objects that print out in this way are called *vectors*;
-they represent a set of numbers. R has added numbers in [brackets] along the 
+they represent a set of numbers. 
+
+R has added numbers in [brackets] along the 
 left side of the printout to indicate locations within the vector. For example,
-`5218` follows `[1]`, indicating that `5218` is the first entry in the vector. 
-And if `[43]` starts a line, then that would mean the first number on that line
-would represent the 43<sup>rd</sup> entry in the vector.
+`16810` follows `[1]`, indicating that `16810` is the first entry in the vector. 
+And if `[33]` starts a line, then that would mean the first number on that line
+would represent the 33<sup>rd</sup> entry in the vector.-->
 
-R has some powerful functions for making graphics. We can create a simple plot 
-of the number of girls baptized per year with the command
+##Summary Statistics
+In economics, we are often interested in knowing basic summary statistics of 
+variables and also in generating new variables that contain new information. 
+One very useful command in R, using the `mosaic` package, is the `favstats`
+command (read as "fave stats""). What, you might ask, are an economist's 
+favorite statistics? How about the following? 
 
-```{r plot-girls-vs-year, eval=FALSE}
-plot(x = arbuthnot$year, y = arbuthnot$girls)
+- mean
+
+- median
+
+- standard deviation
+
+- minimum
+
+- maximum
+
+Let's try the `favstats` command with the ParticipationLevels data frame
+
+```{r calc_total_participation, eval=FALSE}
+favstats(female, data = ParticipationLevels)
 ```
 
-By default, R creates a scatterplot with each x,y pair indicated by an open 
-circle. The plot itself should appear under the *Plots* tab of the lower right 
-panel of RStudio. Notice that the command above again looks like a function, 
-this time with two arguments separated by a comma.  The first argument in the 
-plot function specifies the variable for the x-axis and the second for the y-axis.
-If we wanted to connect the data points with lines, we could add a third argument,
-the letter `l` for **l**ine.
+As you can see we have information about the mean number of females who 
+participated in the labor force over the period (in thousands). Each month, 
+approximately 45,567,830 women participated in the labor force, or about 46 
+million. That should sound about right. 
 
-```{r plot-girls-vs-year-line, eval=FALSE}
-plot(x = arbuthnot$year, y = arbuthnot$girls, type = "l")
+* * * 
+Try the `favstats` command with the male variable in ParticipationLevels
+
+-   What was the mean number of mean employed each month over the period 1948 to 2015? 
+
+-   What was the standard deviation of the number of males employed each month? 
+
+-   What were the minimum and maximum numbers of males employed each month? 
+
+```{r}
+favstats(male, data = ParticipationLevels)
 ```
 
-You might wonder how you are supposed to know that it was possible to add that 
-third argument.  Thankfully, R documents all of its functions extensively. To 
-read what a function does and learn the arguments that are available to you, 
-just type in a question mark followed by the name of the function that you're 
-interested in. Try the following.
+When you ran the `favstats` command, the final column was labeled as 'missing'. 
+Missing data exist when there are no observations of that variable for a 
+particular case. For both males and females in the US, we have no missing data.
+This makes sense for aggregate employment data, but if you were asking each 
+person individually what their income was, people would be less likey to 
+report that, and data would likely be missing. One of the jobs of the 
+statistician or econometrician is to work out what missing data look like. 
+Dealing with that is beyond the scope of this course. We will mainly deal
+with 'non-missing' data. 
 
-```{r plot-help, eval=FALSE, tidy = FALSE}
-?plot
+##Filtering and Mutating
+
+We might be interested in seeing the total number of participants in the labor 
+force each year. To do this we could do one of two operations. We will do a 
+simple one first. Let's say we're interested in finding out what the total 
+number of labor force participants was in January of 1948. We shall use the 
+command `filter` to do this. First, we tell R which data we want to see, 
+then we run the command 
+
+```{r}
+Jan1948 <- 
+ParticipationLevels %>%
+filter(date == "1948-01-01") 
+Jan1948
 ```
+Let's go through a step-by-step interpretation of the string of code: 
 
-Notice that the help file replaces the plot  in the lower right panel. You can 
-toggle between plots and help files using the tabs at the top of that panel.
+- First, we tell R we want to assign the name `Jan1948` to our new variable. 
+- Second, we tell R to pipe in (to use) the `ParticipationLevels` data. 
+- Third, we then (%>%) tell R to use the filter command where it takes the
+variable `date` and only selects the case(s) for which date is equal to
+"1948-01-01" (the use of two equals signs `==` is very important here! You will
+get an error if you only use one equals sign)
+- Fourth, we tell R to display our new dataframe `Jan1948`. 
 
-2.  Is there an apparent trend in the number of girls baptized over the years?  
-    How would you describe it?
+We can see that there were 43,214 male labor force participants (in thousands) 
+and 16,881 female (also in thousands). Now, we can treat R like a calculator 
+and add these together
 
-Now, suppose we want to plot the total number of baptisms.  To compute this, we 
-could use the fact that R is really just a big calculator. We can type in 
-mathematical expressions like
-
-```{r calc-total-bapt-numbers, eval=FALSE}
-5218 + 4683
+```{r}
+43214 + 16881
 ```
+We can see that there are 60,095 total participants in the labor force (in
+thousands). 
 
-to see the total number of baptisms in 1629. We could repeat this once for each 
-year, but there is a faster way. If we add the vector for baptisms for boys and
-girls, R will compute all sums simultaneously.
-
-```{r calc-total-bapt-vars, eval=FALSE}
-arbuthnot$boys + arbuthnot$girls
-```
-
-What you will see are 82 numbers (in that packed display, because we aren't 
-looking at a data frame here), each one representing the sum we're after. Take a
-look at a few of them and verify that they are right. Therefore, we can make a 
-plot of the total number of baptisms per year with the command
-
-```{r plot-total-vs-year, eval=FALSE}
-plot(arbuthnot$year, arbuthnot$boys + arbuthnot$girls, type = "l")
-```
-
-This time, note that we left out the names of the first two arguments.  We can 
-do this because the help file shows that the default for `plot` is for the first
-argument to be the x-variable and the second argument to be the y-variable.
-
-Similarly to how we computed the proportion of boys, we can compute the ratio of
-the number of boys to the number of girls baptized in 1629 with
-
-```{r calc-prop-boys-to-girls-numbers, eval=FALSE}
-5218 / 4683
-```
-
-or we can act on the complete vectors with the expression
-
-```{r calc-prop-boys-to-girls-vars, eval=FALSE}
-arbuthnot$boys / arbuthnot$girls
-```
-
-The proportion of newborns that are boys
-
-```{r calc-prop-boys-numbers, eval=FALSE}
-5218 / (5218 + 4683)
-```
-
-or this may also be computed for all years simultaneously:
-
-```{r calc-prop-boys-vars, eval=FALSE}
-arbuthnot$boys / (arbuthnot$boys + arbuthnot$girls)
-```
-
-Note that with R as with your calculator, you need to be conscious of the order 
+With R as with your calculator, you need to be conscious of the order 
 of operations.  Here, we want to divide the number of boys by the total number 
 of newborns, so we have to use parentheses.  Without them, R will first do the 
 division, then the addition, giving you something that is not a proportion.
 
-3.  Now, make a plot of the proportion of boys over time. What do you see? Tip: 
-If you use the up and down arrow keys, you can scroll through your previous 
+How else could we do this? We could add the male and female totals together 
+to create a new variable. To create a new variable we use the `mutate` command.
+
+```{r}
+ParticipationLevels <- 
+  ParticipationLevels %>% 
+  mutate(total = male + female)
+```
+What does this string of code mean? Let's go through it step-by-step: 
+
+- First, we tell R the name we want to assign our data frame. We're going to stick with old name of `ParticipationLevels`. 
+- Second, we tell R we want to pipe in the data from the existing data frame `ParticipationLevels` to tell it we're using that data in our function. 
+- Third, we then (`%>%`) call the mutate function and tell it that we're creating a new variable called `total` which is `male + female`. 
+- We can now `head(ParticipationLevels)` to check what our new variable looks like. Go ahead and do that on your own (it's not included in the code above)
+
+We didn't create the total variable just because. Rather, we want to identify the proportions of men and women who are in the labor 
+force. Let's attempt that now using the `mutate` command again and generate 
+a new data frame that  has the variable `femprop` for the proportion of the
+labor force that is made up of females. 
+
+```{r female_proportion}
+ParticipationLevels <-
+  ParticipationLevels %>%
+  mutate(femprop = female / total) 
+head(ParticipationLevels)
+```
+
+* * * 
+-   Write out a point by point interpretation of the command like we did for the commands to generate `total`. 
+
+-   Now you generate a new variable called `maleprop` which is the proportion
+of male participants as a total of all the labor force participants. 
+
+-   Look at the head and the tail of the data frame (you can look at more than
+6 rows if you want). What has happened to the proportion of males and females
+as a total of the labor force participants in the United States?
+
+-   Create two new data frames Jan1960 and Jan2000 which `filter` out all other
+months except those ones in each frame. Display them and comment. 
+
+```{r male_prop_part, echo = FALSE}
+ParticipationLevels <-
+  ParticipationLevels %>%
+  mutate(maleprop = male / total) 
+head(ParticipationLevels, 6)
+tail(ParticipationLevels, 6)
+Jan1960 <- 
+  ParticipationLevels %>%
+  filter(date == "1960-01-01")
+Jan2000 <- 
+  ParticipationLevels %>%
+  filter(date == "2000-01-01")
+Jan1960
+Jan2000
+```
+
+You can also use the command `filter` to create a new dataframe where the
+dates are in a particular range or only after a given date. For example, 
+let's say that we were only interested in looking at dates since January 2000.
+We could easily tell R this by using the greater than sign, `>=` or the `>`  
+therefore and doing the following: 
+
+```{r}
+RecentParticipation <- 
+  ParticipationLevels %>%
+  filter(date >= "2000-01-01")
+```
+Check that you ran the code correctly by checking the `head` of the data
+frame.  We could have looked at all dates _prior_ to the 2000s by using the 
+less than sign `<`. 
+
+How about checking dates in a given 10 year period? Let's
+say we were only interested in the 1960s and we want to check ou that ten-year 
+period. 
+
+```{r head_fem_prop}
+The1960s <- 
+  ParticipationLevels %>%
+  filter(date >= "1960-01-01" & date < "1970-01-01")
+  head(The1960s)
+```
+
+Again, we're not just filtering data because we think filtering is cool, we
+might be interested in what the mean proportions and variance were across
+decades because we have some hypothesis about different decades. Or we could lookat 5-year periods, or the periods before and after financial crises. 
+
+Complete the following exercise using `filter` and `favstats`: 
+-   What was the mean proportion of women in the labor force for the 1960s? 
+
+-   What was the mean proportion of women in the labor force in the 2000s? 
+
+__TIP__: Make sure that you have an 'n' of 120 when you run the favstats command. Why should it be 120? 
+
+```{r filter_favstats_60s_00s, echo = FALSE}
+The2000s <- 
+  ParticipationLevels %>%
+  filter(date >= "2000-01-01" & date < "2010-01-01")
+  favstats(femprop, data = The1960s)
+  favstats(femprop, data = The2000s)
+```
+
+
+
+3.  
+
+##Selecting variables
+Let's start to examine the data a little more closely. We can access the data
+in a single column of a data frame separately using a command called `select`:
+
+```{r view-female, eval=FALSE}
+ParticipationFemale <- 
+  ParticipationLevels %>%
+  select(female)
+head(ParticipationFemale)
+```
+
+This command will only show the number of females in the labor force during each period. 
+
+[exercise number] What command would you use to extract just the counts of __males__ in the 
+labor force? Try it! 
+
+
+
+
+__Tip__: If you use the up and down arrow keys, you can scroll through your previous 
 commands, your so-called command history. You can also access it by clicking on 
 the history tab in the upper right panel.  This will save you a lot of typing in
 the future.
 
-Finally, in addition to simple mathematical operators like subtraction and 
-division, you can ask R to make comparisons like greater than, `>`, less than,
-`<`, and equality, `==`. For example, we can ask if boys outnumber girls in each 
-year with the expression
-
-```{r boys-more-than-girls, eval=FALSE}
-arbuthnot$boys > arbuthnot$girls
-```
-
-This command returns 82 values of either `TRUE` if that year had more boys than 
-girls, or `FALSE` if that year did not (the answer may surprise you). This 
-output shows a different kind of data than we have considered so far. In the 
-`arbuthnot` data frame our values are numerical (the year, the number of boys 
-and girls). Here, we've asked R to create *logical* data, data where the values
-are either `TRUE` or `FALSE`. In general, data analysis will involve many 
-different kinds of data types, and one reason for using R is that it is able to
-represent and compute with many of them.
-
-This seems like a fair bit for your first lab, so let's stop here. To exit 
+This seems like a fair bit for your [nth] lab, so let's stop here. To exit 
 RStudio you can click the *x* in the upper right corner of the whole window.  
 You will be prompted to save your workspace. If you click *save*, RStudio will 
 save the history of your commands and all the objects in your workspace so that 
-the next time you launch RStudio, you will see `arbuthnot` and you will have 
+the next time you launch RStudio, you will see `ParticipationLevels` and you will have 
 access to the commands you typed in your previous session. For now, click *save*,
-then start up RStudio again.
+then re-start RStudio.
 
 * * *
 
-## On Your Own
-
-In the previous few pages, you recreated some of the displays and preliminary 
-analysis of Arbuthnot's baptism data. Your assignment involves repeating these 
-steps, but for present day birth records in the United States.  Load up the 
-present day data with the following command.
-
-```{r load-present-data, eval=FALSE}
-source("http://www.openintro.org/stat/data/present.R")
-```
-
-The data are stored in a data frame called `present`.
-
--   What years are included in this data set? What are the dimensions of the 
-    data frame and what are the variable or column names?
-
--   How do these counts compare to Arbuthnot's? Are they on a similar scale?
-
--   Make a plot that displays the boy-to-girl ratio for every year in the data 
-    set. What do you see? Does Arbuthnot's observation about boys being born in
-    greater proportion than girls hold up in the U.S.? Include the plot in your 
-    response.
-
--   In what year did we see the most total number of births in the U.S.? You can
-    refer to the help files or the R reference card 
-    [http://cran.r-project.org/doc/contrib/Short-refcard.pdf](http://cran.r-project.org/doc/contrib/Short-refcard.pdf)
-    to find helpful commands.
-
-These data come from a report by the Centers for Disease Control 
-[http://www.cdc.gov/nchs/data/nvsr/nvsr53/nvsr53_20.pdf](http://www.cdc.gov/nchs/data/nvsr/nvsr53/nvsr53_20.pdf). 
-Check it out if you would like to read more about an analysis of sex ratios at 
-birth in the United States.
-
+## Conclusion
 That was a short introduction to R and RStudio, but we will provide you with more
 functions and a more complete sense of the language as the course progresses. 
 Feel free to browse around the websites for [R](http://www.r-project.org) and 

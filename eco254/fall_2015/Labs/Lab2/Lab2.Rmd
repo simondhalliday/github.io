@@ -44,7 +44,7 @@ United States.
 ParticipationLevels <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/Labs/Lab1/more/labor_force_levels.csv") 
 ParticipationLevels <- 
   ParticipationLevels %>%
-  mutate(Date = as.Date(Date))
+  mutate(date = as.Date(date))
 ParticipationLevels %>%
 head(10)
 ```
@@ -120,7 +120,7 @@ include the pipe as stories told by a 6-year-old:
 <img src="more/and_then_kid.png" height="400px" width="300px" align="middle"/>
 
 That way, I don't get confused about what it means because I always
-get the functions in the right sequence that way. 
+get the functions in the right sequence. 
 
 
 
