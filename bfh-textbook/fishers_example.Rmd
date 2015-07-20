@@ -1,0 +1,194 @@
+---
+title: "Fishers Example"
+author: "Simon Halliday"
+date: "2015-July -19"
+output: html_document
+runtime: shiny
+---
+
+```{r, echo = FALSE}
+require(shiny)
+```
+
+
+###This is stolen from the LaTex file and edited a bit
+We assume the interaction between the two fishermen works as follows.
+If Alfredo were fishing the lake by himself, and Bob were not there,
+the amount of fish he would catch, $y^{A}$, when he fishes $e^{A}$
+hours would be $12$ fish per hour::
+
+$$y^{A}=12e^{A}$$
+
+
+Alfredo, however, dislikes fishing, and deducts $\frac{1}{2}(e^{A})^{2}$
+when he fishes $e^{A}$ hours, so his utility, or payoff, when he
+fishes $e^{A}$ hours is
+
+$$u^{A}=12e^{A}-\frac{1}{2}(e^{A})^{2}$$
+
+Alfredo, fishing alone, would maximize utility by fishing $12$ hours
+a day; his utility would be $72$. This would be Alfredo's \emph{decision
+problem} if he had no interaction with Bob.
+
+But Bob's fishing reduces the amount of fish Alfredo can catch in
+an hour. For each hour Bob fishes, Alfredo catches $\frac{1}{2}$
+fish per hour less. If Bob fishes $e^{B}$ hours, and Alfredo fishes
+$e^{A}$ hours, Alfredo's catch is:
+
+$$y^{A}=(12-\frac{1}{2}e^{B})e^{A}$$
+
+
+Thus the social interaction in the situation is that Alfredo's utility
+depends on both his own hours of fishing, and on Bob's hours of fishing:
+
+$$u^{A}=(12-\frac{1}{2}e^{B})e^{A}-\frac{1}{2}(e^{A})^{2}$$
+
+
+We assume that Bob has the same utility dependent on Alfredo's fishing.
+
+To keep things simple, suppose for the moment that the only actions
+Alfredo and Bob consider are to fish either $6$ or $8$ hours.
+
+The two fishermen's actions lead to the following four possible outcomes: 
+
+- **Alfredo fishes 8 hours, Bob fishes 8 hours**: When both fishermen
+fish 8 hours, we can see that each one catches $64$ fish and has
+a utility of $32$. Each fisherman ends up with the same payoff as
+his fallback position, $32$. 
+-  **Alfredo fishes 6 hours, Bob fishes 6 hours**: When both fishermen
+spend less time fishing they each catch more fish per hour. They also
+benefit because they are spending less time fishing. Each fisherman
+catches $54$ fish and has a utility of $36$, which is larger than
+their fallback position, $32$. 
+- **Alfredo fishes 6 hours, Bob fishes 8 hours**: Because Bob fishes
+8 hours, In this case Bob benefits because with Alfredo fishing less,
+he catches more fish per hour. Bob catches $72$ fish and has a utility
+of $40$. Alfredo, however, is catching less fish per hour and fishing
+less; he catchs $48$ fish and has a utility of $30$, which is less
+than the fallback position $32$.
+- **Alfredo fishes 8 hours, Bob fishes 6 hours**: This is symmetrical
+to the previous description, so now Alfredo's utility is $40$, and
+Bob's is $30$.
+
+We can take the description of the players, actions and payoffs we
+provided above and convert it into a *normal form game* as represented
+by th *payoff matrix* in the Table. 
+The convention we will use throughout this book it to list the row
+player's payoffs first and the column player's payoffs second. So,
+in the Fishermen's Dilemma game, Alfredo's payoffs are first and Bob's
+payoffs are listed second. 
+
+|   |   | Bob | |
+|---|---|---|---|
+|   |   | Fish 6 Hours | Fish 8 Hours |
+| Alfredo | Fish 6 Hours | 36, 36 | 30, 40 |
+|  | Fish 8 Hours | 40, 30 | 32, 32 |
+
+
+Here we describe the problem of the fishers dilemma in Ch. 2 or Ch. 8. 
+We can see below that we have parameterized the model in the same way that we did 
+in chapter 2 of the textbook in the one Box. 
+
+perhaps we want some math, as we have in the textbook: 
+
+##The fishers' best response functions
+We can also find the best repsonses by differentiating $u^A$ with respect to $e^A$ and setting the result equal to zero to find the utility-maximizing level of effort for A, which gives the first-order condition: 
+$$\frac{\partial u^A}{\partial e^A} = \alpha(e - \beta e^B) - e^A = 0$$
+The FOC implies that: 
+$$e^A[e^B] = \alpha(1 - \beta e^B)$$
+$$e^B[e^A] = \alpha(1 - \beta e^A)$$
+
+Let us assume that $\alpha$ and $\beta$ start at 12 and 0.5 respectively, but that they might actually vary for each player. These ideas are captured in the simulation below.
+
+##Graphs of the Fishers' Best Responses
+```{r, echo = FALSE}
+shinyApp(
+  ui = fluidPage(
+   sidebarLayout(
+    sidebarPanel(
+                sliderInput("T",
+                                HTML("Fisher A: amount of fish per hour"),
+                                min = 1,
+                                max = 20,
+                                value = 12,
+                                step = 1), 
+                    
+                sliderInput("m",
+                                HTML("Fisher A: amount of externality"),
+                                min = 0,
+                                max = 1,
+                                value = 0.5,
+                                step=0.1,
+                                round = FALSE),
+                sliderInput("Q",
+                                HTML("Fisher B: amount of fish per hour"),
+                                min = 1,
+                                max = 20,
+                                value = 12,
+                                step = 1), 
+                sliderInput("s",
+                                HTML("Fisher B: amount of externality"),
+                                min = 0,
+                                max = 1,
+                                value = 0.5,
+                                step=0.1,
+                                round = FALSE)
+   ),
+ mainPanel(plotOutput("BestResponse")
+             )
+     )
+  ),
+server = function(input, output) {
+  output$BestResponse <- renderPlot(width = 400, {
+    BestResponse1 <- function(a, T=12, m=0.5) {
+      ((T/m)-(1/m)*a)
+    }
+    BestResponse2 <- function(a, Q=12, s=0.5){
+      (Q-s*a)
+    }
+    COL <- c("#1B9E77", "#F0F0D8", "#D8D8C0", "#E7298A", "#66A61E", "#E6AB02", "#A6761D", "#666666")
+    par(mar =  c(2, 2, 5, 5))
+    xlims <- c(0, 30)
+    ylims <- c(0, 30)
+    
+    plot(0, 0, xlim = xlims, ylim = ylims, type = "n",
+         xlab = expression(paste("amount of A, ", a)),
+         ylab = expression(paste("amount of B, ", b)),
+         xaxt = "n", 
+         yaxt = "n", 
+         cex.lab = 1.5, 
+         bty = "n")
+    
+    npts <- 500
+    xx1 <- seq(xlims[1], input$T, length.out = npts)
+    yy1 <- BestResponse1(xx1, T=input$T, m=input$m)
+    lines(xx1, yy1, col = COL[1], lwd = 4)
+    xx2 <- seq(xlims[1], input$Q / input$s, length.out = npts)
+    yy2 <- BestResponse2(xx2, Q=input$Q, s=input$s)
+    lines(xx2, yy2, col = COL[3], lwd = 4)
+    
+    
+    axis(1, at = xlims, pos = 0)
+    axis(2, at = ylims, pos = 0)
+    add_legend <- function(...) {
+      opar <- par(fig=c(0, 1, 0, 1), oma=c(0, 0, 0, 0), 
+                  mar=c(0, 0, 0, 0), new=TRUE)
+      on.exit(par(opar))
+      plot(0, 0, type='n', bty='n', xaxt='n', yaxt='n')
+      legend(...)
+    }
+    
+    add_legend("topright", legend=c(
+      expression(paste("A best response function")), 
+      expression(paste("B best response function"))
+    ),
+    col = COL, lty = 1, lwd = 3, bty = "n", cex=1.2, pt.cex = 1)
+  })
+}, 
+  options = list(height = 500)
+)
+```
+
+
+
+
