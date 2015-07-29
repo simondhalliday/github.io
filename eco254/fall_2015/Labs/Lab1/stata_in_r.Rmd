@@ -1,0 +1,71 @@
+---
+title: "R Markdown and Stata with NIDS data"
+author: "Simon Halliday"
+date: "2015-July -28"
+output: html_document
+---
+#Basics
+A bunch of the text below is based on Richard Ball's memo that he circulated to people involved with the TIER project ([www.haverford.edu/TIER/](https://www.haverford.edu/TIER/)] and at the 5 Colleges. 
+
+The purpose of this Rmarkdown document is to show that it is possible to include chunks of Stata code in an Rmarkdown document and to use your own data (rather than the system data such as `auto.dta`). 
+
+First write a chunk of R code telling R where to find Stata, and telling R that subsequent chunks of code should be run on Stata. This is written for a Mac with MacOS rather than the Windows filepath Richard used. 
+
+```{r initialize_stata, echo=TRUE, message=FALSE}
+  require(knitr)
+  statapath <- "/Applications/Stata/StataSE.app/Contents/MacOS/StataSE"
+  opts_chunk$set(engine="stata", engine.path=statapath, comment="")
+```
+
+#Opening a .dta file, running commmands, saving data
+Below, I have loaded a dataset I use to teach my African Development course Stata. It is longitudinal data from the first wave of South Africa's National Income Dynamics Survey (NIDS) hence `nids.dta`. Importantly, when I tried to do this, it turned out the Rmd did *not* like long filepaths, so I copied the data file to the desktop and that worked, though it's messy. I then ran a bunch of commands from my first two labs (based on similar labs taught by Murray Leibbrandt and Cally Ardington at the University of Cape Town and in the the SALDRU Stata course). 
+
+```{r use_data_and_commands, message = FALSE}
+use "/Users/shalliday/Desktop/nids.dta"
+tab w1_best_race
+tab w1_r_b7
+numlabel, add 
+tab w1_r_b7
+tab w1_r_b7 if w1_r_b4==2
+tab w1_r_b7 w1_r_b4
+tab w1_r_b7 w1_best_race
+replace w1_r_b7=. if w1_r_b7<0
+tab  w1_r_b7 w1_best_race, missing
+sum w1_best_race
+sum w1_r_b7 if w1_r_b6>=18 & w1_r_b6!=.
+tab w1_best_race w1_r_b4, sum(w1_r_b6)
+gen noschool=0
+replace noschool=1 if w1_r_b7==25
+replace noschool=. if w1_r_b7==.
+tab w1_r_b7 noschool, missing
+tab w1_best_race, gen(race)
+rename race1 African
+rename race2 Coloured
+rename race3 Indian
+rename race4 White
+recode w1_r_b7 (-9/-3 24 =.) (25 =0) (13 16 =10) (14 17 =11) (15 =12) (18 =13) (19 =14) (20 =15) (21 22 =16) (23 =17), gen(edyears)
+gen lninc=ln(w1_hhincome)
+label var lninc "Log of household income"
+egen hhsize=count(pid), by(hhid)
+lab var hhsize "Household Size"
+tab hhsize
+egen hh_one=tag(hhid)
+tab hhsize if hh_one==1
+egen meaned = mean(edyears), by(w1_r_b6 w1_best_race)
+capture mkdir temp
+save temp/nids_modified.dta, replace
+```
+
+The last command above was based on Richard Ball's example to check whether I could save and re-import the data below. 
+
+I modified the `nids.dta` file, and saved it as `nids_modified.dta.`
+
+#Opening the data again
+And now we can get `nids_modified.dta` back in a later chunk if we want to do something with it. I try to summarize the variable hhsize (which I had generated above). 
+
+```{r import_data, echo=FALSE}
+use temp/nids_modified.dta
+summarize hhsize
+```
+
+Anyway, this just goes to show that you can import your own data, run a bunch of commands, and save it to work in later chunks. 
