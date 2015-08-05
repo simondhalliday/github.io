@@ -38,17 +38,11 @@ lines(xx3, isovlow(xx3, delta = 5), col = COL[1], lwd = 4)
 lines(xx1, solowCondition(xx1, delta = 5), col = COL[3], lwd = 4)
 
 ticksy <- c(0, 0.5, 1)
-
-axis(1, at = xlims, pos = 0)
-axis(2, at = ylims, pos = 0, las=1)
-
-# add_legend <- function(...) {
-#   opar <- par(fig=c(0, 1, 0, 1), oma=c(0, 0, 0, 0), 
-#               mar=c(0, 0, 0, 0), new=TRUE)
-#   on.exit(par(opar))
-#   plot(0, 0, type='n', bty='n', xaxt='n', yaxt='n')
-#   legend(...)
-# }
+ylabels <- c(0, expression(paste(frac(1,2))), 1)
+ticksx <- c(0, 10, 20, 40)
+xlabels <- c(0, expression(paste(2*delta)), expression(paste(4*delta)), 40)
+axis(1, at = ticksx, pos = 0, labels = xlabels)
+axis(2, at = ticksy, pos = 0, labels = ylabels, las = 1)
 
 #Annotation of the three graphs and the NE
 text(5, 0.3, expression(paste("Principal's BR ", frac(q, p) ," = ", frac(1, 4)*delta)))
@@ -56,31 +50,12 @@ text(35, 0.62, expression(paste("BRF q = ", 1 - frac(2*delta, p))))
 text(28, 0.1, expression(paste("Iso-v curve v = ", v,"*")))
 text(19, 0.55, expression(paste("NE")))
 
-#Annotation of the important points on the axes
-mtext(expression(paste(2*delta)), side = 1, at = 10)
-mtext(expression(paste(4*delta)), side = 1, at = 20)
-mtext(expression(paste(frac(1,2))), las = 1, side = 2, at = 0.5)
-
-# ticksx <- c(0, 10, 20, 40)
-# axis(1, at = ticksx)
-# ticksy <- c(0, 0.5, 1)
-# axis(2, at = ticksy)
-
 #Lines for the coordinates of the Nash equilbrium
 segments(20, 0, 20, 0.5, lty = 2, col = "darkgray")
 segments(0, 0.5, 20, 0.5, lty = 2, col = "darkgray")
 
 #Add a point for the NE
 points(20, 0.5, pch = 16, col = "black", cex = 1.5)
-
-# add_legend("topright", legend=c(
-#   expression(paste("Agent's Indifference Curve: v = v*", )),
-#   expression(paste("Agent's Best Response: q = 1 - (2*delta/p)",)), 
-#   expression(paste("Solow Condition: q = p*(delta/2)",))
-# ),
-# col = COL, lty = 1, lwd = 2, cex=1, bty = "n")
-
-
 
 dev.off()
 
