@@ -39,6 +39,30 @@ lines(xx3, isovhigh(xx3, delta = 5), col = COL[1], lwd = 4)
 lines(xx3, isovlow(xx3, delta = 5), col = COL[1], lwd = 4)
 lines(xx1, solowCondition(xx1, delta = 5), col = COL[3], lwd = 4)
 
+
+#For the polygon need the intersection of v and iso-profit
+#(2p - 40)^2 = p^2 - 400
+#4p^2 - 160p + 1600 = p^2 - 400
+#3p^2 - 160p + 2000 = 0
+#p = 20 or p = 100/3 = 33.3 
+# => q = (1/40)*33.3 = 0.8325
+
+xplens <- seq(20, 33.3, 0.01)
+yplens <- seq(0.5, 0.8325, 0.0002498122)
+polygon(xplens, yplens, col = "black", density=NULL)
+yy1 <- isovhigh(xx3, delta = 5, v = 20)
+#Below, note I have gone to number 416 because at that observation we can 
+#find the closest outcome to the intersection of the curves. Serves fine 
+#for the relevant polygon
+polygon(c(xx3, xx3[416]), c(yy1, yy1[416]), col = COL[6], density=NULL, border = NA)
+yblah <- seq(yy1[1], min(yy1), -.01)
+polygon(c(xx1, min(xx1)), c(yy1, min(yy1)), col = COL[2], density=NULL,
+        border = NA)
+#x.shade <- c(20, 21, 22, 23, 24)
+#y.shade <- c(0.5, 0.625, 0.65, 0.675, 0.7)
+#polygon(x.shade, y.shade, col = "black", density=NULL)
+#polygon(c(x.shade, rev(x.shade)), c(y.shade, rev(y.shade)), col = "black", density=NULL, border = NA)
+
 #Pareto improving lens
 xplens <- seq(20, 24.6282, 0.01)
 yplens <- seq(0.5, 0.616705, 0.01)
