@@ -1,0 +1,232 @@
+---
+title: "ECO254 - Behavioral Economics - Syllabus"
+author: "Simon Halliday"
+date: "Fall 2015"
+output: 
+  html_document:
+    css: ./stylesheets/styles.css
+---
+
+
+###Pre-requisites
+ECO254 requires you to have completed ECO250 and ECO220/MTH220. You need to have completed the courses for at least some of the following reasons: 
+
+* We build substantially on consumer theory from ECO250. We will look at various forms of utility functions and experiments that evaluate self-interest. We will also examine human rationality. 
+* We build on choice under uncertainty from ECO250. We  evaluate whether expected utility theory is the best or only description of individual choices with risk and compare it with prospect theory. 
+* We will employ the knowledge you obtained from ECO220/MTH220 about means, standard deviation, correlation, probability distributions and regression analysis with one or more variables in order to understand results from economic experiments. 
+* We will employ the practical skills you developed from ECO220/MTH220 in using a statistical software package like R or Stata to produce graphical and statistical output that is relevant to the questions we evaluate. 
+
+As calculus is a pre-requisite for ECO250, I shall assume that you are comfortable with calculus and algebra. 
+
+Game theory (with Prof Miller or while abroad) is a recommended course to have taken, but not a pre-requisite. 
+
+###Learning Goals
+I separate learning goals into goals with different verbs: *know*, *understand*,  *comprehend*, *analyze*, *synthesize*, *do*, etc. 
+
+- _Know_ the virtues and limitations of the rational actor model and its application to choice theory and the behavioral sciences. 
+- _Understand_ the role of economics as a constituent of the behavioral sciences 
+- _Ask_ meaningful questions with important potential answers
+- _Analyze_ data from experiments and surveys to answer questions relevant to the behavioral sciences
+- _Synthesize_ different ideas, theories and empirics within the behavioral sciences
+- _Design_ well conceived experiments and surveys to _answer_ important questions
+- _Do_ rigorous data analysis to _comprehend_ relevant data
+
+
+###Texts
+Required text: Edward Cartwright, 2011, [*Behavioral Economics*](http://www.routledge.com/books/details/9780415737616/), 2nd Edition, Routledge Advanced Texts in Economics and Finance, Taylor and Francis.  
+The companion website for the book is  [here](http://www.routledgetextbooks.com/textbooks/9780415737647/default.php). At the book's website you'll see quizzes, flashcards, and worked examples. 
+
+Supplementary texts: 
+- Charles Plott, 2007, [*Markets, Games and Strategic Behavior*](http://www.amazon.com/Markets-Games-Strategic-Behavior-Charles/dp/0321419316/ref=sr_1_1?ie=UTF8&qid=1435175629&sr=8-1&keywords=markets+games+strategic), Pearson. Note, a draft .pdf of this book is available [various](http://harbaugh.uoregon.edu/Readings/expbooknsf.pdf) [places](http://faculty.cbpp.uaa.alaska.edu/jmurphy/courses/econ333/protected/readings/expbooknsf.pdf) online and I will refer to the draft version most of the time. 
+
+- Daniel Kaplan [*Data Computing: An Introduction to Wrangling and Visualization with R*](), Preview Edition (will be available in the bookstore; not yet available on Amazon).
+##Excel, Stata and R
+
+During the course we will use R to do statistical analysis and produce graphics. R is rated among the top ten most useful programming languages and is growing in use. See for example, this blogpost:  [www.r-bloggers.com/r-6-in-ieee-2015-top-programming-languages-rising-3-places/](http://www.r-bloggers.com/r-6-in-ieee-2015-top-programming-languages-rising-3-places/) We need to do statistical analysis in the course, so you will learn about tidy data, the grammar of graphics and the basics of statistical analysis building on the theoretical knowledge you should have from ECO220 or MTH220. 
+
+We will use Microsoft Excel as a spreadsheet package for this course. You should also be able to use Google Docs as an alternative. I do not recommend MacOS Number: it is strictly inferior to both these alternatives. MS Excel is used in a variety of business, banking and accounting settings and I strongly advise you to improve your knowledge of the software. We will use some of the graphics capabilities of Excel. The following constitutes a non-exhaustive list of the functions we may use: `corr, cov, sum, count, if, sumif, countif, concatenate, stddev, index, match, vlookup`. 
+
+For Help with Excel, Stata or R, I suggest you go to the following links: 
+
+* __Excel, Stata and R__ Princeton's [Data and Statistical Services](http://dss.princeton.edu/training/): They cover topics related to Stata and R and have very helpful annotated screenshots to help you undersand what's going on. They have a helpful comparison document for Stata and R in case you happen to know the one package better than the other. 
+* __R only__ [The Five College Guide to R and R Studio](http://www3.amherst.edu/~nhorton/FiveCollegeR.pdf): Covers the basics of what you want to be able to do in R-studio and R using the mosaic package. Prof. Horton also has a variety of very helpful videos on his webpage at Amherst for [getting started with R](https://www.amherst.edu/people/facstaff/nhorton) (scroll about half-way down the page). He uses the lovely `mosaic` package to make R more accessible. 
+* __Stata and R__ UCLA's Statistics [help pages](http://www.ats.ucla.edu/stat/): they have comprehensive help  [R](http://www.ats.ucla.edu/stat/r/), and for [Stata](http://www.ats.ucla.edu/stat/stata/). I use them regularly as reminders and tutorials.
+* __Stata only__ German Rodriguez's online [Stata tutorial](http://data.princeton.edu/stata/) at Princeton. 
+* __Stata only__ Stata.com's long list of [resources for learning Stata](http://www.stata.com/links/resources-for-learning-stata/). 
+
+__Important__ Make sure you can save an Excel file as a comma separated value (.csv) file so that you can import it easily into either Stata (using the command `insheet`) or R (using the commands `read.csv` or `read.table`). To get help in Stata you can type in `help` followed by the command's name e.g. `help insheet`. To get help in R you can type in `?` followed by the command's name, e.g. `?read.csv`.
+
+__TIP__ If you want to import Stata data (a .dta file)  into R, you should use the `haven` package. 
+
+###Style Guides
+When doing statistical work, it is imperative that you adopt a good style when presenting your work. I recommend that you use a style guide. 
+
+**For R Scripts**: 
+
+*Hadley Wickham has a brief and useful [style guide](http://adv-r.had.co.nz/Style.html "adv-r.had.co.nz/Style.html"). 
+*Google has a very comprehensive style guide for its employees who use R, [Google's R Style Guide]("https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml") (This is viewed as a bit of a gold standard)
+
+**For Stata Do Files**
+Note, I *only* expect you to use do files, I don't expect you to use ado or mata files (they're beyond what I use when I use Stata).
+
+*A basic intro to do files is available at StataCorp, [Ch. 13: Using the Do File Editor]("http://www.stata.com/manuals13/gsw13.pdf")
+*Miwa Nakajo (TAMU) has another great resource on Stata do files at [Instruction to Stata Do File]("http://people.tamu.edu/~mnakajo/stata_dofile.pdf")
+*StataCorp has more do file info here [Ch. 16: Do Files]("http://www.stata.com/manuals13/u16.pdf")
+*Nick Cox has an article in the Stata journal of programming in stata, [Suggestions on Stata Programming Style]("http://www.stata-journal.com/sjpdf.html?articlenum=pr0018"). 
+*Francis Smart also has a great guide on his blog, [My Not So Brief Stata Formatting Guide]("http://www.econometricsbysimulation.com/2013/03/my-not-so-brief-stata-formatting-guide.html")
+*Kit Baum has some comprehensive notes on Stata use [here]("http://fmwww.bc.edu/GStat/docs/StataIntro.pdf")
+
+##Reproducibility and Integrity in Research
+In ECO254, we shall do our best to follow the norms of the Teaching Integrity in Empirical Research ([TIER]("http://www.haverford.edu/TIER/")) 
+project in conjunction with the Open Science Framework ([OSF]("https://osf.io")). 
+
+
+##Quantitative Literacy/Quantitative Reasoning
+“Economics is an empirically oriented discipline. The focus is on explaining and testing our understanding of economic phenomena. Hence, students need an appreciation for an ability to deal with empirical matters.” Siegfried et al 1991, p.216
+
+“The foundation in empirical methods depends on (1) knowing something about the measurement of economic variables (methods of data collection, reliability, etc.); (2) being able to organize, work with, and manipulate data for purposes of comparison; (3) the capacity to test hypotheses with empirical data; and (4) knowing how to interpret the results of various statistical procedures. The quantitative methods course should be reoriented from its almost singular statistical focus to emphasize this wider range of quantitative methods employed by economics.”(ibid. p.216)
+
+###In-class Experiments
+We will use [VEconLab]("http://veconlab.econ.virginia.edu/admin.htm") to run in-class experiments, typically during the Thursday class-times. 
+
+<!--- http://www.ncer.edu.au/data/documents/statatutorial.pdf  
+Not Sure I'm going to use this, but might recommend it somewhere.
+-->
+
+
+###Course Schedule
+Below is a tentative and preliminary course schedule. 
+
+| Date  | Topic   | Reading  | Lab/Experiment | Assignment | 
+|---|---|---|---|---|
+| 9/8-10 |  Intro & Lab 1  |  BE Ch. 1 | -  | b|
+| 9/15-17  |  Heuristics |  BE Ch. 2 |  b |  b|
+| 9/22-24  |  Risk |  BE Ch. 3 | blah   | blah |
+| 9/29-10/1  |  Risk |  BE Ch. 3 | blah   | blah |
+| 10/6-10/8 | Time |  BE Ch. 4 | b   | b |
+| 10/13-10/15 | Time |  BE Ch. 4 | b   | b | 
+| 10/20-10/22  | Learning |  BE Ch. 5 |b   |  b |
+| 10/27-10/29  |  Interacting |  BE Ch. 6| b   | |
+| 11/03  |  Otelia Cromwell Day |  b |b   | b |
+| 11/05  |  Social Preferences |   BE Ch. 7 | b   | b  |
+| 11/10-12 |  Social Preferences |   BE Ch. 7 | b   | b  |
+| 11/17-19 |  Evolution & Culture |  BE Ch. 8 | b   | b|
+| 11/24  |  Happiness & Utility |  BE Ch. 10 |  b  | b |
+| 12/1-3  | BE & Policy  |  BE Ch. 11 | b   | b |
+| 12/8-10  | Presentations |  - |   b | Project Hand-in |
+| 12/15  |  Presentations | -  |  -  |  b |
+
+###Piazza, Questions & Email
+In ECO254 we will use Piazza. Piazza is a website that allows participants to post questions (with their names or anonymously). You can respond to questions other people ask and they can respond to questions you ask. I can also endorse, comment on and add feedback to questions. I strongly encourage you to assist each other online (and preferably to do so with your names) so that I can see if and when you understand or do not understand an idea. Using Piazza also helps to ensure that I do not receive many emails asking the same question (which has happened in the past). If you email me about something already covered on Piazza, I will direct you to Piazza. I will add you all to the Piazza course after which you will receive an email alert and need to create a log-in for Piazza. Many of you probably already have such a log-in (I hope you remember your passwords). 
+
+All of which said, please feel free to email me. Typically, if an email is *not* about course content (which should almost always go on Piazza), then the email will be about something that is particularly relevant to you personally, e.g. you are traveling and will miss class, you need an extension for an assignment, you have a physical or mental health issue that needs to be resolved, etc. I shall always do my best to accommodate you. That said, I receive many, many emails. I try to ensure I get back to you within 24 hours (during the business week) or by Monday (if you emailed over the weekend). Very occasionally, I may miss an email because of reading it on my phone and forgetting to mark it as unread to respond to it later. I apologize in advance if this does happen. 
+
+
+## Extra Credit for Spinelli Center Workshops
+In consultation with Dr. Cat McCune of the Spinelli Quantitative Learning Center, we have devised a program to evaluate and revise your statistical knowledge and to supplement your understanding of Excel and Stata specifically. 
+
+First, to evaluate where you stand, we will use Aleks.com, an online tool, as an initial assessment method for your statistical knowledge. 
+
+Maria is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats. She is currently completing two MA degrees (one in public policy & another in resource economics). She can coach you on the use of Excel, Stata and R. Maria will run the workshops at the Spinelli Center. 
+
+###Revising and Learning Statistics
+There are many resources online for learning or revising statistics. 
+
+*For introductory statistics, [Open Intro Statistics](https://www.openintro.org/stat/?stat_book=os) is a free online textbook paired with R (and `mosaic`) that you can use to revise relevant statistical knowledge and applications.  
+
+* For the use of statistics in experiments, [A First Course in Design and Analysis of Experiments](http://users.stat.umn.edu/~gary/Book.html) is a textbook originally published in 2000 that has gone out of print, but the pdf of which has reverted to the author (Gary Oehlert) and which he has made available free of charge online under a creative commons license. 
+
+###Additional Links and Resources
+
+
+* Rebecca Morton and Kenneth Williams. [From Nature to the Lab: The Methodology of Experimental Political Science and the Study of Causality](http://faculty.som.yale.edu/shyamsunder/ExperimentalEconomics/Nature_to_Lab_manuscript.pdf). Working manuscript.
+* More links
+
+
+###Arbitrary
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+
+
+
+```{r}
+library(ggplot2)
+library(plyr)
+library(reshape2)
+library(dplyr)
+
+#First, I read in the csv as data
+tppdata <- read.csv("mergedpunish.csv")
+#I don't need the pcodes from that data, so I drop them
+tpp2 <- select(tppdata, punishlev, take20, dictatorallocation)
+#I need to get the means of deduction points for each dictator allocation using the `aggregate` command
+tppagg <- aggregate(punishlev ~ dictatorallocation + take20, tpp2, mean)
+#I now call on ggplot to create a graphic of this over each period. 
+ggplot(tppagg, aes(x = dictatorallocation, y = punishlev, fill = factor(take20))) + 
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_fill_discrete(name="Treatment",
+                      breaks = c(0, 1),
+                      labels = c("TP-DG", "T20-TP-DG")) +
+  xlab("Dictator Allocation") + ylab("Mean Deduction Points") 
+
+
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+
+###Group Project
+A major part of your overall grade is based will be based on a group project you complete over the semester. 
+
+| Assessment  | Percentage   | Cumulative  | 
+|---|---|---|
+| Class Participation | 10% | 10% |
+| Response Papers | 10% | 20% |
+| Theory Presentation | 5% | 25% |
+| Take-home Midterm 1| 15% | 40% |
+| Take-home Midterm 2 | 15% | 55% |
+| Group Project | 20% | 75% |
+| Final Presentation | 5% | 80% | 
+| Lab Reports | 20% | 100% |
+
+* Class Participation
+* Response Papers: During the semester, you will select two papers from the reading list and the potential dates at which you can hand them in. 
+* Theory Presentation (in a group): You and fellow group members will take a theory from the textbook and present it to the class. It is important that the theory you cover here be *different* to the theory you cover in your group project in order for you to develop your understanding of more than one topic. 
+* Take-home midterms: You will have one week to complete each take-home midterm exam. Each will involve data analysis, theory from the textbook, or interpretation of experimental results from a published paper. 
+* Group Project: In groups of 4-5 you will consider a question in behavioral economics that you can use an experiment to answer. You will devise an experimental design, compose  instructions, and explain the statistical methods you would use to analyze the data. You will review the relevant literature and explain the theory that pertains to your question. 
+* Final presentation: You and your group members will produce a powerpoint presentation and present your experimental design in class. 
+* Lab reports: You will write two lab reports during the semester based on experiments you participate in during the semester. 
+
+
+###Guideline Questions to Think About Your Group Research Experiment
+ 
+Each member of the class will participate in a group project. In doing so, you will need to think about a research experiment you would like to do (assume you had the funds and other resources to do so). It would be useful for you to write down answers to the following questions, and then iterate by revising your answers as you think about each question, discuss it with your group members, your other colleagues and the instructor. Send me your write up at any stage you wish, and feel free to come and talk to me about it.
+
+1. What is the question you would like to have answered after the experiment? (Your answer should be a single sentence with a question mark at the end.)
+2. What do you know already about the possible answers to the question you have stated above?
+3. What are the various possible ways of finding an answer to the question you have stated above?  Include both experimental and other methods you can think of.
+4. What are the advantages and disadvantages of using an experiment to find an answer?
+5. How important is this question to YOU? What are the chances that the answer you get from the experiment will surprise you or others?  What are the chances that it will change someone’s mind?
+6. How would you conduct the experiment?  (Write down a design and develop instructions.)
+7. Is your experimental design the *simplest possible design* to help answer the question you have stated?
+8. What are the possible outcomes of the experiment? Do the possible outcomes include at least one outcome that will *answer* the question you stated above? What is the chance that you will observe this outcome?
+
+At any stage of your thinking, feel free to go back and revise your earlier answers if you wish to.
+
+###Acknowledgments
+In developing this syllabus, I have drawn on resources from variety of people: Shyam Sunder, Michael Naef, 
+
+
+
+
