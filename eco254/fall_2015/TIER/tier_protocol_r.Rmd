@@ -8,7 +8,7 @@ output:
        css: ../stylesheets/styles.css
 ---
 
-Section I of this protocol describes each of the components that should be included in the documentation for your paper.  Section II describes how these components should be formatted and organized.
+Section 1 of this protocol describes each of the components that should be included in the documentation for your paper.  Section 2 describes how these components should be formatted and organized.
 
 #The components of the documentation
 
@@ -57,7 +57,7 @@ Information an independent researcher would need to understand and use the data 
 
 In some cases, it is also necessary to include information about the file structure (e.g., the delimiters used to separate variables, or, in rectangular files without delimiters, the columns in which the variables are stored).  Any other unique or idiosyncratic aspects of the data that an independent user of the data would need to understand should be explained as well.
 
-You should create one document that serves as a guide to all your metadata.  When completed, this document should be saved in .pdf format, with the name metadata-guide.pdf.  One section, or entry, of this document should be devoted to each of your original data files.  The entry on a particular original data file should begin with a presentation of the source information described above in item (1.).  If the additional information described in item (2.) can be conveniently presented in the metadata-guide.pdf document, then this information should also be included.  If the additional information is voluminous, or if you choose to include any additional documents that contain some of the information that was available with the original data (such as a codebook or users’ guide), then this supplementary information can be stored in additional documents.  In this case, the entry in the metadata-guide.pdf document for the original data file should mention the relevant supplementary documents(s) and describe the information that can be found in them.
+You should create one document that serves as a guide to all your metadata.  When completed, this document should be saved in .pdf format, with the name *metadata-guide.pdf*.  One section, or entry, of this document should be devoted to each of your original data files.  The entry on a particular original data file should begin with a presentation of the source information described above in item (1.).  If the additional information described in item (2.) can be conveniently presented in the *metadata-guide.pdf* document, then this information should also be included.  If the additional information is voluminous, or if you choose to include any additional documents that contain some of the information that was available with the original data (such as a codebook or users’ guide), then this supplementary information can be stored in additional documents.  In this case, the entry in the *metadata-guide.pdf* document for the original data file should mention the relevant supplementary documents(s) and describe the information that can be found in them.
 
 ##Importable data  
 For each of your original data files, you should create a corresponding version that we will call an **importable data file**.  
@@ -66,7 +66,7 @@ The importable data file will usually be a slightly modified version of the orig
 
 For every original data file that is preserved in a format that R can open or import, the importable version should be an exact copy of the original.  
 
-For every original data file that is preserved in a format that R cannot open or import, the importable version of the file should be modified to the minimal extent necessary to R to open or import it.  The necessary modifications will vary depending on the format of the original file.  For example, if the original data file is a spreadsheet that contains explanatory notes at the bottom of the sheet, it will probably be necessary to remove those notes from the importable version of the spreadsheet.  As a second example, if an original data file is formatted for use with a particular type of software other than R (e.g., Stata), it may be necessary to convert the Stata-formatted file either to some kind of delimited text format or to R’s .Rdata format.  Many other cases may arise in practice, but the principle is always the same:  The importable data file should be as nearly identical as possible to the original. No changes should be made to the file other than the minimal modifications required to allow Stata to read the data it contains.
+For every original data file that is preserved in a format that R cannot open or import, the importable version of the file should be modified to the minimal extent necessary to R to open or import it.  The necessary modifications will vary depending on the format of the original file.  For example, if the original data file is a spreadsheet that contains explanatory notes at the bottom of the sheet, it will probably be necessary to remove those notes from the importable version of the spreadsheet.  As a second example, if an original data file is formatted for use with a particular type of software other than R (e.g., Stata), it may be necessary to convert the Stata-formatted file either to some kind of delimited text format or to R’s .Rdata format.  Many other cases may arise in practice, but the principle is always the same:  The importable data file should be as nearly identical as possible to the original. No changes should be made to the file other than the minimal modifications required to allow R to read the data it contains.
 
 Explanations of the changes made to the original data files (if any) when the importable files were constructed should be given in your read-me file (which is described in more detail below).
 
@@ -85,6 +85,16 @@ Your Rmd files will include one or more files that execute each of these phases 
 
 ###Importing
 For the importing phase, the  Rmd file(s) should instruct R to read the data in each of your importable data files, and then save them in R’s .Rdata format.  For example, if you have an importable data file in .csv format, your Rmdfile(s) will include an `read.csv` or `read.table` command that reads the data, and a `save.image` command that saves the data in a .Rdata-formatted file.  (If an importable data file is already in R’s .Rdata format, nothing needs to be done to it during the importing phase.)  
+
+Many help documents exist for importing files into R. Rob Kabacoff has a very useful tutorial at [www.statmethods.net/input/importingdata.html]("http://www.statmethods.net/input/importingdata.html"). 
+
+Alternatively, a new package, `haven` offers commands to import various data files from other statistical packages, such as: 
+
+ - Stata: `read_dta()` 
+ - SAS: `read_sas()`
+ - SPSS: `read_sav()` or `read_por()`
+
+Hadley Wickham explains the use of the package here: [www.r-bloggers.com/haven-0-1-0/]("http://www.r-bloggers.com/haven-0-1-0/").
 
 At the end of the importing phase, you will have a set of data files, all in .Rdata format, containing all the data you will use for your project.  
 
@@ -111,14 +121,14 @@ showing the proportion of observations in each of the possible categories.  For 
 
 If the results presented in your paper were derived from more than one analysis data file, the data appendix should include all of the above information for each of the analysis data files that was used. 
 
-In addition to the data appendix itself, you should also preserve a do-file that generates all the output (frequency tables, bar charts, summary statistics and histograms) presented in the data appendix.
+In addition to the data appendix itself, you should also preserve a Rmd-file that generates all the output (frequency tables, bar charts, summary statistics and histograms) presented in the data appendix.
 
-##Read-me file
-Your documentation should include a read-me file that gives information about all the other files included in the documentation. In particular, the read-me file should:
+##Readme file
+Your documentation should include a readme file that gives information about all the other files included in the documentation. In particular, the readme file should:
 
-- indicate the version of Stata that was used for the project, and list any packages that need to be installed for your Rmd-files to run
+- indicate the version of R that was used for the project, and list any packages that need to be installed for your Rmd-files to run
 
-- explain the structure of the directories in which the documentation is stored (instructions on how the directories should be organized are given below in Part II), and briefly describe each of the files included in the documentation
+- explain the structure of the directories in which the documentation is stored (instructions on how the directories should be organized are given below in Section 2), and briefly describe each of the files included in the documentation
 
 - for every importable data file, this brief description should include an explanation of the modifications that were made to the original data file
 
@@ -150,7 +160,7 @@ All of your original data files should be stored in the "Original data"" directo
 ##Metadata for original data files
 You should create one document that serves as a guide to all your metadata.  When completed, this document should be saved in .pdf format, with the name *metadata-guide.pdf*.  This document should be stored in the top level of the "Metadata" directory.  
 
-The metadata-guide.pdf should consist of one section, or "entry,"" for each of your original data files.  
+The *metadata-guide.pdf* should consist of one section, or "entry,"" for each of your original data files.  
 
 The source information [item (1.) described in Section 1.2 above] should appear at the beginning of the entry for each of your original data files.
 
@@ -162,11 +172,11 @@ If all the relevant information about all of your original data files is present
 All of your importable data files should be stored in the “Importable data” directory.
 
 ##R Markdown files
-All of your do-files (those described above in Section I.D. as well as the one described in Section I.E.) should be stored in the "Command files" directory.  It is helpful to give the do-files names that indicate which part of the project each is used for: importing, processing, analysis, or the data appendix.
+All of your Rmd-files (those described above in Section 1.4. as well as the one described in Section 1.5.) should be stored in the "Command files" directory.  It is helpful to give the Rmd-files names that indicate which part of the project each is used for: importing, processing, analysis, or the data appendix.
 
 ##Data appendix
 The data appendix should be saved in .pdf format, with the name *data-appendix.pdf*.  It should be stored in the top level of the "My Project" directory.
 
 ##Readme file
-The read-me file should be saved in .txt format, with the name readme.txt.  It should be stored in the top level of the "My Project" directory.
+The readme file should be saved in .txt format, with the name readme.txt.  It should be stored in the top level of the "My Project" directory.
 
