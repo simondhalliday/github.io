@@ -1,16 +1,20 @@
 ---
 title: "ECO254 - Behavioral Economics - Syllabus"
 author: "Instructor: Simon Halliday"
-date: "Fall 2015"
+date: "Smith College, Fall 2015"
 output: 
+  html_document:
+    css: ./stylesheets/styles.css
+---
+
+```{r, echo = FALSE}
   #word_document
   #pdf_document: 
   #documentclass: article
   #latex_engine: pdflatex
   #rmarkdown::tufte_handout
-  html_document:
-   css: ./stylesheets/styles.css
----
+```
+
 
 **This syllabus is preliminary and subject to change.**
 
@@ -55,6 +59,9 @@ Please make sure you have completed these surveys by the end of the first week o
 - Your individual background and preferences: [goo.gl/forms/M9DaKh366j]("https://goo.gl/forms/M9DaKh366j")
 - Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny]("https://goo.gl/forms/MKPML7aMny")
 - Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318]("https://moodle.smith.edu/mod/questionnaire/view.php?id=17318")
+
+##Method of Instruction
+The course is a lecture-based course with labs and a substantial amount of student participation and teamwork. Students are expected to prepare the chapter readings for each session and to be able to answer questions about the readings to produce a high quality discussion. Each student is expected to contribute to the discussion. If you do not contribute, I shall encourage you to do so. If you contribute substantially more than anyone else, then I may ask you rather to encourage the engagement of others. We will also employ peer evaluation, though the professor will award grades.
 
 ##Texts
 Copies of these are on reserve at the library. 
@@ -101,11 +108,12 @@ The following table summarizes the different aspects of the course's assessment.
 |---|---|---|
 | Class Participation | 10% | 10% |
 | In-class presentations | 10% | 20% |
-| Take-home Midterm | 30% | 50% |
-| Proposal Presentation | 5% | 55% |
-| Team Project | 30% | 85% |
-| Final Presentation | 5% | 90% | 
-| Experiment Reports | 10% | 100% | 
+| Take-home Midterm | 25% | 45% |
+| Proposal Presentation | 5% | 50% |
+| Team Project | 25% | 75% |
+| Final Presentation | 5% | 80% | 
+| Experiment Reports | 10% | 90% | 
+| Lab exercises | 10% | 100% |
 
 -  *Class Participation*: Class participation will be based on your participation in class, in your group, on Piazza, in the experiments, etc.
 -  *In-class presentations*: During the semester, you will give very brief presentations on topics in the chapters (in pairs or triples). You will be expected to read the original paper, give a brief written summary (to me and posted online for the class as a google doc to which you provide a link) and talk very briefly about the idea in class. There will be sign-up sheets online. 
@@ -114,13 +122,13 @@ The following table summarizes the different aspects of the course's assessment.
 - *Team Project*: In teams of 4-5 you will consider a question in behavioral economics that you can use an experiment to answer. You will devise an experimental design, compose  instructions, and explain the statistical methods you would use to analyze the data. You will review the relevant literature and explain the theory that pertains to your question. **Be sure to sign up for a meeting time with Professor Halliday before fall break**. I shall provide a list of meet-up times on doodle. You will also each answer a survey on your team at the end of the semester. 
 - *Final presentation*: You and your team members will produce a powerpoint presentation and present your experimental design in class. 
 - *Experiment reports (ER)*: You will write two experimental lab reports during the semester based on experiments you participate in during the semester. You pick when to hand them in after each experiment. We will do 4 experiments, you will be expected to hand in the report online by the next class. They are indicated in the provisional schedule by ER1 through ER4. 
+- *Lab Exercises*: There are a variety of end-of-chapter exercises in *Data Computing*. You will regularly submit answers to these ( they are not meant to take longer than 30-60 mins). The exact number of submissions TBD. 
 
 ##In-class Experiments
-We will use [VEconLab]("http://veconlab.econ.virginia.edu/admin.htm") to run in-class experiments, typically during the Thursday class-times. I'm also investigating an alternative platform, [MobLab]("https://www.moblab.com").
-
+We will use [VEconLab]("http://veconlab.econ.virginia.edu/admin.htm") to run in-class experiments, typically during the Thursday class-times. I'm also investigating two alternative platforms: [MobLab]("https://www.moblab.com") and [economics-games]("http://economics-games.com").
 
 ##Moodle & Website
-In general, I will use my site, simondhalliday.github.io/eco254 for content for ECO254. We also have a moodle site where the lecture capture software will automatically send lecture recordings. 
+In general, I will use my site, simondhalliday.github.io/eco254 for content for ECO254. We also have a moodle site where the lecture capture software will automatically send lecture recordings and I will put copies of files that we use in the course. 
 
 ##Guideline Questions to Think About Your Team Research Project
  
@@ -140,8 +148,17 @@ At any stage of your thinking, feel free to go back and revise your earlier answ
 ##Team Formation
 I will put you into teams. I will take your answers to the course survey about your backgrounds -- your majors, the courses you've taken, etc -- to design teams with diverse backgrounds and capabilities. As this is an upper-level course, all of you should have taken the pre-reqs, but the extra courses you've taken will help to improve the diversity of perspectives in your teams. I would recommend that you assign each person in your team a role and either hold roles constant for the semester or occasionally rotate roles to expose people to different tasks. 
 
+##Team Meeting
+Please register for a team meeting with me on Doodle here: [doodle.com/a69htymvp2fserf3]("https://doodle.com/a69htymvp2fserf3").
+I have meeting slots on Tuesday and Thursday of the last two weeks of the semester *before* fall break. 
+
+##Integrity in Empirical Research for your Team 
+When you set up a project, you will need to follow the TIER protocol. 
+The draft protocol for R is available here: [simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r]("https://simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r"). 
+Read it carefully and be sure that you know how to follow the protocol. Set up your project in a Google drive or Dropbox folder that follows the steps in the protocol. 
+
 ##Team Project Deadlines
-You have four deadlines that I have imposed for the Team Research Project. 
+You have four deadlines that I have imposed on your Team Research Project. 
 
 - initial meeting with me before fall break
 - team proposal presentation
@@ -163,6 +180,10 @@ At the middle and end of the semester, you will evaluate each of your fellow tea
 It is important that you differentiate between people who truly worked hard for the good of the group and those you perceived not to be working as hard on group tasks 
 
 (NOTE: If you give everyone pretty much the same score when it is not truly deserved, you will be hurting those who did the most and helping those who did the least)."
+
+Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP]("http://goo.gl/forms/MrWOFxpcfP")
+
+Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G]("http://goo.gl/forms/pLGGQTM66G")
 
 ##Stats Prep & Extra Credit for Spinelli Center Workshops
 Dr. Cat McCune of the Spinelli Quantitative Learning Center and I have devised a program to evaluate and revise your statistical knowledge. The program will also offer workshops on Excel to make sure you have that infrastructure in place before using R. 
@@ -219,7 +240,6 @@ Note, I *only* expect you to use do files, I don't expect you to use ado or mata
 ##Reproducibility and Integrity in Research
 In ECO254, we shall do our best to follow the norms of the Teaching Integrity in Empirical Research ([TIER]("http://www.haverford.edu/TIER/")) 
 project in conjunction with the Open Science Framework ([OSF]("https://osf.io")). 
-
 
 ##Quantitative Literacy/Quantitative Reasoning
 “Economics is an empirically oriented discipline. The focus is on explaining and testing our understanding of economic phenomena. Hence, students need an appreciation for an ability to deal with empirical matters.” Siegfried et al 1991, p.216
