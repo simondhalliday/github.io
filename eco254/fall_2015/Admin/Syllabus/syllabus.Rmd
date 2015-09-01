@@ -96,9 +96,9 @@ Below is a tentative and preliminary course schedule. It is subject to change de
 | 11/05  | Group Presentations |   BE Ch. 7  |  Lab 6   |  Midterm |
 | 11/10-12 |  Social Preferences |   BE Ch. 7 |  Experiment   | -  |
 | 11/17-19 | Social Preferences  |  BE Ch. 7 |  Lab 8   | ER4 |
-| 11/24  |  Happiness & Utility |  BE Ch. 10 |  Lab 9  | - |
-| 12/1-3  | BE & Policy  |  BE Ch. 11 | Lab 10   | - |
-| 12/8-10  | Presentations |  - |  - | Project Hand-in |
+| 11/24  |  Social Preferences |  BE Ch. 10 |  Lab 9  | - |
+| 12/1-3  | Happiness & Utility  |  BE Ch. 11 | No Lab   | - |
+| 12/8-10  | BE & Policy; Presentations |  - |  - | Project Hand-in |
 | 12/15  |  Presentations | -  |  -  |  -  |
 
 ##Assessment
