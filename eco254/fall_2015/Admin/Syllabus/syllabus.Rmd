@@ -40,7 +40,7 @@ As calculus is a pre-requisite for ECO250, I shall assume that you are comfortab
 
 Game theory (with Prof Miller or while abroad) is a recommended course to have taken, but not a pre-requisite. 
 
-**You need to have access to a laptop/notebook for this course we will use them every Thursday either for experiments or data analysis in R. If you need access to one, let me know and we shall do our best to organize one with ETS.**
+**You need to have access to a laptop/notebook for this course. We will use them every Thursday either for experiments or data analysis in R. If you need access to one, let me know and we shall do our best to organize one with ETS.**
 
 ##Learning Goals
 I separate learning goals into goals with different verbs: *know*, *understand*,  *comprehend*, *analyze*, *synthesize*, *do*, etc. 
@@ -181,9 +181,10 @@ It is important that you differentiate between people who truly worked hard for 
 
 (NOTE: If you give everyone pretty much the same score when it is not truly deserved, you will be hurting those who did the most and helping those who did the least)."
 
-Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP]("http://goo.gl/forms/MrWOFxpcfP")
+You can access the evaluation forms here: 
 
-Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G]("http://goo.gl/forms/pLGGQTM66G")
+- Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP]("http://goo.gl/forms/MrWOFxpcfP")
+- Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G]("http://goo.gl/forms/pLGGQTM66G")
 
 ##Stats Prep & Extra Credit for Spinelli Center Workshops
 Dr. Cat McCune of the Spinelli Quantitative Learning Center and I have devised a program to evaluate and revise your statistical knowledge. The program will also offer workshops on Excel to make sure you have that infrastructure in place before using R. 
