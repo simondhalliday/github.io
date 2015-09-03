@@ -52,6 +52,7 @@ I separate learning goals into goals with different verbs: *know*, *understand*,
 - _Synthesize_ different ideas, theories and empirics within the behavioral sciences
 - _Design_ well conceived experiments and surveys to _answer_ important questions
 - _Do_ rigorous data analysis to _comprehend_ relevant data
+- *Recognize* the benefits of *teaching yourself* to do new things. 
 
 ##Course Surveys
 Please make sure you have completed these surveys by the end of the first week of term. 
@@ -93,12 +94,12 @@ Below is a tentative and preliminary course schedule. It is subject to change de
 | 10/20-10/22  | Learning & Info |  BE Ch. 5 | Experiment   |  - |
 | 10/27-10/29  |  Group Interactions |  BE Ch. 6 | Lab 5   | ER3 (T); Prop Pres (Th) |
 | 11/03  |  Otelia Cromwell Day |   -  |  -  |  -  |
-| 11/05  | Group Presentations |   BE Ch. 7  |  Lab 6   |  Midterm |
+| 11/05  | Group Presentations |   BE Ch. 6  |  Lab 6   |  Midterm |
 | 11/10-12 |  Social Preferences |   BE Ch. 7 |  Experiment   | -  |
 | 11/17-19 | Social Preferences  |  BE Ch. 7 |  Lab 8   | ER4 |
-| 11/24  |  Social Preferences |  BE Ch. 10 |  Lab 9  | - |
-| 12/1-3  | Happiness & Utility  |  BE Ch. 11 | No Lab   | - |
-| 12/8-10  | BE & Policy; Presentations |  - |  - | Project Hand-in |
+| 11/24  |  Social Preferences |  BE Ch. 7|  Lab 9  | - |
+| 12/1-3  | Happiness & Utility  |  BE Ch. 10 | No Lab   | - |
+| 12/8-10  | BE & Policy; Presentations |  Ch. 11 |  - | Project Hand-in |
 | 12/15  |  Presentations | -  |  -  |  -  |
 
 ##Assessment
