@@ -6,14 +6,15 @@ output:
 
 #ECO254 - Behavioral Economics
 Professor: Simon Halliday
+**[Syllabus](fall_2015/Admin/Syllabus/syllabus.html)**
 
-#### [Syllabus](syllabus.html)
+## Week 1 
 
-### Week 1 
-
-#### Tuesday
+### Tuesday 8 September
 In-class question about behavioral economics: 
 <iframe src="https://docs.google.com/a/smith.edu/forms/d/1j0vinY1FzSlo7UpYcmOb2xM4zGbf5C5QqKlDjUZznq8/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+*Homework*
 
 On your laptop, follow these steps to install R and the latest version of RStudio. Make sure to install R first!
 
@@ -37,7 +38,7 @@ Google).
     - [Austerity's Spreadsheet Error]("http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error") (Colbert Report Video)
 
 
-#### Thursday
+### Thursday 10 September
 - [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
 - [Markdown Demo File (.html)](markdown-demo.html)
 - [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
