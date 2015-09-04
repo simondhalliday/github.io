@@ -34,7 +34,7 @@ ECO254 requires you to have completed ECO250 and ECO220/MTH220. You need to have
 - We build substantially on consumer theory from ECO250. We will look at various forms of utility functions and experiments that evaluate self-interest. We will also examine human rationality. 
 - We build on choice under uncertainty from ECO250. We  evaluate whether expected utility theory is the best or only description of individual choices with risk and compare it with prospect theory. 
 - We will employ the knowledge you obtained from ECO220/MTH220 about means, standard deviation, correlation, probability distributions and regression analysis with one or more variables in order to understand results from economic experiments. 
-- We will employ the practical skills you developed from ECO220/MTH220 in using a statistical software package like R or Stata to produce graphical and statistical output that is relevant to the questions we evaluate. 
+- We will employ the practical skills you developed from ECO220/MTH220 in using a statistical software package like R (or Stata) to produce graphical and statistical output that is relevant to the questions we evaluate. 
 
 As calculus is a pre-requisite for ECO250, I shall assume that you are comfortable with calculus and algebra. 
 
@@ -46,12 +46,12 @@ Game theory (with Prof Miller or while abroad) is a recommended course to have t
 I separate learning goals into goals with different verbs: *know*, *understand*,  *comprehend*, *analyze*, *synthesize*, *do*, etc. 
 
 - _Know_ the virtues and limitations of the rational actor model and its application to choice theory and the behavioral sciences. 
-- _Understand_ the role of economics as a constituent of the behavioral sciences 
-- _Ask_ meaningful questions with important potential answers
-- _Analyze_ data from experiments and surveys to answer questions relevant to the behavioral sciences
-- _Synthesize_ different ideas, theories and empirics within the behavioral sciences
-- _Design_ well conceived experiments and surveys to _answer_ important questions
-- _Do_ rigorous data analysis to _comprehend_ relevant data
+- *Understand* the role of economics as a discipline in the behavioral sciences 
+- *Ask* meaningful questions with important potential answers
+- *Analyze* data from experiments and surveys to answer questions relevant to the behavioral sciences
+- *Synthesize* different ideas, theories and empirics within the behavioral sciences
+- *Design* well conceived experiments and surveys to *answer* important questions
+- *Find* ways to *wrangle* data and play around with *computing* to derive useful insights
 - *Recognize* the benefits of *teaching yourself* to do new things. 
 
 ##Course Surveys
@@ -151,7 +151,7 @@ I will put you into teams. I will take your answers to the course survey about y
 
 ##Team Meeting
 Please register for a team meeting with me on Doodle here: [doodle.com/a69htymvp2fserf3]("https://doodle.com/a69htymvp2fserf3").
-I have meeting slots on Tuesday and Thursday of the last two weeks of the semester *before* fall break. 
+I have meeting slots on Tuesday and Thursday of the last two weeks of the semester *before* fall break. *Only register for the meetince once your teams are confirmed* (just in case you're very keen).
 
 ##Integrity in Empirical Research for your Team 
 When you set up a project, you will need to follow the TIER protocol. 
@@ -188,11 +188,13 @@ You can access the evaluation forms here:
 - Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G]("http://goo.gl/forms/pLGGQTM66G")
 
 ##Stats Prep & Extra Credit for Spinelli Center Workshops
-Dr. Cat McCune of the Spinelli Quantitative Learning Center and I have devised a program to evaluate and revise your statistical knowledge. The program will also offer workshops on Excel to make sure you have that infrastructure in place before using R. 
+Dr. Cat McCune of the Spinelli Quantitative Learning Center and I have devised a program to evaluate and revise your statistical knowledge in a Spinelli QLC Stats Workshop. The program will also offer workshops on Excel to make sure you have that infrastructure in place before using R. 
 
 In the first week of ECO254, you will need to complete a knowledge survey on Moodle. Your answers on the knowlege survey will provide me and Dr. McCune some insight into what you would want to have revised by the Spinelli Center. Please access the knowledge survey through [Moodle]("https://moodle.smith.edu/mod/questionnaire/view.php?id=17318"). 
 
 Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats. She is currently completing two MA degrees (one in public policy & another in resource economics). She can coach you on the use of Excel and R. Maria will run the workshops at the Spinelli Center. 
+
+The Spinelli Center will give me a list of the people who attend the revision workshops and I will give you extra credit if you do attend the workshops. 
 
 ##Revising and Learning Statistics
 There are many resources online for learning or revising statistics. 
@@ -205,9 +207,9 @@ There are many resources online for learning or revising statistics.
 
 During the course we will use R to do statistical analysis and produce graphics. R is rated among the top ten most useful programming languages and is growing in use. See for example, this blogpost:  [www.r-bloggers.com/r-6-in-ieee-2015-top-programming-languages-rising-3-places/](http://www.r-bloggers.com/r-6-in-ieee-2015-top-programming-languages-rising-3-places/) 
 
-We need to do statistical analysis in the course, so you will learn about tidy data, the grammar of graphics and the basics of statistical analysis building on the theoretical knowledge you should have from ECO220 or MTH220. If you prefer to use Stata you are welcome to, but R is becoming more commonplace and there is more support for its use at Smith. Also, R and RStudio are free so you can access R using RStudio on your own computer. In contrast, Stata is costly and either the college or you yourself will have to pay for R.
+We need to do statistical analysis in the course, so you will learn about tidy data, the grammar of graphics and the basics of statistical analysis building on the theoretical knowledge you should have from ECO220 or MTH220. If you prefer to use Stata you are welcome to, but R is becoming more commonplace and there is more support for its use at Smith. Also, R and RStudio are *free* so you can access R using RStudio on your own computer. In contrast, Stata is costly and either the college or you yourself will have to pay for R. 
 
-We will use Microsoft Excel as a spreadsheet package for this course. You should also be able to use Google Docs as an alternative. I do not recommend MacOS Numbers: it is strictly inferior to both these alternatives. MS Excel is used in a variety of business, banking and accounting settings and I strongly advise you to improve your knowledge of the software. The main use of Excel will be to prepare data for use in R by exporting the data to a csv file. So you know, the following constitutes a non-exhaustive list of the functions I expect you ought to know how to use in Excel for the workplace, but which I shan't go into myself in this course. `corr, cov, sum, count, if, sumif, countif, concatenate, stddev, index, match, vlookup`. 
+We will use Microsoft Excel as a spreadsheet package for this course. You should also be able to use Google Docs as an alternative. I do not recommend MacOS Numbers: it is strictly inferior to both these alternatives. MS Excel is used in a variety of business, banking and accounting settings and I strongly advise you to improve your knowledge of the software. The main use of Excel will be to prepare data for use in R by exporting the data to a csv file. So you know, the following constitutes a non-exhaustive list of the functions I expect you ought to know how to use in Excel for the workplace, but which I shan't go into myself in this course. `corr, cov, sum, count, if, sumif, countif, concatenate, stddev, index, match, vlookup`. (Maria will go through many of these in the Excel Workshop.)
 
 For Help with Excel, Stata or R, I suggest you go to the following links: 
 
@@ -227,17 +229,8 @@ When doing statistical work, it is imperative that you adopt a good style when p
 **For R Scripts**: 
 
 *Hadley Wickham has a brief and useful [style guide](http://adv-r.had.co.nz/Style.html "adv-r.had.co.nz/Style.html"). 
-*Google has a very comprehensive style guide for its employees who use R, [Google's R Style Guide]("https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml") (This is viewed as a bit of a gold standard)
+*Google has a very comprehensive style guide for its employees who use R, [Google's R Style Guide]("https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml") 
 
-**For Stata Do Files**
-Note, I *only* expect you to use do files, I don't expect you to use ado or mata files (they're beyond what I use when I use Stata).
-
-*A basic intro to do files is available at StataCorp, [Ch. 13: Using the Do File Editor]("http://www.stata.com/manuals13/gsw13.pdf")
-*Miwa Nakajo (TAMU) has another great resource on Stata do files at [Instruction to Stata Do File]("http://people.tamu.edu/~mnakajo/stata_dofile.pdf")
-*StataCorp has more do file info here [Ch. 16: Do Files]("http://www.stata.com/manuals13/u16.pdf")
-*Nick Cox has an article in the Stata journal of programming in stata, [Suggestions on Stata Programming Style]("http://www.stata-journal.com/sjpdf.html?articlenum=pr0018"). 
-*Francis Smart also has a great guide on his blog, [My Not So Brief Stata Formatting Guide]("http://www.econometricsbysimulation.com/2013/03/my-not-so-brief-stata-formatting-guide.html")
-*Kit Baum has some comprehensive notes on Stata use [here]("http://fmwww.bc.edu/GStat/docs/StataIntro.pdf")
 
 ##Reproducibility and Integrity in Research
 In ECO254, we shall do our best to follow the norms of the Teaching Integrity in Empirical Research ([TIER]("http://www.haverford.edu/TIER/")) 
@@ -250,7 +243,8 @@ project in conjunction with the Open Science Framework ([OSF]("https://osf.io"))
 
 I will do my best to help you become more quantitatively literate and to help you to become better applied social scientists in your study of behavioral economics. 
 
-
+##Stats Tutors
+Sunday through Thursday nights 7-9pm in Burton 301 there are statistics tutors who are there to help students in MTH/SDS220. But, they can also help you out with using R. You can find out more on the Spinelli Center Website: [www.smith.edu/qlc/tutoring.html#S2]("http://www.smith.edu/qlc/tutoring.html#S2"). 
 
 ##Additional Links and Resources
 
