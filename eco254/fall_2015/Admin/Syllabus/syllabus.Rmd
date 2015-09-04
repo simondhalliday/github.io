@@ -65,18 +65,18 @@ Please make sure you have completed these surveys by the end of the first week o
 The course is a lecture-based course with labs and a substantial amount of student participation and teamwork. Students are expected to prepare the chapter readings for each session and to be able to answer questions about the readings to produce a high quality discussion. Each student is expected to contribute to the discussion. If you do not contribute, I shall encourage you to do so. If you contribute substantially more than anyone else, then I may ask you rather to encourage the engagement of others. We will also employ peer evaluation, though the professor will award grades.
 
 ##Texts
-Copies of these are on reserve at the library. 
+Copies of the required texts are (or will be) available in the Smith Bookstore and are (or will be) on reserve at Neilson Library. The supplementary texts will have copies on reserve at Neilson Library (don't buy them unless you really, really want to).
+
 Required texts: 
 
  - Edward Cartwright, 2011, [*Behavioral Economics*](http://www.routledge.com/books/details/9780415737616/), 2nd Edition, Routledge Advanced Texts in Economics and Finance, Taylor and Francis.  
 The companion website for the book is  [here](http://www.routledgetextbooks.com/textbooks/9780415737647/default.php). At the book's website you'll see quizzes, flashcards, and worked examples. 
 - Daniel Kaplan [*Data Computing: An Introduction to Wrangling and Visualization with R*](data-computing.org), 2015.  
 
-Supplementary/Recommended text(s): 
-Copies of these are on reserve at the Library.
+Supplementary/Recommended text(s):
 
 - Charles Plott, 2007, [*Markets, Games and Strategic Behavior*](http://www.amazon.com/Markets-Games-Strategic-Behavior-Charles/dp/0321419316/ref=sr_1_1?ie=UTF8&qid=1435175629&sr=8-1&keywords=markets+games+strategic), Pearson. Note, a draft .pdf of this book is available [various](http://harbaugh.uoregon.edu/Readings/expbooknsf.pdf) [places](http://faculty.cbpp.uaa.alaska.edu/jmurphy/courses/econ333/protected/readings/expbooknsf.pdf) online and I will refer to the draft version most of the time. 
-- Nicholas J. Horton  and Ken Kleinman, 2015, *Using R and R-studio for Data Management, Statistical Analysis and Graphics*, 2nd Edition, CRC Press (Taylor & Francis Press), Florida, USA. 
+- Nicholas J. Horton  and Ken Kleinman, 2015, [*Using R and R-studio for Data Management, Statistical Analysis and Graphics*]("https://www.crcpress.com/Using-R-and-RStudio-for-Data-Management-Statistical-Analysis-and-Graphics/Horton-Kleinman/9781482237368"), 2nd Edition, CRC Press (Taylor & Francis Press), Florida, USA. 
 
 
 ##Course Schedule
