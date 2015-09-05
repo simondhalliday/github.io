@@ -49,12 +49,12 @@ Google).
 ### No particular date
 Sign up for topic presentations here:
 
-- Chapter 2: [docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing").
-- Chapter 3: [docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing")
-- Chapter 4: [docs.google.com/spreadsheets/d/1fg424AeOBNTP-mTB0Ldf8u6YGcQhGwluI6x4q8MnkCA/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/1fg424AeOBNTP-mTB0Ldf8u6YGcQhGwluI6x4q8MnkCA/edit?usp=sharing"")
-- Chapter 5: [docs.google.com/spreadsheets/d/1FiIqjgV7PcmNJIh0-oRoOxLf5g_y0DTXnvS-jwj2Mr0/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/1FiIqjgV7PcmNJIh0-oRoOxLf5g_y0DTXnvS-jwj2Mr0/edit?usp=sharing")
-- Chapter 6: [docs.google.com/spreadsheets/d/14fd-eZ84u526MVMlWknqkD7Ev8CjPQRbzw3t_17TYkA/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/14fd-eZ84u526MVMlWknqkD7Ev8CjPQRbzw3t_17TYkA/edit?usp=sharing")
-- Chapter 7: [docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing")
-- Chapter 10: [docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing")
-- Chapter 11: [docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing]("https://docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing")
+- Chapter 2: [docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing).
+- Chapter 3: [docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing)
+- Chapter 4: [docs.google.com/spreadsheets/d/1fg424AeOBNTP-mTB0Ldf8u6YGcQhGwluI6x4q8MnkCA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1fg424AeOBNTP-mTB0Ldf8u6YGcQhGwluI6x4q8MnkCA/edit?usp=sharing)
+- Chapter 5: [docs.google.com/spreadsheets/d/1FiIqjgV7PcmNJIh0-oRoOxLf5g_y0DTXnvS-jwj2Mr0/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1FiIqjgV7PcmNJIh0-oRoOxLf5g_y0DTXnvS-jwj2Mr0/edit?usp=sharing)
+- Chapter 6: [docs.google.com/spreadsheets/d/14fd-eZ84u526MVMlWknqkD7Ev8CjPQRbzw3t_17TYkA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/14fd-eZ84u526MVMlWknqkD7Ev8CjPQRbzw3t_17TYkA/edit?usp=sharing)
+- Chapter 7: [docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing)
+- Chapter 10: [docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing)
+- Chapter 11: [docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing)
 
