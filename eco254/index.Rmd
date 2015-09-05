@@ -46,8 +46,7 @@ Google).
 - [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
 
 
-### No particular date
-Sign up for topic presentations here:
+### Topic Presentation Sign-ups:
 
 - Chapter 2: [docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing).
 - Chapter 3: [docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing)
@@ -57,4 +56,18 @@ Sign up for topic presentations here:
 - Chapter 7: [docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing)
 - Chapter 10: [docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing)
 - Chapter 11: [docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing)
+
+###Chapter shared notes
+Each person presenting on a given topic should add their notes/definitions in each shared chapter note section. Other people may add to these notes. 
+
+- Chapter 2: [docs.google.com/document/d/1mOkEsD59_JuuevBZfO4kfCDtdAepEz-a3HOjo2xz--s/edit?usp=sharing](https://docs.google.com/document/d/1mOkEsD59_JuuevBZfO4kfCDtdAepEz-a3HOjo2xz--s/edit?usp=sharing)
+- Chapter 3: [docs.google.com/document/d/1gysWaBqK3j8f2KvIj8B1kkk3VDp3172L4zO1vXNb1Es/edit?usp=sharing](https://docs.google.com/document/d/1gysWaBqK3j8f2KvIj8B1kkk3VDp3172L4zO1vXNb1Es/edit?usp=sharing)
+- Chapter 4: [docs.google.com/document/d/1ck6LHxiOVMzmQMLagcj6tFyNTVVr_vUmibf6JdAjcqw/edit?usp=sharing](https://docs.google.com/document/d/1ck6LHxiOVMzmQMLagcj6tFyNTVVr_vUmibf6JdAjcqw/edit?usp=sharing)
+- Chapter 5: [docs.google.com/document/d/1pdYt-uC6g80N0wMuuWPa3krqM_GqKLzDuN7n-_Lbaos/edit?usp=sharing](https://docs.google.com/document/d/1pdYt-uC6g80N0wMuuWPa3krqM_GqKLzDuN7n-_Lbaos/edit?usp=sharing)
+- Chapter 6: [docs.google.com/document/d/15hWodfWxqaaRjwtMjMeHA5yKWohttswOvj1gY3Lqkc0/edit?usp=sharing](docs.google.com/document/d/15hWodfWxqaaRjwtMjMeHA5yKWohttswOvj1gY3Lqkc0/edit?usp=sharing)
+- Chapter 7: [docs.google.com/document/d/1uBgu2o55ZlOZR2E7CiCj9XX2VdEcUH3krMmLJ3jl38Y/edit?usp=sharing](https://docs.google.com/document/d/1uBgu2o55ZlOZR2E7CiCj9XX2VdEcUH3krMmLJ3jl38Y/edit?usp=sharing)
+- Chapter 10: [docs.google.com/document/d/1ev6fNTCR3iVq8szAjE-GggGAXwTabD0da4_NoCwFHco/edit?usp=sharing](https://docs.google.com/document/d/1ev6fNTCR3iVq8szAjE-GggGAXwTabD0da4_NoCwFHco/edit?usp=sharing)  
+- Chapter 11: [docs.google.com/document/d/1v73QYA8-CtsIvTCQC3PrRO73G165bijfFSsi3qtek6A/edit?usp=sharing](https://docs.google.com/document/d/1v73QYA8-CtsIvTCQC3PrRO73G165bijfFSsi3qtek6A/edit?usp=sharing)
+
+
 

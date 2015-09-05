@@ -57,9 +57,9 @@ I separate learning goals into goals with different verbs: *know*, *understand*,
 ##Course Surveys
 Please make sure you have completed these surveys by the end of the first week of term. 
 
-- Your individual background and preferences: [goo.gl/forms/M9DaKh366j]("https://goo.gl/forms/M9DaKh366j")
-- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny]("https://goo.gl/forms/MKPML7aMny")
-- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318]("https://moodle.smith.edu/mod/questionnaire/view.php?id=17318")
+- Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
+- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
+- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
 
 ##Method of Instruction
 The course is a lecture-based course with labs and a substantial amount of student participation and teamwork. Students are expected to prepare the chapter readings for each session and to be able to answer questions about the readings to produce a high quality discussion. Each student is expected to contribute to the discussion. If you do not contribute, I shall encourage you to do so. If you contribute substantially more than anyone else, then I may ask you rather to encourage the engagement of others. We will also employ peer evaluation, though the professor will award grades.
@@ -76,7 +76,7 @@ The companion website for the book is  [here](http://www.routledgetextbooks.com/
 Supplementary/Recommended text(s):
 
 - Charles Plott, 2007, [*Markets, Games and Strategic Behavior*](http://www.amazon.com/Markets-Games-Strategic-Behavior-Charles/dp/0321419316/ref=sr_1_1?ie=UTF8&qid=1435175629&sr=8-1&keywords=markets+games+strategic), Pearson. Note, a draft .pdf of this book is available [various](http://harbaugh.uoregon.edu/Readings/expbooknsf.pdf) [places](http://faculty.cbpp.uaa.alaska.edu/jmurphy/courses/econ333/protected/readings/expbooknsf.pdf) online and I will refer to the draft version most of the time. 
-- Nicholas J. Horton  and Ken Kleinman, 2015, [*Using R and R-studio for Data Management, Statistical Analysis and Graphics*]("https://www.crcpress.com/Using-R-and-RStudio-for-Data-Management-Statistical-Analysis-and-Graphics/Horton-Kleinman/9781482237368"), 2nd Edition, CRC Press (Taylor & Francis Press), Florida, USA. 
+- Nicholas J. Horton  and Ken Kleinman, 2015, [*Using R and R-studio for Data Management, Statistical Analysis and Graphics*](https://www.crcpress.com/Using-R-and-RStudio-for-Data-Management-Statistical-Analysis-and-Graphics/Horton-Kleinman/9781482237368), 2nd Edition, CRC Press (Taylor & Francis Press), Florida, USA. 
 
 
 ##Course Schedule
@@ -126,7 +126,7 @@ The following table summarizes the different aspects of the course's assessment.
 - *Lab Exercises*: There are a variety of end-of-chapter exercises in *Data Computing*. You will regularly submit answers to these ( they are not meant to take longer than 30-60 mins). The exact number of submissions TBD. 
 
 ##In-class Experiments
-We will use [VEconLab]("http://veconlab.econ.virginia.edu/admin.htm") to run in-class experiments, typically during the Thursday class-times. I'm also investigating two alternative platforms: [MobLab]("https://www.moblab.com") and [economics-games]("http://economics-games.com").
+We will use [VEconLab](http://veconlab.econ.virginia.edu/admin.htm) to run in-class experiments, typically during the Thursday class-times. I'm also investigating two alternative platforms: [MobLab](https://www.moblab.com) and [economics-games](https://economics-games.com).
 
 ##Moodle & Website
 In general, I will use my site, simondhalliday.github.io/eco254 for content for ECO254. We also have a moodle site where the lecture capture software will automatically send lecture recordings and I will put copies of files that we use in the course. 
@@ -150,12 +150,12 @@ At any stage of your thinking, feel free to go back and revise your earlier answ
 I will put you into teams. I will take your answers to the course survey about your backgrounds -- your majors, the courses you've taken, etc -- to design teams with diverse backgrounds and capabilities. As this is an upper-level course, all of you should have taken the pre-reqs, but the extra courses you've taken will help to improve the diversity of perspectives in your teams. I would recommend that you assign each person in your team a role and either hold roles constant for the semester or occasionally rotate roles to expose people to different tasks. 
 
 ##Team Meeting
-Please register for a team meeting with me on Doodle here: [doodle.com/a69htymvp2fserf3]("https://doodle.com/a69htymvp2fserf3").
+Please register for a team meeting with me on Doodle here: [doodle.com/a69htymvp2fserf3](https://doodle.com/a69htymvp2fserf3).
 I have meeting slots on Tuesday and Thursday of the last two weeks of the semester *before* fall break. *Only register for the meetince once your teams are confirmed* (just in case you're very keen).
 
 ##Integrity in Empirical Research for your Team 
 When you set up a project, you will need to follow the TIER protocol. 
-The draft protocol for R is available here: [simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r]("https://simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r"). 
+The draft protocol for R is available here: [simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r](https://simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r). 
 Read it carefully and be sure that you know how to follow the protocol. Set up your project in a Google drive or Dropbox folder that follows the steps in the protocol. 
 
 ##Team Project Deadlines
@@ -184,13 +184,13 @@ It is important that you differentiate between people who truly worked hard for 
 
 You can access the evaluation forms here: 
 
-- Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP]("http://goo.gl/forms/MrWOFxpcfP")
-- Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G]("http://goo.gl/forms/pLGGQTM66G")
+- Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP](http://goo.gl/forms/MrWOFxpcfP)
+- Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G](http://goo.gl/forms/pLGGQTM66G)
 
 ##Stats Prep & Extra Credit for Spinelli Center Workshops
 Dr. Cat McCune of the Spinelli Quantitative Learning Center and I have devised a program to evaluate and revise your statistical knowledge in a Spinelli QLC Stats Workshop. The program will also offer workshops on Excel to make sure you have that infrastructure in place before using R. 
 
-In the first week of ECO254, you will need to complete a knowledge survey on Moodle. Your answers on the knowlege survey will provide me and Dr. McCune some insight into what you would want to have revised by the Spinelli Center. Please access the knowledge survey through [Moodle]("https://moodle.smith.edu/mod/questionnaire/view.php?id=17318"). 
+In the first week of ECO254, you will need to complete a knowledge survey on Moodle. Your answers on the knowlege survey will provide me and Dr. McCune some insight into what you would want to have revised by the Spinelli Center. Please access the knowledge survey through [Moodle](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318). 
 
 Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats. She is currently completing two MA degrees (one in public policy & another in resource economics). She can coach you on the use of Excel and R. Maria will run the workshops at the Spinelli Center. 
 
@@ -229,12 +229,12 @@ When doing statistical work, it is imperative that you adopt a good style when p
 **For R Scripts**: 
 
 *Hadley Wickham has a brief and useful [style guide](http://adv-r.had.co.nz/Style.html "adv-r.had.co.nz/Style.html"). 
-*Google has a very comprehensive style guide for its employees who use R, [Google's R Style Guide]("https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml") 
+*Google has a very comprehensive style guide for its employees who use R, [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) 
 
 
 ##Reproducibility and Integrity in Research
-In ECO254, we shall do our best to follow the norms of the Teaching Integrity in Empirical Research ([TIER]("http://www.haverford.edu/TIER/")) 
-project in conjunction with the Open Science Framework ([OSF]("https://osf.io")). 
+In ECO254, we shall do our best to follow the norms of the Teaching Integrity in Empirical Research ([TIER](http://www.haverford.edu/TIER/)) 
+project in conjunction with the Open Science Framework ([OSF](https://osf.io)). 
 
 ##Quantitative Literacy/Quantitative Reasoning
 “Economics is an empirically oriented discipline. The focus is on explaining and testing our understanding of economic phenomena. Hence, students need an appreciation for an ability to deal with empirical matters.” Siegfried et al 1991, p.216
@@ -244,7 +244,7 @@ project in conjunction with the Open Science Framework ([OSF]("https://osf.io"))
 I will do my best to help you become more quantitatively literate and to help you to become better applied social scientists in your study of behavioral economics. 
 
 ##Stats Tutors
-Sunday through Thursday nights 7-9pm in Burton 301 there are statistics tutors who are there to help students in MTH/SDS220. But, they can also help you out with using R. You can find out more on the Spinelli Center Website: [www.smith.edu/qlc/tutoring.html#S2]("http://www.smith.edu/qlc/tutoring.html#S2"). 
+Sunday through Thursday nights 7-9pm in Burton 301 there are statistics tutors who are there to help students in MTH/SDS220. But, they can also help you out with using R. You can find out more on the Spinelli Center Website: [www.smith.edu/qlc/tutoring.html#S2](http://www.smith.edu/qlc/tutoring.html#S2). 
 
 ##Additional Links and Resources
 
