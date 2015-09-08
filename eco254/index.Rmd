@@ -14,31 +14,31 @@ Professor: Simon Halliday
 ## Week 1 
 
 ### Tuesday 8 September
-In-class question about behavioral economics: 
-<iframe src="https://docs.google.com/a/smith.edu/forms/d/1j0vinY1FzSlo7UpYcmOb2xM4zGbf5C5QqKlDjUZznq8/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+Results of in-class question about behavioral economics: 
+
 
 *Homework*
 
 On your laptop, follow these steps to install R and the latest version of RStudio. Make sure to install R first!
 
-1. Download and install R here: [cran.rstudio.com/]("https://cran.rstudio.com/")
-2. Download and install Rstudio here: [www.rstudio.com/products/rstudio/download/]("https://www.rstudio.com/products/rstudio/download/")
+1. Download and install R here: [cran.rstudio.com/](https://cran.rstudio.com/)
+2. Download and install Rstudio here: [www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
 
 Complete these surveys: 
 
-- Your individual background and preferences: [goo.gl/forms/M9DaKh366j]("https://goo.gl/forms/M9DaKh366j")
-- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny]("https://goo.gl/forms/MKPML7aMny")
-- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318]("https://moodle.smith.edu/mod/questionnaire/view.php?id=17318")
+- Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
+- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
+- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
 
 - Short Reading (if an article is blocked in your browser, search for the title using
 Google).
-    - [Economics Behaving Badly]("http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html"), Loewenstein and Ubel, *New York Times*, 14 July 2010.  
-    - [New Truths that only one can see]("http://www.nytimes.com/2014/01/21/science/new-truths-that-only-one-can-see.html"),
+    - [Economics Behaving Badly](http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html), Loewenstein and Ubel, *New York Times*, 14 July 2010.  
+    - [New Truths that only one can see](http://www.nytimes.com/2014/01/21/science/new-truths-that-only-one-can-see.html),
     *New York Times*,  George Johnson, 20 January 2014. 
-    - [How reliable are psychology studies?]("http://www.theatlantic.com/health/archive/2015/08/psychology-studies-reliability-reproducability-nosek/402466/"), Ed Yong, *The Atlantic*, 27 August 2015.
-    - [Unreliable Research: trouble at the lab]("http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble"), 
+    - [How reliable are psychology studies?](http://www.theatlantic.com/health/archive/2015/08/psychology-studies-reliability-reproducability-nosek/402466/), Ed Yong, *The Atlantic*, 27 August 2015.
+    - [Unreliable Research: trouble at the lab](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble), 
     *The Economist*, 17 October 2013.
-    - [Austerity's Spreadsheet Error]("http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error") (Colbert Report Video)
+    - [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
 
 
 
