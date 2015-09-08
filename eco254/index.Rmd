@@ -6,6 +6,8 @@ output:
 
 #ECO254 - Behavioral Economics
 Professor: Simon Halliday
+
+- Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - Piazza Signup Link: [piazza.com/smith/fall2015/eco254](piazza.com/smith/fall2015/eco254)
 
@@ -41,6 +43,13 @@ Google).
 
 
 ### Thursday 10 September
+Today we shall do an experiment and (if there's time) begint to talk about using R. 
+
+- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
+- I will give you details on this page that you can use to log in. 
+
+
+
 - [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
 - [Markdown Demo File (.html)](markdown-demo.html)
 - [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
@@ -70,4 +79,13 @@ Each person presenting on a given topic should add their notes/definitions in ea
 - Chapter 11: [docs.google.com/document/d/1v73QYA8-CtsIvTCQC3PrRO73G165bijfFSsi3qtek6A/edit?usp=sharing](https://docs.google.com/document/d/1v73QYA8-CtsIvTCQC3PrRO73G165bijfFSsi3qtek6A/edit?usp=sharing)
 
 
+###Chapter Questions and Definitions
 
+- Chapter 2: [docs.google.com/document/d/1237o0s9GHzibZsZLTEKUY1_pQmOhVycnj8yOwCRQFis/edit?usp=sharing](https://docs.google.com/document/d/1237o0s9GHzibZsZLTEKUY1_pQmOhVycnj8yOwCRQFis/edit?usp=sharing)
+- Chapter 3: 
+- Chapter 4: 
+- Chapter 5: 
+- Chapter 6: 
+- Chapter 7: 
+- Chapter 10: 
+- Chapter 11: 
