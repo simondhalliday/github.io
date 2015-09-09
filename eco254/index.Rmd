@@ -15,7 +15,7 @@ Professor: Simon Halliday
 
 ### Tuesday 8 September
 Results of in-class question about behavioral economics: 
-
+![Wordcloud for Behavioral Economics Ideas Exercise](word_cloud.png)
 
 *Homework*
 
