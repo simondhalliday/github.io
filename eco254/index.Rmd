@@ -11,7 +11,31 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - Piazza Signup Link: [piazza.com/smith/fall2015/eco254](https://piazza.com/smith/fall2015/eco254)
 
+## Week 2
+###Tuesday 15 September
+Be sure to read Chapter 2 (I would suggest to the end of 2.5 in Cartwright). 
+
+###Thursday 17 September
+TBD
+
 ## Week 1 
+
+### Thursday 10 September
+Today we shall do an experiment and (if there's time) begin to talk about using R. 
+
+- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
+- I will give you details on this page that you can use to log in. 
+
+Experiment Reports
+
+- Guidelines for the reports are available here: [simondhalliday.github.io/eco254/fall_2015/Admin/exp_reports](https://simondhalliday.github.io/eco254/fall_2015/Admin/exp_reports)
+- The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
+- The data are available in a google spreadsheet here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
+- The data currently have a 'filter' in the first row and they are filtered on the individual ID codes (1 through 28). You can find your ID code and use the ID code to check what behavior you adopted, i.e. your bid or ask. Your cumulative earnings are also recorded. 
+
+- [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
+- [Markdown Demo File (.html)](markdown-demo.html)
+- [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
 
 ### Tuesday 8 September
 Results of in-class question about behavioral economics: 
@@ -39,20 +63,6 @@ Google).
     - [Unreliable Research: trouble at the lab](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble), 
     *The Economist*, 17 October 2013.
     - [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
-
-
-
-### Thursday 10 September
-Today we shall do an experiment and (if there's time) begint to talk about using R. 
-
-- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
-- I will give you details on this page that you can use to log in. 
-
-
-
-- [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
-- [Markdown Demo File (.html)](markdown-demo.html)
-- [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
 
 
 ### Topic Presentation Sign-ups:
