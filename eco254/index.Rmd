@@ -30,7 +30,7 @@ Experiment Reports
 
 - Guidelines for the reports are available here: [simondhalliday.github.io/eco254/fall_2015/Admin/exp_reports](https://simondhalliday.github.io/eco254/fall_2015/Admin/exp_reports)
 - The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
-- The data are available in a google spreadsheet here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
+- The data are available in a google spreadsheet here: [docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing)
 - The data currently have a 'filter' in the first row and they are filtered on the individual ID codes (1 through 28). You can find your ID code and use the ID code to check what behavior you adopted, i.e. your bid or ask. Your cumulative earnings are also recorded. 
 
 - [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
