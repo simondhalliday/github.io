@@ -1,0 +1,96 @@
+---
+title: "Happiness and Your ID"
+author: "Simon Halliday"
+date: "2015-September -15"
+output: html_document
+---
+
+In your class surveys, I asked you the last two digits of your 99 number and your reported happiness between 1 and 5. We can check whether you anchor your 99 numbers at all. 
+
+I first read in the data (the code will be suppressed in the html)
+```{r setup, include=FALSE}
+HappyStudents <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/activities/happiness.csv")
+```
+
+What is the hypothesis? Those people with higher ID numbers will report higher happiness, right? 
+
+So we group people into two categories: 
+
+- High if ID > 50
+- Low if ID < 50
+
+Now group by the two categories and create a graph: 
+```{r firstgraph, message = FALSE, echo = FALSE}
+library(dplyr)
+library(mosaic)
+lvls <- c(0, 50, 100)
+lbls <- c("Low", "High")
+HappyStudents <- 
+  HappyStudents %>%
+  mutate(cats = cut(id, lvls, labels = lbls))
+HappyAverages <- 
+  HappyStudents %>%
+  group_by(cats) %>%
+  summarise(ave_happiness = mean(happyscale))
+HappyAverages %>%
+  ggplot(aes(x = cats, y = ave_happiness, fill = cats)) + 
+  geom_bar(stat = "identity", position = "dodge", fill = c("#7fc97f", "#beaed4")) + 
+  xlab("ID Number < 50 or < 50") + 
+  ylab("Mean Reported Happiness")
+```
+
+These don't look too different. But, let's do a t-test on these to check. 
+
+```{r ttest1, echo = FALSE}
+library(mosaic)
+library(dplyr)
+HappyStudents <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/activities/happiness.csv")
+HappyStudents <- 
+  HappyStudents %>%
+  mutate(bignumber = as.factor(bignumber))
+  t.test(happyscale ~ bignumber, data = HappyStudents)
+```
+So, they are not statistically significantly different (the variable `bignumber` is a categorical variable). 
+
+Or, let's put it into quartiles to check if we're missing something with our aggregation:
+
+- 1st Quartile: 0-24
+- 2nd Quartile: 25-50
+- 3rd Quartile: 51-74
+- 4th Quartile: 75-99
+
+```{r secondgraph, message = FALSE, echo = FALSE}
+library(mosaic)
+library(dplyr)
+HappyStudents <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/activities/happiness.csv")
+HappyStudents <- 
+  HappyStudents %>%
+  mutate(bignumber = as.factor(bignumber))
+levels <- c(0, 25, 50, 75, 100)
+labels <- c("1st", "2nd", "3rd", "4th")
+HappyStudents <- 
+  HappyStudents %>% 
+  mutate(q = cut(id, levels, labels = labels))
+HappyAveQ <- 
+  HappyStudents %>%
+  group_by(q) %>%
+  summarise(ave_happiness = mean(happyscale))
+HappyAveQ %>%
+  ggplot(aes(x = q, y = ave_happiness, fill = q)) + 
+  geom_bar(stat = "identity", position = "dodge", fill = c("#7fc97f", "#beaed4", "#fdc086",
+"#ffff99")) + 
+  xlab("Quartile") + 
+  ylab("Mean Reported Happiness")
+
+```
+
+What about these, should we check for statistical significance? We could also check these for statistical significance. I suspect the sample sizes are too small, but for now we can simply check some baseline statistics for the four categories. 
+
+
+The following command `favstats` gives us the 'favorite' statistics we need to understand our sample (as Mari suspected, we have a small group in the 4th quartile). We want to see how the variable `happyscale` (the scale from 1 to 5) varies for each of the quartiles (labeled as the variable `q`):
+```{r summarygroups}
+favstats(happyscale ~ q, data = HappyStudents)
+```
+
+And that's that for now. 
+
