@@ -21,7 +21,20 @@ Be sure to read Chapter 2 (I would suggest to the end of 2.5 in Cartwright).
 
 
 ###Thursday 17 September
-TBD
+
+We will use these documents as guides, for some of them you will need to log in to Moodle: 
+
+- Installation Guide: [https://moodle.smith.edu/mod/resource/view.php?id=37210](https://moodle.smith.edu/mod/resource/view.php?id=37210)
+
+Watch these videos by Nick Horton (Amherst) as an introduction to R markdown: 
+
+- Video 1: [www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be](https://www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be)
+- Video 2: [www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be](https://www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be)
+
+Prof Horton also has some videos about starting out with  R: 
+
+- Video 1: [www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ](https://www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ)
+- Video 2: [www.youtube.com/watch?v=3Y_i3PxIKfg](https://www.youtube.com/watch?v=3Y_i3PxIKfg)
 
 ## Week 1 
 
