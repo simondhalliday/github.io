@@ -26,7 +26,7 @@ We will use these documents as guides, for some of them you will need to log in 
 
 - Installation Guide: [https://moodle.smith.edu/mod/resource/view.php?id=37210](https://moodle.smith.edu/mod/resource/view.php?id=37210)
 - Tidy Data: [fall_2015/slides/tidy_data](fall_2015/slides/tidy_data)
-- Check your name off here: [https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit#gid=0](https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit#gid=0)
+- Check your name off here: [https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing)
 
 
 Watch these videos by Nick Horton (Amherst) as an introduction to R markdown: 
