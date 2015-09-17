@@ -25,6 +25,7 @@ Be sure to read Chapter 2 (I would suggest to the end of 2.5 in Cartwright).
 We will use these documents as guides, for some of them you will need to log in to Moodle: 
 
 - Installation Guide: [https://moodle.smith.edu/mod/resource/view.php?id=37210](https://moodle.smith.edu/mod/resource/view.php?id=37210)
+- Tidy Data: [fall_2015/slides/tidy_data](fall_2015/slides/tidy_data)
 
 Watch these videos by Nick Horton (Amherst) as an introduction to R markdown: 
 
