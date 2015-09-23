@@ -88,6 +88,14 @@ Google).
     *The Economist*, 17 October 2013.
     - [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
 
+###R Cheat Sheets
+- `ggplot2` and data visualization cheat sheet: [www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
+- data wrangling with `dplyr` cheat sheet: [www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+- "minimal R" for basic stats in R (with `mosaic`, by Randy Pruim - we use pages 3-4 mostly): [cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf](https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf)
+- R Markdown cheat sheet: [www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
+- R markdown reference guide (more comprehensive & assumes more knowledge of, e.g. html): [www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+
 
 ### Topic Presentation Sign-ups:
 
