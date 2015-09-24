@@ -79,24 +79,36 @@ library(DataComputing)</code></pre>
   group_by(year, sex) %&gt;%
   summarise(yearlytotal = sum(count))</code></pre>
 <p>You should now have an object in your “Environment” tab called “Riley”.</p>
+<div id="head" class="section level3">
+<h3>head()</h3>
 <p>For the question in the quiz, you need to use the function <code>head()</code> to find out how many people are called Riley at the top of the data table Riley.</p>
 <pre class="r"><code>head(Riley)</code></pre>
-<pre><code>## Source: local data frame [6 x 3]
-## Groups: year [6]
-## 
-##    year   sex yearlytotal
-##   (int) (chr)       (int)
-## 1  1880     M          41
-## 2  1881     M          47
-## 3  1882     M          54
-## 4  1883     M          45
-## 5  1884     M          47
-## 6  1885     M          58</code></pre>
-<p>Now, we need to <code>filter()</code> this table to create a new data table (I called mine <code>FemRiley</code>) to get a data table that includes only the female cases called Riley.</p>
-<p>Now, for the question in the quiz, you need to find out the dimensions of your DataTable. To find out the dimensions of a data table we use the function <code>dim()</code>:</p>
+</div>
+<div id="favstats" class="section level3">
+<h3>favstats()</h3>
+<p>Run the <code>favstats()</code> function to find the summary statistics of the variable <code>yearlytotal</code> with the data table <code>Riley</code>.</p>
+<p>What is the mean value of <code>yearlytotal</code> rounded to the closest unit?</p>
+</div>
+<div id="filter-and-femriley" class="section level3">
+<h3>filter() and FemRiley</h3>
+<p>Now, we need to <code>filter()</code> this table to create a new data table (I called mine <code>FemRiley</code>) to get a data table that includes only the female cases called Riley. (Don’t forget to use two <code>=</code> signs for your condition, e.g. <code>==</code>):</p>
+<p>Now, for the quiz, we need to find out what the first year was in which a female was called Riley in the data. We can do this by using the <code>head()</code> function on our <code>FemRiley</code> data table.</p>
+</div>
+<div id="dim-of-femriley" class="section level3">
+<h3>dim() of FemRiley</h3>
+<p>For the next question in the quiz you need to find out the dimensions of your DataTable. To find out the dimensions of a data table we use the function <code>dim()</code>:</p>
 <pre class="r"><code>dim(FemRiley)</code></pre>
-<p>For the next question in the quiz, you need to calculate the number of females called Riley in the 1995 (I don’t know what year Riley at Smith was born, but I took an educated guess. Riley, apologies if I got it incorrect.) Once more, use filter to create an object called FemRiley1995 with only those people called Riley and born in 1995 in the object FemRiley1995. You will need to use your insight from the class to do this.</p>
+</div>
+<div id="femriley1995" class="section level3">
+<h3>FemRiley1995</h3>
+<p>For the next question in the quiz, you need to calculate the number of females called Riley in the 1995 (I don’t know what year Riley in ECO254 at Smith was born, but I took an educated guess; Riley, apologies if I got it incorrect.) Once more, use filter to create an object called FemRiley1995 with only those people called Riley and born in 1995 in the object FemRiley1995. You will need to use your insight from the class to do this.</p>
+<p>Display your total in the console (or in your knitted R markdown) calling on the data table’s name:</p>
 <pre class="r"><code>FemRiley1995</code></pre>
+</div>
+<div id="final-aside" class="section level3">
+<h3>Final Aside</h3>
+<p>Note, you could also have just typed <code>View(FemRiley)</code> in the console and scrolled until you got to 1995 to check how many women named Riley were born in that year, rather than creating a new object. But creating a new object is good practise for things yet to come.</p>
+</div>
 
 
 </div>

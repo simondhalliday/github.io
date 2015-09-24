@@ -29,30 +29,44 @@ Riley <-
 
 You should now have an object in your "Environment" tab called "Riley". 
 
+###head()
 For the question in the quiz, you need to use the function `head()` to find out how many people are called Riley at the top of the data table Riley.
-```{r}
+```{r headRiley, results = "hide"}
 head(Riley)
 ```
 
-Now, we need to `filter()` this table to create a new data table (I called mine `FemRiley`) to get a data table that includes only the female cases called Riley. 
+###favstats()
+
+Run the `favstats()` function to find the summary statistics of the variable `yearlytotal` with the data table `Riley`.
+```{r, include = FALSE}
+favstats(yearlytotal, data = Riley)
+```
+What is the mean value of `yearlytotal` rounded to the closest unit?
+
+###filter() and FemRiley
+Now, we need to `filter()` this table to create a new data table (I called mine `FemRiley`) to get a data table that includes only the female cases called Riley. (Don't forget to use two `=` signs for your condition, e.g. `==`):
 ```{r FemRiley, include = FALSE}
 FemRiley <- 
   Riley %>% 
   filter(sex == "F")
 FemRiley
 ```
+Now, for the quiz, we need to find out what the first year was in which a female was called Riley in the data. We can do this by using the `head()` function on our `FemRiley` data table. 
 
-Now, for the question in the quiz, you need to find out the dimensions of your DataTable. To find out the dimensions of a data table we use the function `dim()`:
+###dim() of FemRiley
+For the next question in the quiz you need to find out the dimensions of your DataTable. To find out the dimensions of a data table we use the function `dim()`:
 ```{r dimFemRiley, results = "hide"}
 dim(FemRiley)
 ```
 
+###FemRiley1995
 For the next question in the quiz, you need to calculate the number of
-females called Riley in the 1995 (I don't know what year Riley at Smith
-was born, but I took an educated guess. Riley, apologies if I got it
-incorrect.) Once more, use filter to create an object called FemRiley1995
-with only those people called Riley and born in 1995 in the object
-FemRiley1995. You will need to use your insight from the class to do this. 
+females called Riley in the 1995 (I don't know what year Riley in ECO254 
+at Smith was born, but I took an educated guess; Riley, apologies if I
+got it incorrect.) Once more, use filter to create an object called
+FemRiley1995 with only those people called Riley and born in 1995 in 
+the object FemRiley1995. You will need to use your insight from the class
+to do this. 
 
 ```{r, include = FALSE, results = "hide"}
 FemRiley1995 <- 
@@ -60,9 +74,15 @@ FemRiley1995 <-
   filter(year == 1995)
 ```
 
+Display your total in the console (or in your knitted R markdown) calling on the data table's name:
 ```{r, results = "hide"}
 FemRiley1995
 ```
 
+###Final Aside
+Note, you could also have just typed `View(FemRiley)` in the console and
+scrolled until you got to 1995 to check how many women named Riley were
+born in that year, rather than creating a new object. But creating a new 
+object is good practise for things yet to come. 
 
 
