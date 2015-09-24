@@ -11,6 +11,19 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - Piazza Signup Link: [piazza.com/smith/fall2015/eco254](https://piazza.com/smith/fall2015/eco254)
 
+## Week 3
+###Tuesday 22 September
+- Finish chapter two's content from 2.3 onwards. 
+
+###Thursday 24 September
+We shall talk about Chs 2-4 of Data Computing and get started on a lab: 
+
+- http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab1/Lab1
+- If you need to check the cheat sheets, then there are links lower down the page. 
+- R command structure: [https://moodle.smith.edu/mod/resource/view.php?id=39615](https://moodle.smith.edu/mod/resource/view.php?id=39615)
+- Data verbs: [https://moodle.smith.edu/mod/resource/view.php?id=39616](https://moodle.smith.edu/mod/resource/view.php?id=39616)
+
+
 ## Week 2
 ###Tuesday 15 September
 Be sure to read Chapter 2 (I would suggest to the end of 2.5 in Cartwright). 
