@@ -1,0 +1,68 @@
+---
+title: "Quiz 1"
+author: "Simon Halliday"
+date: "2015-September -24"
+output: html_document
+---
+
+Load the packages you require: `mosaicData` and `DataComputing`: 
+```{r requirements, message = FALSE}
+library(mosaicData)
+library(DataComputing)
+```
+
+
+I picked a name randomly from the class and got "Riley". We shall investigate a little bit about that name using the `BabyNames` datatable provided in `mosaicData`. 
+
+I ran the following command to create a data table called `Riley` to
+provide a table with the total of all people called Riley in the `BabyNames` data table.
+
+Copy and paste this command into your console or R markdown in a data
+chunk and run it. 
+```{r Riley}
+Riley <- 
+  BabyNames %>%
+  filter(name == "Riley") %>%
+  group_by(year, sex) %>%
+  summarise(yearlytotal = sum(count))
+```
+
+You should now have an object in your "Environment" tab called "Riley". 
+
+For the question in the quiz, you need to use the function `head()` to find out how many people are called Riley at the top of the data table Riley.
+```{r}
+head(Riley)
+```
+
+Now, we need to `filter()` this table to create a new data table (I called mine `FemRiley`) to get a data table that includes only the female cases called Riley. 
+```{r FemRiley, include = FALSE}
+FemRiley <- 
+  Riley %>% 
+  filter(sex == "F")
+FemRiley
+```
+
+Now, for the question in the quiz, you need to find out the dimensions of your DataTable. To find out the dimensions of a data table we use the function `dim()`:
+```{r dimFemRiley, results = "hide"}
+dim(FemRiley)
+```
+
+For the next question in the quiz, you need to calculate the number of
+females called Riley in the 1995 (I don't know what year Riley at Smith
+was born, but I took an educated guess. Riley, apologies if I got it
+incorrect.) Once more, use filter to create an object called FemRiley1995
+with only those people called Riley and born in 1995 in the object
+FemRiley1995. You will need to use your insight from the class to do this. 
+
+```{r, include = FALSE, results = "hide"}
+FemRiley1995 <- 
+  FemRiley %>% 
+  filter(year == 1995)
+```
+
+```{r, results = "hide"}
+FemRiley1995
+```
+
+
+
