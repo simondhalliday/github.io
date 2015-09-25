@@ -86,3 +86,35 @@ born in that year, rather than creating a new object. But creating a new
 object is good practise for things yet to come. 
 
 
+###Bonus Graphic: Kerry over time
+Let's move away from Riley and pick another person's name from class,
+"Kerry". We can see how the totals of males and females named Kerry has
+changed over time. 
+
+The code below shows what we'd need to do to get the data for the name
+Kerry and then put it into a ggplot (we start to use `ggplot` next week
+for visualization; this graphic is here purely for you to look at what
+you think might be going on). Also, if you want to, you can substitute
+each instance of the name "Kerry" in the codebloc for a name that you
+want to investigate to see what has happened to that name over time. 
+You'll notice that some names are *never* used for males and some names 
+are *never* used for females (unlike Riley, Kerry or Darcy), try Kitty,
+Paula, Hera or Mariko to see what I mean. 
+
+```{r}
+Kerry <- 
+  BabyNames %>%
+  filter(name == "Kerry") %>%
+  group_by(year, sex) %>%
+  summarise(yearlytotal = sum(count))
+Kerry %>%
+  ggplot(aes(x = year, y = yearlytotal, color = sex)) +
+  geom_line(size = 0.8) +
+  ylim(0, NA) +
+  ylab("Yearly Totals of the Name Kerry") +
+  xlab("Year") +
+  scale_color_discrete(name="Sex",
+                         breaks=c("F", "M"),
+                         labels=c("Female", "Male")) +
+  theme_bw()
+```
