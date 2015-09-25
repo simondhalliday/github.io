@@ -11,6 +11,16 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - Piazza Signup Link: [piazza.com/smith/fall2015/eco254](https://piazza.com/smith/fall2015/eco254)
 
+## Week 4
+###Tuesday 29 September
+
+- Be sure to complete the first R quiz here: [https://moodle.smith.edu/mod/quiz/view.php?id=39737](https://moodle.smith.edu/mod/quiz/view.php?id=39737)
+- We will start on Chapter 3 in class. Please make sure you're signed up for topics to discuss in class. 
+
+###Thursday 1 October
+
+- Nothing yet
+
 ## Week 3
 ###Tuesday 22 September
 - Finish chapter two's content from 2.3 onwards. 
