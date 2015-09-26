@@ -1,0 +1,78 @@
+---
+title: 'Exercises: Chapters 1 to 4'
+author: "Simon Halliday"
+date: "Due: 8 October"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+##Basics
+In this set of exercises, you will consult the book and provide your answers using this R Markdown document as a template. I will provide some additional instructions below in *italics*. You can access the RMarkdown version of this file here: [simondhalliday.github.io/ecos54/fall_2015/exercises/exercises1-4.Rmd](https://simondhalliday.github.io/ecos54/fall_2015/exercises/exercises1-4.Rmd)
+
+##Chapter 1 Exercises
+###Problem 1.2
+
+a. 
+b. 
+c.
+d.
+e. 
+
+##Chapter 2 Exercises
+
+###Problem 2.3 
+*Remember to load the relevant packages that you need to answer this question.*
+
+###Problem 2.7 
+
+a. 
+b. 
+c.
+d.
+e. 
+
+###Problem 2.9
+*Remember to load the relevant packages that you need to answer this question.*
+
+a. 
+b. 
+c.
+d.
+e. 
+
+##Chapter 3 Exercises
+
+###Problem 3.2
+
+###Problem 3.3
+
+###Problem 3.6 
+
+
+###Problem 3.6 
+*Simply say which statement (a, b, c, or d) will not produce the same output as the others and explain why.*
+
+
+
+##Chapter 4 Exercises
+###Problem 4.1
+
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
+
+
+###Problem 4.2
+*Simply diagnose the problem in a short phrase.*
+
+a. 
+b. 
+c. 
+d. 
+e. 
+
