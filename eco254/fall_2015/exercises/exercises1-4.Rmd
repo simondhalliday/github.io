@@ -9,7 +9,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 ##Basics
-In this set of exercises, you will consult the book and provide your answers using this R Markdown document as a template. I will provide some additional instructions below in *italics*. You can access the RMarkdown version of this file here: [simondhalliday.github.io/ecos54/fall_2015/exercises/exercises1-4.Rmd](https://simondhalliday.github.io/ecos54/fall_2015/exercises/exercises1-4.Rmd)
+In this set of exercises, you will consult the book and provide your answers using this R Markdown document as a template. I will provide some additional instructions below in *italics*. You can access the RMarkdown version of this file here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4.Rmd](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4.Rmd)
+Be sure to change the name of the author to your own name and change the output to `pdf_document` to upload the pdf to Moodle. 
 
 ##Chapter 1 Exercises
 ###Problem 1.2

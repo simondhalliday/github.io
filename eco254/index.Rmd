@@ -19,7 +19,7 @@ Professor: Simon Halliday
 
 ###Thursday 1 October
 
-- Nothing yet
+- Check out the set of exercises for Chapters 1 to 4 of *Data Computing* here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4) The exercises will be due online on Moodle on 8 October. 
 
 ## Week 3
 ###Tuesday 22 September
