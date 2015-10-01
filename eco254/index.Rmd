@@ -19,6 +19,9 @@ Professor: Simon Halliday
 
 ###Thursday 1 October
 
+- We're doing Experiment 2 today. 
+- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
+- I will give you details on this page that you can use to log in.
 - Check out the set of exercises for Chapters 1 to 4 of *Data Computing* here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4) The exercises will be due online on Moodle on 8 October. 
 
 ## Week 3
@@ -118,6 +121,8 @@ Google).
 - R Markdown cheat sheet: [www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 - R markdown reference guide (more comprehensive & assumes more knowledge of, e.g. html): [www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 
+###Suggestions for your research project
+Go to the following page: [simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
 
 ### Topic Presentation Sign-ups:
