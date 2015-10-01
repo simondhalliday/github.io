@@ -23,6 +23,10 @@ Professor: Simon Halliday
 - Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
 - I will give you details on this page that you can use to log in.
 - Check out the set of exercises for Chapters 1 to 4 of *Data Computing* here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4) The exercises will be due online on Moodle on 8 October. 
+- The graphic from the experiment is here: [https://moodle.smith.edu/mod/resource/view.php?id=42294](https://moodle.smith.edu/mod/resource/view.php?id=42294)
+- Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
+- Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
+
 
 ## Week 3
 ###Tuesday 22 September
