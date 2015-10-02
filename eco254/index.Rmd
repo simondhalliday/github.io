@@ -26,7 +26,7 @@ Professor: Simon Halliday
 - The graphic from the experiment is here: [https://moodle.smith.edu/mod/resource/view.php?id=42294](https://moodle.smith.edu/mod/resource/view.php?id=42294)
 - Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
 - Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
-
+- I strongly recommend that you read Chapters 4 and 7 of the Charles Plott book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
 
 ## Week 3
 ###Tuesday 22 September
