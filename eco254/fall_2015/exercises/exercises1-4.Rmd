@@ -13,7 +13,7 @@ In this set of exercises, you will consult the book and provide your answers usi
 Be sure to change the name of the author to your own name and change the output to `pdf_document` to upload the pdf to Moodle. 
 
 ##Chapter 1 Exercises
-###Problem 1.2
+###Problem 1.1
 
 a. 
 b. 
@@ -28,13 +28,21 @@ e.
 
 ###Problem 2.7 
 
+1. 
+2.
+3. 
+4. 
+5. 
+
+###Problem 2.8
+
 a. 
 b. 
 c.
 d.
 e. 
 
-###Problem 2.9
+###Problem 2.10
 *Remember to load the relevant packages that you need to answer this question.*
 
 a. 
@@ -49,7 +57,7 @@ e.
 
 ###Problem 3.3
 
-###Problem 3.6 
+###Problem 3.4 
 
 
 ###Problem 3.6 
