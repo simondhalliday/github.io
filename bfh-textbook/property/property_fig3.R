@@ -17,6 +17,7 @@ indiffcurveA3 <- function(x, U = 7.156591, A = 1, a = 0.5) {
   ((((U)/A)*(1/x)^a)^(1/(1-a)))
 }
 
+#These functions are for testing a couple of things while troubleshooting the polygon
 invParetoEfficient1 <- function(x) {
   14 - (3/2)*x
 }
@@ -30,7 +31,7 @@ invParetoEfficient2 <- function(x) {
 #Aisha's utility (8^0.5)*(2^0.5) = 4
 #Betty's utility (2^0.5)*(13^0.5) = 5.09
 
-#COL <- c("#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#A6761D", "#666666")
+
 COL <- c("#7fc97f", "#beaed4", "#fdc086", "#ffff99")
 COLA <- c("#99d8c9","#66c2a4","#41ae76", "#238b45", "#005824")
 par(mar =  c(6, 4, 4, 4))
@@ -61,9 +62,6 @@ xx1 <- seq(xlims[1], xlims[2], length.out = npts)
 
 yy1 <- indiffcurveA2(xx1, U = 4, A = 1, a = 0.5)
 yy2 <- invParetoEfficient1(xx1)
-#polygon(c(xx1, xx1[400]), c(yy1, yy1[400]), col=COL[3], density=NULL, border = NA)
-
-
 
 #Draw the lines for the graphs
 lines(xx1, indiffcurveA1(xx1), col = COLA[3], lwd = 4)
@@ -89,22 +87,24 @@ arrows(6.2, -1.6, 9, -1.6, xpd = TRUE, length=0.1,angle=40,lwd=3)
 text(9.6, 0.9, expression(u[1]^A))
 text(9.6, 2.2, expression(u[2]^A))
 text(9.6, 5.9, expression(u[3]^A))
-#text(16, 0.52, expression(paste("Nash Equilibrium")))
 
-points(1.34, 12, pch = 16, col = "black", cex = 1.5)
+#Perhaps useful point to label the unused intersection of the participation constraints
+#points(1.34, 12, pch = 16, col = "black", cex = 1.5)
 
 #Line to label B's endowment
 #segments(0, 13, 2, 13, lty = 2, col = "darkgray", lwd = 2)
 #segments(2, 0, 2, 13, lty = 2, col = "darkgray", lwd = 2)
 
+
 #Set up second axes and labels
 
 par(new = TRUE)
-#par(mar =  c(6, 4, 4, 4))
 
+#Use the same x and ylims as previously, but with locations switched
 xlims2 <- c(10, 0)
 ylims2 <- c(15, 0)
 
+#Leave the ylab and xlab blank to ensure no axes titles
 plot(0, 0, xlim = xlims2, ylim = ylims2, type = "n",
      xlab = expression(paste("")),
      ylab = expression(paste("")),
@@ -115,6 +115,7 @@ plot(0, 0, xlim = xlims2, ylim = ylims2, type = "n",
      xaxs="i", 
      yaxs="i")
 
+#Set up axes at sides 3 and 4 (top and right)
 axis(side = 3, at = ticksx, pos = 0, labels = xlabels)
 axis(side = 4, at = ticksy, pos = 0, labels = ylabels, las = 0)
 mtext("B's Apples, x", side=3, line = 2.5, cex = axislabelsize)
@@ -125,7 +126,7 @@ arrows(-0.8, 10, -0.8, 14, xpd = TRUE, length=0.1,angle=40,lwd=3)
 arrows(6.2, -1.8, 9, -1.8, xpd = TRUE, length=0.1,angle=40,lwd=3)
 
 
-
+#Functions for B's indifference curves
 indiffcurveB1 <- function(x, U = 5.09, A = 1, a = 0.5) {
   ((((U-2)/A)*(1/x)^a)^(1/(1-a)))
 }
@@ -152,6 +153,7 @@ text(9.1, 8.2, expression(u[3]^B))
 
 #Add a point for the initial endowment
 points(2, 13, pch = 16, col = "black", cex = 1.5)
+text(1.8, 12.5, expression(e))
 
 #Add point for comparison to participation constraint
 points(6.2, 1.55, pch = 16, col = "black", cex = 1.5)
@@ -159,9 +161,7 @@ text(6.1, 1.2, expression(d))
 
 #Pareto efficiency curve
 segments(4.16, 6.23, 6.73, 10.1, lty = 2, col = "darkgray", lwd = 2)
-
-text(1.8, 12.5, expression(e))
-
+text(4.5, 8.6, expression("Pareto Efficient Curve"))
 
 #Calculate TIOLI power allocation for B
 #mrs(x,y) => pareto efficient curve is (3/2)x = y
@@ -170,7 +170,7 @@ text(1.8, 12.5, expression(e))
 # => x^A = 4/((3/2)^0.5) = 3.27 => x^B = 6.73
 # => y^A = 3/2(x^A) = 4.9 => y^B = 10.1
 
-#Add a point for B's TIOLI power
+#Add point g for B's TIOLI power
 points(6.73, 10.1, pch = 16, col = "black", cex = 1.5)
 text(6.9, 10.3, expression(g))
 
@@ -181,7 +181,7 @@ text(6.9, 10.3, expression(g))
 # => x^B = 5.09/((3/2)^0.5) = 4.16 => x^A = 5.84
 # => y^B = 3/2(x^B) = 6.23 => y^A = 8.77 
 #=> u^A = (5.84^0.5)*(8.77^0.5) = 7.156591
-#Add a point for A's TIOLI power
+#Add point f for A's TIOLI power
 points(4.16, 6.23, pch = 16, col = "black", cex = 1.5)
 text(4, 6, expression(f))
 
@@ -192,7 +192,7 @@ text(1.8, 12.5, expression(e))
 points(4, 10, pch = 16, col = "black", cex = 1.5)
 text(3.8, 9.6, expression(h))
 
-#Polygon and Label for the Pareto-Improving Lens --- darn hard...
+#Polygon and Label for the Pareto-Improving Lens --- haven't figured this out yet
 yy1 <- indiffcurveB2(xx1, U = 5.09, A = 1, a = 0.5)
 yy2 <- invParetoEfficient2(xx1)
 #polygon(c(xx1, xx1[432]), c(yy1, yy1[432]), col="powderblue", density=NULL, border = NA)
