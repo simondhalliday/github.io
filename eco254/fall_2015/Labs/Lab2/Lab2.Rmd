@@ -8,14 +8,6 @@ output:
   pdf_document: default
 ---
 
-```{r requirements, message = FALSE, echo = FALSE}
-require(mosaic)
-require(dplyr)
-require(tidyr)
-require(dygraphs)
-require(xts)
-require(ggthemes)
-```
 ##Learning Outcomes
 
 - Put into practice your knowledge of cases and variables
@@ -31,6 +23,20 @@ require(ggthemes)
 - ... allowing you to superimpose time series line graphs
 
 - Envisioning the skill to develop dynamic graphs like the Federal Reserve uses
+
+
+##Loading the packages
+Call on the following packages, using the `install.packages("")` command if necessary. 
+```{r requirements, message = FALSE}
+require(mosaic)
+require(dplyr)
+require(tidyr)
+require(dygraphs)
+require(xts)
+require(ggthemes)
+```
+
+
 
 ##Levels of Labor Force Participation
 The Federal Reserve Bank, St. Louis has an economic research branch called
@@ -73,9 +79,7 @@ files.
 
 You should go through the following process: 
 
-- Download the Excel file `labor_force_participation.xls` from the course
-website 
-[simondhalliday.github.io/eco254](http://simondhalliday.github.io/eco254). 
+- Download the Excel file `labor_force_participation.xls` from the following url:[https://drive.google.com/file/d/0B9jjwkjdUJU7R2hXVGtvTEZmLVU/view?usp=sharing](https://drive.google.com/file/d/0B9jjwkjdUJU7R2hXVGtvTEZmLVU/view?usp=sharing) 
 
 - Open the file in MS Excel and save the file as a .csv file. 
 
@@ -88,9 +92,7 @@ Participation <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.i
 ```
 
 ##Getting R to see Dates
-But, we face a problem. MS Excel does funny things to dates that most computer
-programs other than Excel dislike. This can be solved in a variety of different
-ways. We shall solve it using the function `mutate`:
+Remember that R needs to be told a variable is a date. We shall solve it using the function `mutate` as we did previously:
 ```{r mutate_date}
 Participation <- 
   Participation %>%
@@ -106,7 +108,9 @@ understand the power of R.
 Let's use these data to create two graphs, one for each of men and women. 
 You can use many commands to generate graphs in R, but we shall use the
 `ggplot` command. If you want to search for help, you need to look for
-"ggplot2" because an old version of `ggplot` existed. 
+"ggplot2" because an old version of `ggplot` existed. Remember to look for
+help simply put a question mark `?` in front of a command's name, e.g. 
+`?ggplot2`.
 
 To generate a graph in `ggplot` you first need to tell R what data you want to
 use. We shall do this by putting the data on a line _before_ we call on the
@@ -114,40 +118,36 @@ ggplot command and we shall follow the name of the data with the following
 symbol: `%>%`. The `%>%` symbol is called a __pipe__ in programming, statistics
 or econometrics. You should read the pipe as saying "Then" or "And then". 
 
-I like the to think of my programs that 
-include the pipe as stories told by a 6-year-old:
-
-<img src="more/and_then_kid.png" height="400px" width="300px" align="middle"/>
-
-That way, I don't get confused about what it means because I always
-get the functions in the right sequence. 
-
-
-
-So the command we will use to tell Shiny what data to use is the following: 
-```{r data_pipe, eval = FALSE}
-Participation %>%
-```
-
 Next we will add in the call to `ggplot` and tell it that the x-axis maps to a
-date and that the y-axis maps to a measure of the female participation rate:
+date and that the y-axis maps to a measure of the female participation rate. 
+
+You will get an error if you try to knit this in a chunk without the option `eval = FALSE` in the curly brackets after a comma after `{r}`, e.g. `{r, eval = FALSE}`. By including this command you are telling RMarkdown *not* to evaluate the command as an actual command, but simply to print it. We're doing it here to add things together step by step. 
+
 ```{r data_ggplot, eval = FALSE}
 Participation %>% 
   ggplot(aes(x = date, y = female))
 ```
 
-But we haven't yet told `ggplot` what kind of plot we want. We want a line
-plot. To make a plot we have to specify a kind of `geom` for `ggplot`. A 
+For your reference, the line above would be the equivalent of doing the following: 
+```{r ggplot no pipe, eval = FALSE}
+ggplot(Participation, aes(x = date, y = female))
+```
+
+The commands above won't do anything yet because we haven't yet told `ggplot` 
+what kind of plot we want. We want a line plot. To make a plot we have to 
+specify a kind of `geom` for `ggplot`. A 
 `geom` is a type of object that talks to R and says "Make Me A Line Plot" 
 or "Make Me A Scatter Plot" or "Make Me a Density Plot". We shall use
-`geom_line` as a line graph is the one we want. 
+`geom_line` as a line graph is the one we want. Check the notes on using
+`ggplot` if you want to be sure of this. 
 
 Now, `ggplot` also needs you to end each line with a `+` sign. Think back 
-to the 6-year-old: she might say 'and' a lot. We have to treat ggplot like a
+to the 6-year-old from Lab 1 who was telling you about the `%>%` symbol: 
+she might say 'and' a lot. We have to treat ggplot like a
 6-year-old who says 'and' a lot. So it doesn't just want to be told what the
 x-axis and y-axis are, it also needs to be told "and I want a line plot".
 
-```{r}
+```{r first ggplot}
 Participation %>% #Put in data data and then...
   ggplot(aes(x = date, y = female)) + #ggplot x and y AND
   geom_line() #I want a line plot
@@ -156,17 +156,17 @@ Participation %>% #Put in data data and then...
 I have created the graph for women below again, but with a label for the 
 y-axis and a different background. 
 ```{r participation_female}
-#Female Partipction Rate Graph
+#Female Participation Rate Graph
 Participation %>%
   ggplot(aes(x = date, y = female)) +
   geom_line() +
-  ylab("Female Labor Force Partipation Rate") +
-  theme_bw()
+  ylab("Female Labor Force Partipation Rate") + #This is a label for the y-axis
+  theme_bw() #this is a "theme" for the ggplot from the ggthemes package
 ```
 
 -   Now it's your turn. Use the commands you've learned so far to create a graph for the labor force participation rate of men. Your graph should look like the one below. 
 
--   You only need to change one part of the code!
+-   You only need to change two parts of the code. 
 
 ```{r participation_male, echo  = FALSE}
 #Male Participation Rate Graph
@@ -177,11 +177,13 @@ ggplot(aes(x = date, y = male)) +
    theme_bw()
 ```
 
+- Is it easy to compare the two graphs? What makes it easier or harder? 
+
 ## Making Data fit for Purpose
 
 As it stands, with the data as it exists in the way we get it from the Federal
 Reserve, we can create the graphs for male and female participation rate
-independently, but we have to stop there. We can'tsuperimpose the male and
+independently, but we have to stop there. We can't superimpose the male and
 female graphs on each other or create facets of them in one command (more on
 faceting later). Why is that? 
 
@@ -195,12 +197,12 @@ data that we have.
 
 -   What is measured in each column in the existing data? 
 
--   Does each column measure a unique variable? 
+-   Does each column measure a *unique* variable? 
 
--   What variable ought we to have in its own column? 
+-   What variables ought we to have in its own columns? Why? 
 
 
-To super-impose the two graphs, we shall change the shape of the data or
+To super-impose the two graphs, we shall change the "shape" of the data or
 `gather` it. `gather` is a very useful command in the `dplyr` package that
 allows us to change the cases and variables we're interested in analyzing. 
 
@@ -247,12 +249,17 @@ graphs did not.
 
 -   Why do you think zero is important to include in the graph?  
 
+You have now created a *static* version of the graph from FRED. Well done!
+
+##Faceting
+
 Another way of presenting graphs is to present them in _facets_ that are
 side-by-side or above each other. `ggplot` allows you to do this easily with
 the option `facet_grid()`. In the ggplot below, we add the option
-`facet_grid(.~sex)` to have R _facet_ the ggplots on the sex variable. 
+`facet_grid(.~sex)` to have R _facet_ the ggplots on the `sex` variable 
+we created with `gather`. 
 
-```{r participation_facet}
+```{r faceting participation_facet}
  Participation2 %>%
    ggplot(aes(x = date, y = rate)) +
    geom_line(size = 0.8) +
@@ -287,13 +294,9 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
                  #colors = RColorBrewer::brewer.pal(5, "Set2"))
 ```
 
-
-Neumark and Postlethwaite look at data about the probability of a woman being
-employed and how it correlates with whether her sister works (and her sister's
-husband earns more than her husband) and whether her sister-in-law works. 
   
-## Bonus: Spreading your data  
-`spread` and `gather` are __complementary__ commands they go in opposite directions.
+## Spreading your data  
+`spread` and `gather` are __complementary__ commands: they go in opposite directions.
 Earlier, we took our data and `gather`ed it so that we had a male and a female rate of
 labor force participation for each year. If, for some odd reason, you wanted to go back
 to the original shape of the data, you can use the command `spread`, which spreads the
@@ -306,4 +309,18 @@ Participation2 %>% #Tell it to put in the data we used for the graphs
   spread(sex, rate) #spread on the key `sex` with the value `rate`
 head(ParticipationSpread) #Check that the data looks like we want it to
 ```
+
+
+##Next steps
+The data that we've looked at above is just on example of a situation in which
+we can visualize data. There are many sources of data out there that you will 
+want to use in your data analysis. In the next part of today's lab you will 
+take a look at importing data from GapMinder.org to draw graphs looking at HIV.
+In it you will learn about using `filter` and `select` in more complicated ways
+than previously. We don't merely have to stipulate what specific variables we 
+want, we can stipulate variables that meet a certain condition, such as 
+starting with a certain letter or word. 
+
+Continue the journey of visualization by going here: 
+[http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.html](http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.html).
 
