@@ -322,5 +322,5 @@ want, we can stipulate variables that meet a certain condition, such as
 starting with a certain letter or word. 
 
 Continue the journey of visualization by going here: 
-[http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.html](http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.html).
+[http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/TidyGapMinder](http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/TidyGapMinder).
 

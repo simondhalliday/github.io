@@ -9,14 +9,25 @@ Professor: Simon Halliday
 
 - Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
-- Piazza Signup Link: [piazza.com/smith/fall2015/eco254](https://piazza.com/smith/fall2015/eco254)
+- [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
+
+
+##Week 5
+###Tuesday 6 October
+- We continue with Chapter 3 (Risk)
+
+###Thursday 8 October
+We'll be doing an R lab today (followed by a quiz online for hand-in the following week).
+
+- Don't forgot to hand in your exercises due today! Hand in on Moodle. 
+- Here's the lab: [http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2](http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2)
+
+Notes:
+
+  + Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=43766](https://moodle.smith.edu/mod/resource/view.php?id=43766)
+  + Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=43768](https://moodle.smith.edu/mod/resource/view.php?id=43768)
 
 ## Week 4
-###Tuesday 29 September
-
-- Be sure to complete the first R quiz here: [https://moodle.smith.edu/mod/quiz/view.php?id=39737](https://moodle.smith.edu/mod/quiz/view.php?id=39737)
-- We will start on Chapter 3 in class. Please make sure you're signed up for topics to discuss in class. 
-
 ###Thursday 1 October
 
 - We're doing Experiment 2 today. 
@@ -27,6 +38,11 @@ Professor: Simon Halliday
 - Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
 - Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
 - I strongly recommend that you read Chapters 4 and 7 of the Charles Plott book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
+
+###Tuesday 29 September
+
+- Be sure to complete the first R quiz here: [https://moodle.smith.edu/mod/quiz/view.php?id=39737](https://moodle.smith.edu/mod/quiz/view.php?id=39737)
+- We will start on Chapter 3 in class. Please make sure you're signed up for topics to discuss in class. 
 
 ## Week 3
 ###Tuesday 22 September
