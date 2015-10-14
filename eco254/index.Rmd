@@ -12,6 +12,14 @@ Professor: Simon Halliday
 - [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
 
+##Week 6 
+###Thursday 15 October
+
+- We will briefly polish one idea from Risk
+- We begin Time Preferences (ch. 4)
+- We will read a short article
+- I hope to show you something new in R very briefly
+
 ##Week 5
 ###Tuesday 6 October
 - We continue with Chapter 3 (Risk)
