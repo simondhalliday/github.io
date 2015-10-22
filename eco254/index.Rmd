@@ -18,6 +18,7 @@ We will talk about the following topics in R today:
 - Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=46463](https://moodle.smith.edu/mod/resource/view.php?id=46463)
 - Joins: [https://moodle.smith.edu/mod/resource/view.php?id=46462](https://moodle.smith.edu/mod/resource/view.php?id=46462) 
 - `group_by` and `summarise` see here: [http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html](http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html)
+and here: [https://moodle.smith.edu/mod/resource/view.php?id=46744](https://moodle.smith.edu/mod/resource/view.php?id=46744)
 - We will spend time on the team projects (we didn't have time for this on Tues) 
 
 - I want you to emphasize the following steps: 
