@@ -11,6 +11,25 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
+##Week 7 
+###Thursday 22 October
+We will talk about the following topics in R today: 
+
+- Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=46463](https://moodle.smith.edu/mod/resource/view.php?id=46463)
+- Joins: [https://moodle.smith.edu/mod/resource/view.php?id=46462](https://moodle.smith.edu/mod/resource/view.php?id=46462) 
+- We will spend time on the team projects (we didn't have time for this on Tues) 
+
+- I want you to emphasize the following steps: 
+    - making sure you have *data* to work with (to bring to later Thursday sessions) 
+    - deciding on the literature with which your project fits to produce a *literature review*
+    - (much later) thinking about the ways in which you can alter/improve on the existing experiments/surveys to improve our overall knowledge
+
+###Tuesday 20 October
+We will do the following: 
+
+- continue with Time chapter
+- spend time working on the class exercise to generate graphs for risk averse, risk-loving and risk neutral actors
+
 
 ##Week 6 
 ###Thursday 15 October
