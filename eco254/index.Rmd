@@ -17,12 +17,15 @@ We will talk about the following topics in R today:
 
 - Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=46463](https://moodle.smith.edu/mod/resource/view.php?id=46463)
 - Joins: [https://moodle.smith.edu/mod/resource/view.php?id=46462](https://moodle.smith.edu/mod/resource/view.php?id=46462) 
+- `group_by` and `summarise` see here: [http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html](http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html)
 - We will spend time on the team projects (we didn't have time for this on Tues) 
 
 - I want you to emphasize the following steps: 
     - making sure you have *data* to work with (to bring to later Thursday sessions) 
     - deciding on the literature with which your project fits to produce a *literature review*
     - (much later) thinking about the ways in which you can alter/improve on the existing experiments/surveys to improve our overall knowledge
+
+Notice, that once we have covered this content, we will have moved up to about Ch. 11 in *Data Computing*. I recommend that you read Chs. 9 through 11 if you want to keep up. 
 
 
 ####ggplot Exercise
