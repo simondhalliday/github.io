@@ -2,10 +2,11 @@
 title: "TIER Protocol 2.0 Beta for R"
 author: "Richard Ball, Simon Halliday and Ben Baumer"
 date: "2015-August -27"
-output: 
+output:    
     html_document: 
        number_sections: true
        css: ../stylesheets/styles.css
+
 ---
 
 Section 1 of this protocol describes each of the components that should be included in the documentation for your paper.  Section 2 describes how these components should be formatted and organized.
@@ -40,13 +41,13 @@ Metadata should be provided for each of your original data files.  The metadata 
 ###Source information
 The source should include the following information  
 
-- a bibliographic citation for the data file, in the style (e.g., APA or Chicago) you have chosen to follow throughout your paper
+- a *bibliographic citation* for the data file, in the style (e.g., APA or Chicago) you have chosen to follow throughout your paper
 
-- a Digitial Object Identifier (DOI), if one has been assigned to the file
+- a *Digitial Object Identifier (DOI)*, if one has been assigned to the file
 
-- the date you downloaded or otherwise obtained the file
+- the *date* you downloaded or otherwise obtained the file
 
-- a verbal description of how you obtained the data file (e.g., the URL from which you accessed the file and the steps you needed to take to download it to your computer)
+- a verbal description of *how* you obtained the data file (e.g., the URL from which you accessed the file and the steps you needed to take to download it to your computer)
 
 ###Additional information
 Information an independent researcher would need to understand and use the data can vary a great deal depending on the nature of the particular data file in question.  Deciding what additional information to provide therefore requires thoughtful consideration and judgment.  In many cases, the relevant information is similar to what is found in a "codebook" or users' guide for a dataset: 

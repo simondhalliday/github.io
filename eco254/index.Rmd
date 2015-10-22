@@ -24,6 +24,31 @@ We will talk about the following topics in R today:
     - deciding on the literature with which your project fits to produce a *literature review*
     - (much later) thinking about the ways in which you can alter/improve on the existing experiments/surveys to improve our overall knowledge
 
+
+####ggplot Exercise
+We are going to do an exercise where we use ggplot to try to reproduce at least one graphic from a published paper. The paper is: 
+
+- Sutter, Matthias. 2009. "Individual Behavior and Group Membership: Comment." American Economic Review, 99(5): 2247-57.
+- download the paper from Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=46730](https://moodle.smith.edu/mod/resource/view.php?id=46730)
+- see the paper's page at the AER here: [https://www.aeaweb.org/articles.php?doi=10.1257/aer.99.5.2247&fnd=s](https://www.aeaweb.org/articles.php?doi=10.1257/aer.99.5.2247&fnd=s)
+- download the data on Moodle here: [https://moodle.smith.edu/mod/folder/view.php?id=46728](https://moodle.smith.edu/mod/folder/view.php?id=46728)
+- see the online appendix for the paper here: [https://www.aeaweb.org/aer/data/feb2013/20101542_app.pdf](https://www.aeaweb.org/aer/data/feb2013/20101542_app.pdf)
+
+Working with the data: 
+
+- You will notice that the data is *not* glyph-ready and it also isn't that tidy. 
+- Ideally, we would work with the spreadsheet as is and import it into R. We're not going to do that, but will create different spreadsheets with different data and *then* import them into R. 
+- Check out the Tier protocol for suggestions. 
+- Put the original data in an 'original data' folder. 
+- Then create a folder with 'Working data' 
+- We will use the data in working data and document what we do in a readme.txt file. 
+
+Also, check out these links for behavioral econ in the press: 
+
+- People don't want equality, they want fairness: [http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/](http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/)
+- Cass Sunstein reviews Akerlof and Shiller's *Phishing for Phools*: [http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/](http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/)
+
+
 ###Tuesday 20 October
 We will do the following: 
 
