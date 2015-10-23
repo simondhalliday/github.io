@@ -11,6 +11,17 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
+##Week 8 
+###Tuesday 27 October
+
+- Be sure to have gone through the ggplot exercise that we started on last week Thursday. 
+- You can see a step-by-step completion of the first part of the exercise in R here: [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis)
+- Once we've completed this exercise, I'll get started on Ch. 5 of Cartwright. 
+- Then we'll spend a bit of time on group-work too. 
+
+
+###Thursday 29 October
+
 ##Week 7 
 ###Thursday 22 October
 We will talk about the following topics in R today: 
