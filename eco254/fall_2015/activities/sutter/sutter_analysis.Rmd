@@ -1,0 +1,64 @@
+---
+title: "Sutter Experimental Data Analysis Part 1"
+author: "Simon Halliday"
+date: "2015-October-22"
+output: html_document
+---
+
+##Loading required packages
+First, be sure to load the packages you require.
+
+- We need `dplyr` to use `summarise` and `group_by`
+- We need `tidyr` for `gather` later. 
+- We also need `ggplot2` for `ggplot`.
+
+```{r requirements, message = FALSE}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+
+##Data Import
+We now need to import the data. You should have edited and cleaned up the Excel file by now. You can alternatively download the csv of the file from Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=46861](https://moodle.smith.edu/mod/resource/view.php?id=46861).
+
+When you call on `read.csv()` be sure to include the file extension  -- .csv -- at the end. Notice we use uppercase letters to name the data table we've prepared. 
+```{r import data}
+SutExp <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutterexperiment.csv")
+```
+
+##Using rename to have consistent variable names
+We want to have consistent naming protocols. So we shall quickly clean the data to make sure that all the variables are consistently labeled with lower case first letters to ensure we don't confuse them with data tables. To do this, we use the `rename()` function. Notice that we can rename several variables in one line of `rename()`: 
+
+```{r renaming}
+SutExp <- 
+  SutExp %>% 
+  rename(session = Session, subject = Subject, r1 = R1, r2 = R2, r3 = R3, r4 = R4, r5 = R5, r6 = R6, r7 = R7, r8 = R8, r9 = R9, treatment = Treatment)
+```
+
+
+
+##summarise and group_by
+Now that we have an object with the data in it called `SutExp`, we want a data table that contains the averages for each treatment for each round. 
+
+- To find the averages we need to use `group_by` and `summarise`.
+- If you want to revise these functions, read Ch. 7 of *Data Computing* to be sure you understand how to use them and what they mean. 
+- As you can see below, we want to `group_by()` with our Treatment variable "treatment"
+- We then need to use `summarise()` to create the *means* of the variable in which we're interested: r1 through r9.
+- Notice that I create variables with lower case names to be consistent with our practice of naming variables in lowercase when we can, e.g. `r1 = mean(r1)`. 
+- Notice too that we can have several functions within one `summarise()` function: we have 9 instances of `mean()` in the use of `summarise()` below: 
+
+```{r summary data}
+groupAves <- 
+  SutExp %>% 
+  group_by(treatment) %>%
+  summarise(r1 = mean(r1), r2 = mean(r2), r3 = mean(r3), r4 = mean(r4), r5 = mean(r5), r6 = mean(r6), r7 = mean(r7), r8 = mean(r8), r9 = mean(r9))
+```
+
+- This is the point at which you will need to make this *wide* data *narrow* before you can turn it into a plot. 
+- To make the data narrow you will need to use the `gather` function. 
+- Check in chapter 11 of *Data Computing* if you want to read up on how to use `gather` or `spread`. 
+
+Once you have narrowed your data you will then be able to call on `ggplot` to plot the data in a sensible way. 
+
+Please be sure to have gone through the process so far by Tuesday 27 October. 
