@@ -20,11 +20,11 @@ library(ggplot2)
 
 
 ##Data Import
-We now need to import the data. You should have edited and cleaned up the Excel file by now. You can alternatively download the csv of the file from Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=46861](https://moodle.smith.edu/mod/resource/view.php?id=46861).
+We now need to import the data. You should have edited and cleaned up the Excel file by now. You can alternatively download the csv of the file from Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=47020](https://moodle.smith.edu/mod/resource/view.php?id=47020).
 
 When you call on `read.csv()` be sure to include the file extension  -- .csv -- at the end. Notice we use uppercase letters to name the data table we've prepared. 
 ```{r import data}
-SutExp <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutterexperiment.csv")
+SutExp <- read.csv("/Users/shalliday/Google Drive/simondhalliday.github.io/eco254/fall_2015/activities/sutter/SutExp.csv")
 ```
 
 ##Using rename to have consistent variable names
