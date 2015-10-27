@@ -20,6 +20,18 @@ Professor: Simon Halliday
 - Once we've completed this exercise, I'll get started on Ch. 5 of Cartwright. 
 - Then we'll spend a bit of time on group-work too. 
 
+`ggplot` exercise continued: 
+
+- you're first going to need to make the data narrow using a key-value pair
+- you'll then need to filter out data that you don't need for the first graph in the paper (i.e. you only want "teamtreat" and "individuals")
+    - to do this, you'll need to use "logical operators". 
+    - A logical operator is like an "and" sign "&"" or an "or" sign "|"
+    - you'll need to use or "|" because you'll want to *keep* those observations in "teamtreat"" or "individual"
+- once you've filtered out the treatments you don't need, you can construct the ggplot code
+
+Other Notes: 
+
+- Check here for the notes on Bayes' Rule and understanding expected utility changes: [simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule](http://simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule)
 
 ###Thursday 29 October
 

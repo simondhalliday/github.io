@@ -1,0 +1,84 @@
+---
+title: "Bayes Rule"
+author: "Simon Halliday"
+date: "2015-October -27"
+output: html_document
+---
+
+##Load packages
+```{r, message = FALSE}
+library(mosaic)
+```
+
+
+##Bayes Rule
+In Chapter 5, Cartwright refers to Bayes' Rule. Let's introduce Bayes' Rule as a function in R. We need a function of the probability that the outcome is true given the "signal" $\theta$, or, phrased differently, given some "data" (often called D.) Therefore, we're looking for something like: 
+
+$$Pr(\mbox{Outcome} | \mbox{signal} = \frac{\theta p}{\theta p - (1 - \theta)(1 - p)}$$
+
+```{r bayes rule function}
+bayesrule <- function(p, theta) {
+  (theta * p) / (theta * p + ( 1 - theta)*(1 - p))
+}
+```
+
+Now that we have a function called `bayesrule()`, we can specify values for theta and p in order to get `bayesrule()` to take the values of theta and p as arguments. Let's use the values Cartwright initially suggests: 
+```{r bayes rule eg1}
+theta <- 0.9
+p <- 0.4 
+bayesrule(p, theta)
+```
+
+If we wanted to, we could substitute in new values for theta and p, as below: 
+```{r bayes rule eg2}
+theta <- 0.7
+p <- 0.5 
+bayesrule(p, theta)
+```
+Notice how when p = 0.5, the probability that the outcome is true is simply the accuracy of the signal (here 0.7). So when you "trust" your friend 70% and you are fifty-fifty in your preferences, you'll be 70% likely to go with what your friend suggests untill you encounter a new signal (or new data).
+
+
+##Models of Choice with uncertainty
+Let's put together a 
+```{r expected utility}
+ufn1 <- function(w){
+  (w)^(0.5)
+}
+wealth <- 0
+winnings <- 2
+u1 <- ufn1(wealth + winnings)
+u2 <- ufn1(wealth)
+p <- 0.6
+exp.u <- function(p, u1, u2) {
+  p*u1 + (1 - p)*(u2)
+}
+exp.u(p, u1, u2)
+```
+
+##Gambler's Fallacy
+The gambler's fallacy: we do not expect many heads (or tails) in a row, even though that could occur totally randomly
+```{r gambler fallacy}
+c1 <- rflip(50)
+c1
+cartwright2 <- data.frame(c("H", "T", "T", "H", "H", "H", "T", "T", "H", "T", "T", "H", "T", "H", "H", "T", "H", "T", "T", "T", "H", "H", "T", "H", "H", "H", "T", "H", "T", "T", "H", "H", "T", "H", "T", "T", "T", "H", "H", "T", "H", "H", "T", "T", "T", "H", "T", "H", "H", "T"))
+colnames(cartwright2) <- c("heads")
+cartwright2
+tally(~ heads, data = cartwright2)
+c3 <- rflip(50)
+c3
+GamblersFal <- do(5000) * rflip(10)
+histogram( ~ heads, data = GamblersFal, width = 1 )
+```
+
+
+
+
+
+##Checking values of Bayes Rule in a Table
+I didn't end up using this. Ignore it. I'm keeping it here for my notes later. 
+```{r ignore}
+theta.tab <- seq(0.1, 1, by = 0.1)
+p.tab <- seq(0.1, 1, by = 0.1)
+ptheta <- data.frame(theta.tab, p.tab)
+```
+
