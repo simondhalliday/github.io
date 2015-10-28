@@ -12,6 +12,16 @@ Professor: Simon Halliday
 - [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
 ##Week 8 
+
+###Thursday 29 October
+
+- You can look at all the steps we'll take with the Sutter data here: 
+[http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2)
+ - We will look at the Wilcoxon test on Thursday as well as the a first attempt at a multiple regression model (my notes may change between now and then)
+ - We shall complete Chapter 5 (leaving out signalling games)
+ - Remember, I announced that we'll exclude Ch. 6 and skip to Ch. 7
+ 
+ 
 ###Tuesday 27 October
 
 - Be sure to have gone through the ggplot exercise that we started on last week Thursday. 
@@ -32,8 +42,6 @@ Professor: Simon Halliday
 Other Notes: 
 
 - Check here for the notes on Bayes' Rule and understanding expected utility changes: [simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule](http://simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule)
-
-###Thursday 29 October
 
 ##Week 7 
 ###Thursday 22 October
