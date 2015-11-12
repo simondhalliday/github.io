@@ -1,0 +1,56 @@
+---
+title: "Marseille"
+author: "Simon Halliday"
+date: "2015-November -11"
+output: html_document
+---
+
+```{r requirements, messages = FALSE}
+library(tidyr)
+library(dplyr)
+library(readr)
+library(ggplot2)
+```
+
+Import the data
+```{r import Marseille}
+Marseille <- read_table("/Users/shalliday/Google Drive/simondhalliday.github.io/bfh-textbook/indmarketdemand/MARS.txt", col_names = FALSE)
+```
+
+Head the data to look at it (it has an issue I haven't been able to resolve yet, but it's fine for our needs):
+```{r check Marseille}
+head(Marseille)
+```
+
+We need to rename the variables to 
+```{r wrangling1}
+Marseille <- 
+  Marseille %>%
+  rename(sellerb = X1, lot = X2, nbuyer = X3, date = X4, buyerc = X5, fish = X6, tempa = X7, tempb = X8) 
+Mars <- 
+  Marseille %>%
+  mutate(weight = tempa/10, price = tempb/100)
+head(Mars)
+```
+
+Don't run this code yourselves, just look at the plot. What does it suggest?  
+```{r AllFishPlot}
+Mars %>% 
+  ggplot(aes(x = weight, y = price)) + 
+  geom_point() + 
+  stat_smooth(method = "lm", formula = y ~ x, size = 1) +
+  ylim(0, 100)
+```
+
+
+```{r MarlanData}
+MarsFish44 <- 
+  Mars %>%
+  filter(fish == 44)
+```
+
+```{r MerlanRegressions}
+m1 <- lm(price ~ weight, data = MarsFish44)
+summary(m1)
+```
+
