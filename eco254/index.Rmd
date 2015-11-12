@@ -11,6 +11,24 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
+##Week 10
+##Thursday 12 November
+Go here for the initial Marseille guide:
+
+- [http://simondhalliday.github.io/eco254/fall_2015/activities/marseille/marseille](http://simondhalliday.github.io/eco254/fall_2015/activities/marseille/marseille)
+
+Download the descriptio of the data here: 
+
+- [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
+- And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
+
+
+
+##Tuesday 10 November
+
+##Week 9 
+
+
 ##Week 8 
 
 ###Thursday 29 October
