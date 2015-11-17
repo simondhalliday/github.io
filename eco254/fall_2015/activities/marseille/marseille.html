@@ -71,9 +71,11 @@ img {
 library(dplyr)
 library(readr)
 library(ggplot2)</code></pre>
-<p>Import the data</p>
+<p>Notice that you may have to install the <code>readr</code> package above.</p>
+<p>Import the data as follows. Notice that this is <em>different</em> to how we’ve historically imported data. This is because the data are in a .txt file and so we can’t use <code>read.csv()</code>. Instead, we use <code>read_table()</code> from the <code>readr</code> package.</p>
 <pre class="r"><code>Marseille &lt;- read_table(&quot;/Users/shalliday/Google Drive/simondhalliday.github.io/bfh-textbook/indmarketdemand/MARS.txt&quot;, col_names = FALSE)</code></pre>
-<p>Head the data to look at it (it has an issue in one column I haven’t been able to resolve yet, but it’s fine for our needs):</p>
+<p>Look at the .txt file. Why do you think we had to specify the option <code>col_names = FALSE</code>?</p>
+<p>Head the data to look at it (it has an issue in one column I haven’t been able to resolve yet, but it’s fine for our needs - can you find the issue?):</p>
 <pre class="r"><code>head(Marseille)</code></pre>
 <pre><code>## Source: local data frame [6 x 8]
 ## 
@@ -104,7 +106,7 @@ head(Mars)</code></pre>
 ## 5       2 18085 MONTLAUR      1002 880102  10090    77   205  3600   20.5
 ## 6       2 18088 MONTLAUR      1002 880102  10090    44    60  1800    6.0
 ## Variables not shown: price (dbl)</code></pre>
-<p>Don’t run this code yourselves (the sample size is huge and I don’t know what your laptops are up to doing), just look at the plot. What does it suggest?</p>
+<p>Don’t run the code below yourselves (the sample size is huge and I don’t know how powerful your laptops are), just look at the plot. What does it suggest?</p>
 <pre class="r"><code>Mars %&gt;% 
   ggplot(aes(x = weight, y = price)) + 
   geom_point() + 
@@ -139,13 +141,17 @@ summary(m1)</code></pre>
 ## Residual standard error: 21.11 on 237159 degrees of freedom
 ## Multiple R-squared:  0.01625,    Adjusted R-squared:  0.01624 
 ## F-statistic:  3917 on 1 and 237159 DF,  p-value: &lt; 2.2e-16</code></pre>
-<p>What does the relationship tell you?</p>
+<ul>
+<li>What is the sign on the for weight?</li>
+<li>What is weight’s significance?</li>
+<li>What does the relationship mean in terms of economic theory?</li>
+</ul>
 </div>
 <div id="filtering-the-fish" class="section level2">
 <h2>Filtering the Fish</h2>
 <p>Consult the Marseille Data Description document to check what the different kinds of fish are.</p>
 <p>I have generated the following graph for one of the kinds of fish (Merlan) by filtering and then graphing the data.</p>
-<p>Filtering for Merlan</p>
+<p>Filtering for Merlan:</p>
 <pre class="r"><code>MarsFish44 &lt;- 
   Mars %&gt;%
   filter(fish == 44)</code></pre>
@@ -184,6 +190,7 @@ summary(OLSMerlan)</code></pre>
 <li>Construct a plot for that fish’s quantity-price observations</li>
 <li>Run a linear regression model of that fish’s price-quantity relationship</li>
 <li>Summarize the regression output.</li>
+<li>Submit your html of this later.</li>
 </ul>
 </div>
 <div id="multiple-regression-with-dummy-variables" class="section level1">
