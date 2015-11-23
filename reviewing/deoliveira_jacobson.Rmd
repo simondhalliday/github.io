@@ -1,0 +1,63 @@
+---
+title: "Comments on De Oliveira and Jacobson"
+author: "Simon Halliday"
+date: "2015-November-23"
+output: ioslides_presentation
+    #css: io2013.css
+    #logo: logo2.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Summary
+
+- Time preferences over outcomes for others is NB for policy
+- Big research gap
+- What about getting others to exert effort instead of you?
+- Does *increasing* social distance affect the weight one gives to another's effort? 
+- Or, does *decreasing* social distance remove information asymmetry about personal characteristics, such as (im)patience? 
+
+## Main Results
+
+1. "Law of Supply": Effort supllied increases with higher price for effort. 
+2. Treatments consistent with now-versus-later at the extremes. 
+3. Separate consideration of own vs. others w.r.t. minute rates (more at moderate rates). 
+4. Separate pool into 0 vs. 60 minute choices: People choose 60 later for others much more often than for themselves. 
+    - driven by strangers not friends
+
+## Initial Comments
+
+- Why the asymmetry of the task rates over 0.5 and 0.75, but increasing up to 4? 
+    - e.g. if you're going up to 4, why not decrease to 0.25? 
+    - Definitely not as symmetrical as Augenblick et al. 2015.
+- Why did you not incentivize the beliefs about others and impatience?
+    - Worry: survey responses differ from incentivized choices
+- Why not have a treatment "Friend-Stranger"?
+    - exclude 'own', just tradeoffs of others
+    - disentangle even more the relationship between 'friend' and 'other'. 
+    
+##Initial Comments 2
+
+- I was amazed at how low the rate of attrition was (3/110 subjects)
+- Why do you assume people are never spiteful? 
+    - Why don't I give you more time in the future for spiteful reasons? 
+    - Plenty of evidence that people can be nasty (e.g. Abbink & Sadrieh, 2009, "The Pleasure of Being Nasty"; among others)
+- What stops a subject from just sitting there and playing on their phone? (you answer this... ish)
+
+
+##Comment: Pairing Data & Samples
+
+- Friend data: are there differences in friend-Gender pairings and perceived differences in patience? 
+    - e.g. M-M; M-F; F-M, F-F. 
+- Slight confusion: I saw that 1 of 100 subjects exerted zero effort (p. 11)
+- But you had 3/110 who didn't return... - And 5/63 completed zero in the return session; I wasn't sure how to add & compare these
+
+## Comment: Friends vs. Strangers
+
+- I wasn't sure from the paper, but I suspect that your questionnaire could have used a question like "How many people in the lab right now are you friends with?"
+    - I'm concerned that 'strangers' may not actually be totally strangers, especially if subjects were asked "to bring friends to the lab"
+    - therefore your estimates may *underestimate* the difference between actual strangers and others 
+    - therefore perhaps provide a *lower bound*? 
+    
