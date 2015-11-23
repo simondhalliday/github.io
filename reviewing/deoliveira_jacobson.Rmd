@@ -64,6 +64,7 @@ knitr::opts_chunk$set(echo = FALSE)
     - I'm concerned that 'strangers' may not actually be totally strangers, especially if subjects were asked "to bring friends to the lab"
     - therefore your estimates may *underestimate* the difference between actual strangers and others 
     - therefore perhaps provide a *lower bound*? 
+    - perhaps regressions should be clustered at the level of the session?
     
         
 ##Other comments
