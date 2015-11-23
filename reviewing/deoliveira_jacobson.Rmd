@@ -52,7 +52,8 @@ knitr::opts_chunk$set(echo = FALSE)
 - Friend data: are there differences in friend-Gender pairings and perceived differences in patience? 
     - e.g. M-M; M-F; F-M, F-F. 
 - Slight confusion: I saw that 1 of 100 subjects exerted zero effort (p. 11)
-- But you had 3/110 who didn't return... - And 5/63 completed zero in the return session; I wasn't sure how to add & compare these
+- But you had 3/110 who didn't return... 
+- And 5/63 completed zero in the return session; I wasn't sure how to add & compare these
 
 ## Comment: Friends vs. Strangers
 
