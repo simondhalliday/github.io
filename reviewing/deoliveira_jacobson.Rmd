@@ -40,20 +40,12 @@ knitr::opts_chunk$set(echo = FALSE)
     - exclude 'own', just tradeoffs of others
     - disentangle even more the relationship between 'friend' and 'other'. 
     - Motivated by your result on perceptions of strangers' & friends' patience 
-    
-##Other comments
-
-- I was amazed at how low the rate of attrition was (3/110 subjects) (net $45 payment)
-- Why do you assume people are never spiteful? 
-    - Why wouldn't I give you more time in the future for spiteful reasons? (we could check this against the results, but I may bound your results, maybe?)
-    - Plenty of evidence that people can be nasty (e.g. Abbink & Sadrieh, 2009, Zizzo, various others)
-- What stops a subject from just sitting there and playing on their phone? (you answer this... )
 
 ##Comment re: Climate Change
 - I'm perplexed w.r.t. your discussion of climate change 
     - you find that people are more impatient for other people
     - so, re climate change, I expect others to do more about climate change than me?
-    - "they" incur the costs to deal with climate change, whereas "I" am willing to wait and see what happens?
+    - "they" incur the costs to deal with climate change, whereas "I" am... "willing to wait" and see what happens?
 
 ##Comment: Pairing Data & Samples
 
@@ -73,3 +65,16 @@ knitr::opts_chunk$set(echo = FALSE)
     - therefore your estimates may *underestimate* the difference between actual strangers and others 
     - therefore perhaps provide a *lower bound*? 
     
+        
+##Other comments
+
+- I was amazed at how low the rate of attrition was (3/110 subjects) (net $45 payment)
+- Why do you assume people are never spiteful? 
+    - Why wouldn't I give you more time in the future for spiteful reasons? (we could check this against the results, but I may bound your results, maybe?)
+    - Plenty of evidence that people can be nasty (e.g. Abbink & Sadrieh, 2009, Zizzo, various others)
+- What stops a subject from just sitting there and playing on their phone? (you answer this... )
+
+    
+## Thanks
+Siyabulela! 
+Nkosi kakulu. 
