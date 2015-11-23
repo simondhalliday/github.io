@@ -50,9 +50,9 @@ knitr::opts_chunk$set(echo = FALSE)
 - What stops a subject from just sitting there and playing on their phone? (you answer this... )
 
 ##Comment re: Climate Change
-- Color me perplexed: 
+- I'm perplexed w.r.t. your discussion of climate change 
     - you find that people are more impatient for other people
-    -so, re climate change, I expect others to do more about climate change than me?
+    - so, re climate change, I expect others to do more about climate change than me?
     - "they" incur the costs to deal with climate change, whereas "I" am willing to wait and see what happens?
 
 ##Comment: Pairing Data & Samples
