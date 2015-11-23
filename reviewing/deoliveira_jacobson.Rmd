@@ -1,6 +1,6 @@
 ---
 title: "Comments on De Oliveira and Jacobson"
-author: "Simon Halliday"
+author: "Simon Halliday (Smith College)"
 date: "2015-November-23"
 output: ioslides_presentation
     #css: io2013.css
@@ -27,37 +27,48 @@ knitr::opts_chunk$set(echo = FALSE)
 4. Separate pool into 0 vs. 60 minute choices: People choose 60 later for others much more often than for themselves. 
     - driven by strangers not friends
 
-## Initial Comments
+## Comments about things you can't do anything about
 
 - Why the asymmetry of the task rates over 0.5 and 0.75, but increasing up to 4? 
     - e.g. if you're going up to 4, why not decrease to 0.25? 
-    - Definitely not as symmetrical as Augenblick et al. 2015.
+    - I think Augenblick et al. 2015 was symmetrical around 1. 
 - Why did you not incentivize the beliefs about others and impatience?
     - Worry: survey responses differ from incentivized choices
+
+##Treatments?
 - Why not have a treatment "Friend-Stranger"?
     - exclude 'own', just tradeoffs of others
     - disentangle even more the relationship between 'friend' and 'other'. 
+    - Motivated by your result on perceptions of strangers' & friends' patience 
     
-##Initial Comments 2
+##Other comments
 
-- I was amazed at how low the rate of attrition was (3/110 subjects)
+- I was amazed at how low the rate of attrition was (3/110 subjects) (net $45 payment)
 - Why do you assume people are never spiteful? 
-    - Why don't I give you more time in the future for spiteful reasons? 
-    - Plenty of evidence that people can be nasty (e.g. Abbink & Sadrieh, 2009, "The Pleasure of Being Nasty"; among others)
-- What stops a subject from just sitting there and playing on their phone? (you answer this... ish)
+    - Why wouldn't I give you more time in the future for spiteful reasons? (we could check this against the results, but I may bound your results, maybe?)
+    - Plenty of evidence that people can be nasty (e.g. Abbink & Sadrieh, 2009, Zizzo, various others)
+- What stops a subject from just sitting there and playing on their phone? (you answer this... )
 
+##Comment re: Climate Change
+- Color me perplexed: 
+    - you find that people are more impatient for other people
+    -so, re climate change, I expect others to do more about climate change than me?
+    - "they" incur the costs to deal with climate change, whereas "I" am willing to wait and see what happens?
 
 ##Comment: Pairing Data & Samples
 
 - Friend data: are there differences in friend-Gender pairings and perceived differences in patience? 
     - e.g. M-M; M-F; F-M, F-F. 
-- Slight confusion: I saw that 1 of 100 subjects exerted zero effort (p. 11)
-- But you had 3/110 who didn't return... 
-- And 5/63 completed zero in the return session; I wasn't sure how to add & compare these
+- I got a little confused: 
+    - I saw that 1 of 100 subjects exerted zero effort (p. 11)
+    - But you had 3/110 who didn't return... 
+    - And 5/63 completed zero in the return session
+- I wasn't sure how to add & compare these (in my quick reading)
+- Perhaps make clearer somewhere the various samples
 
 ## Comment: Friends vs. Strangers
-
-- I wasn't sure from the paper, but I suspect that your questionnaire could have used a question like "How many people in the lab right now are you friends with?"
+###Some things you can do something about, some not
+- I wasn't sure from the paper, but I suspect that your questionnaire could have used a question like "How many people in the lab right now are you friends with?" ()
     - I'm concerned that 'strangers' may not actually be totally strangers, especially if subjects were asked "to bring friends to the lab"
     - therefore your estimates may *underestimate* the difference between actual strangers and others 
     - therefore perhaps provide a *lower bound*? 
