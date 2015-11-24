@@ -11,6 +11,16 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
+##Week 12
+###Tuesday 24 November
+- We are going to to do an exercise with the World Values survey here: 
+[http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs](http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs)
+- And we'll talk about Chapter 10. 
+
+##Week 11
+###Tuesday 17 November
+- We need to complete the Marseille exercise we didn't get the chance to finish previously. 
+
 ##Week 10
 ##Thursday 12 November
 Go here for the initial Marseille guide:
