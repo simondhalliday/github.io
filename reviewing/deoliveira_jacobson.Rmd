@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Main Results
 
-1. "Law of Supply": Effort supllied increases with higher price for effort. 
+1. "Law of Supply": Effort supplied increases with higher "price" for effort (substituting across time). 
 2. Treatments consistent with now-versus-later at the extremes. 
 3. Separate consideration of own vs. others w.r.t. minute rates (more at moderate rates). 
 4. Separate pool into 0 vs. 60 minute choices: People choose 60 later for others much more often than for themselves. 
@@ -43,9 +43,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ##Comment re: Climate Change
 - I'm perplexed w.r.t. your discussion of climate change 
-    - you find that people are more impatient for other people
-    - so, re climate change, I expect others to do more about climate change than me?
-    - "they" incur the costs to deal with climate change, whereas "I" am... "willing to wait" and see what happens?
+    - we economists interpret patience in the following way: a higher discount factor for effort 
+    -  a "more patient" person will prefer to exert effort *now* at higher minute rates (sensible)
+    - but says that their friends won't
+    - may not gel with many peoples' intuitive understanding of '(im)patience' (I was trying to explain your paper to my wife & a friend, which is when this came up)
+    - "they" incur the costs to deal with climate change in the future, whereas "I" am... "willing to pay now". Right? 
+    - Admittedly, I could have simply been confused on a quick reading. 
 
 ##Comment: Pairing Data & Samples
 
@@ -60,8 +63,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Comment: Friends vs. Strangers
 ###Some things you can do something about, some not
-- I wasn't sure from the paper, but I suspect that your questionnaire could have used a question like "How many people in the lab right now are you friends with?" ()
-    - I'm concerned that 'strangers' may not actually be totally strangers, especially if subjects were asked "to bring friends to the lab"
+- I wasn't sure from the paper, but I suspect that your questionnaire could have used a question like "How many people in the lab right now are you friends with?" 
+    - I'm concerned that 'strangers' may not actually be total strangers (just *slightly* less social distance), especially if subjects were asked "to bring friends to the lab"
     - therefore your estimates may *underestimate* the difference between actual strangers and others 
     - therefore perhaps provide a *lower bound*? 
     - perhaps regressions should be clustered at the level of the session?
@@ -74,8 +77,3 @@ knitr::opts_chunk$set(echo = FALSE)
     - Why wouldn't I give you more time in the future for spiteful reasons? (we could check this against the results, but I may bound your results, maybe?)
     - Plenty of evidence that people can be nasty (e.g. Abbink & Sadrieh, 2009, Zizzo, various others)
 - What stops a subject from just sitting there and playing on their phone? (you answer this... )
-
-    
-## Thanks
-Siyabulela! 
-Nkosi kakulu. 
