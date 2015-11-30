@@ -11,6 +11,12 @@ Professor: Simon Halliday
 - [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
 - [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
+##Week 13
+###Tuesday 1 December
+
+- Bring your laptops. It's team project time!
+- We'll also do the final experiment (other things equal)
+
 ##Week 12
 ###Tuesday 24 November
 - We are going to to do an exercise with the World Values survey here: 
