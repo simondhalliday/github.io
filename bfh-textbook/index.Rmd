@@ -1,0 +1,74 @@
+---
+title: "Coordination, Conflict and Competition"
+subtitle: "A Text in Microeconomics"
+author: "Samuel Bowles, Duncan Foley and Simon Halliday"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_html: 
+    toc: TRUE
+---
+
+```{r setup, include=FALSE}
+library(tufte)
+library(knitr)
+```
+
+
+> "Most of the people in the world are poor, so if we knew the economics of being poor, we would know much of the economics that really matters. "
+>
+> `r tufte::quote_footer('--- T. W. Schultz, 1979, Nobel Address')`
+
+## Introduction
+```{r cccbook, fig.margin = TRUE, fig.cap = "Provisional Cover", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics('./images/bfh_cover.jpg')
+```
+
+[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/), [Duncan Foley](https://sites.google.com/a/newschool.edu/duncan-foley-homepage/home) and I have a joint project writing an intermediate microeconomics textbook: *Coordination, Conflict and Competition: A Text in Microeconomics* (henceforth CCC). On this site, you will find preliminary content that we are providing to test-teachers who are planning to use draft chapters of the book. 
+
+```{r teampic, fig.margin = TRUE, fig.cap = "Simon, Sam and Duncan at SFI, Summer 2015", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics('./images/bfh_team.jpg')
+```
+
+If you wish to sign up to be a test teacher of the book, then please provide your details in the following google form so that we can gather your details. (If you are unable to see the embedded form below, then click [here](https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform)). 
+
+<iframe src="https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+
+Once we have provided you with draft chapters of the book, I will and share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. I have test-taught the book at Smith College and this content is based on the course I have taught. 
+
+We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you provide feedback to us in another Google Form (to be provided later). 
+
+##What flavor of economics is CCC?
+```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
+knitr::include_graphics('./images/mbie.jpg')
+```
+CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Behavior, Institutions, and Evolution*](http://press.princeton.edu/titles/7610.html) published by Princeton University Press in 2006. 
+
+```{r fig-margin3, fig.margin = TRUE, fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics('./images/logo-red-black.png')
+```
+
+CCC would also be an excellent follow-up text for introductory economics courses that use the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/).  
+
+
+##Contents
+Below is an abridged table of contents for the first 12 chapters of the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing). 
+
+| Chapter  | Title   | Pages  | 
+|---|---|---|
+| Preface | - | 13 |
+| Part 1 | People, Economy& Society | 23 |
+| 1 | Society | 27 |
+| 2 | People & Preferences | 69 |
+| 3 | Doing the Best You can | 105 |
+| 4 | An Uncertain & Risky World | 145 | 
+| 5 | Property & Exchange | 189 | 
+| 6 | Coordination Failures | 233 |
+| Part 2 | Markets | 273 |
+| 7 | Specialization, Exchange & Market Demand | 277 |
+| 8 | Production: Technologies, Costs & Supply | 329 |
+| 9 | Competition, Rent-Seeking & Market Equilibrium | 373 |
+| 10 | Information & Power | 419 |
+| 11 | Employment | 463 |
+| 12 | Credit Markets | 501 |
+
