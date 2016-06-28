@@ -29,12 +29,11 @@ knitr::include_graphics('./images/bfh_cover.jpg')
 knitr::include_graphics('./images/bfh_team.jpg')
 ```
 
-If you wish to sign up to be a test teacher of the book, then please provide your details in the following google form so that we can gather your details. (If you are unable to see the embedded form below, then click [here](https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform)). 
+If you wish to sign up to be a test teacher of the book, then please provide your details in the following Google form so that we can gather your details. (If you are unable to see the embedded form below, then please click [here](https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform)). 
 
 <iframe src="https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
-
-Once we have provided you with draft chapters of the book, I will and share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. I have test-taught the book at Smith College and this content is based on the course I have taught. 
+Once we have provided you with draft chapters of the book, I will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. I have test-taught the book at Smith College and much of this content is based on the course I have taught. We are also working with two RAs over the summer to provide additional content before fall 2016. 
 
 We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you provide feedback to us in another Google Form (to be provided later). 
 
@@ -50,9 +49,17 @@ knitr::include_graphics('./images/logo-red-black.png')
 
 CCC would also be an excellent follow-up text for introductory economics courses that use the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/).  
 
+Here is a non-exhaustive list of important themes in the book: 
+
+- *rents*: gains from trade or rents are produced by social interactions - rents are the benefits obtained by those engaged in social interactions; rents can come from voluntary exchange, or from two neighbors deciding to irrigate their farms
+- *institutions*: institutions can be laws, norms, and equilibria of games; they affect how social interactions unfold and who gets what and why
+- *inequality*: social interactions create rents, but who gets what share of the rents depends on institutions and history
+- *preferences, beliefs and constraints*: people have preferences and beliefs about the world, and they are held back from getting what they want by the constraints -- legal, material and ethical -- from achieving what they want
+- *diversity of preferences*: self-interest, altruism, reciprocity, norms, and process-dependent preferences all exist in the wild and affect how social interactions unfold
+- *external effects*: positive and negative external effects ("externalities") pervade social interactions and people and firms routinely make decisions that affect how well or poorly their counterparts will do
 
 ##Contents
-Below is an abridged table of contents for the first 12 chapters of the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing). 
+Below is an abridged table of contents for the first 12 chapters of the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing) and a copy of the preface here. 
 
 | Chapter  | Title   | Pages  | 
 |---|---|---|
@@ -71,4 +78,10 @@ Below is an abridged table of contents for the first 12 chapters of the book. Cu
 | 10 | Information & Power | 419 |
 | 11 | Employment | 463 |
 | 12 | Credit Markets | 501 |
+
+##Quizzes
+We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. They will use the new Google Quiz interface. I will provide access to the Quiz, which an instructor will then be able to duplicate and edit for use with their own classes. 
+
+##Flashcards
+The book has a glossary with all the definitions used in the book. Over the next academic year we hope to turn the definitions into a set of flashcards using [Anki](http://ankisrs.net/). Anki is an open-source flash-card service where the desktop and web-interfaces can be used free of charge, but the iPad and other app versions can be bought for a fee of $25. You will be able to import the flashcard decks to your Anki app when these are made available. They will be provided chapter-by-chapter. 
 
