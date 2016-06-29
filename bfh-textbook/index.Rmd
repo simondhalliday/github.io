@@ -51,7 +51,15 @@ CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Beha
 knitr::include_graphics('./images/logo-red-black.png')
 ```
 
-CCC would also be an excellent follow-up text for introductory economics courses that use the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/). CORE is based on many similar themes to CCC.   
+CCC would also be an excellent follow-up text for introductory economics courses that use the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/). CORE is based on many similar themes to CCC.  
+
+It could also serve as a follow-up to other texts, such as the following (though the match would not be as good as with CORE). Different courses would also emphasize the mathematics to a greater or lesser extent.  
+
+- Frank and Bernanke, *Principles of Economics*, 5th Ed, McGraw-Hill. 
+- Bowles, Edwards and Roosevelt, *Understanding Capitalism*, 3rd ed, Oxford University Press. 
+- Goodwin, Harris, Nelson, Roach and Torras, *Principles of Economics in Context*, Routledge. 
+- Krugman and Wells, *Microeconomics*, 3rd edition, Worth Publishers. 
+- Cohen, *Microeconomics for Life*, 2nd edition, Pearson Canada. 
 
 Here is a non-exhaustive list of important themes in the book: 
 
@@ -88,7 +96,7 @@ Below is an abridged table of contents for the first 12 chapters of the book. Cu
 We use calculus in the book, but almost all of the calculus is contained in boxes (named for Alfred Marshall as you will see). We try to follow Marshall's maxims with the mathematics:  
 
 ```{marginfigure}
-Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1966, *Memorials of Alfred Marshall*, pp. 427-428.)
+Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1966, *Memorials of Alfred Marshall*, pp. 427-428.
 ```
 "I had a growing feeling in the later years of my work at the subject that a good mathematical theorem dealing with economic hypotheses was very unlikely to be good economics: and I went more and more on the rules
 
@@ -104,8 +112,8 @@ We may not have burned as much of the mathematics as much as we ought to have do
 
 
 ##Quizzes
-We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. They will use the new Google Quiz interface. I will provide access to the Quiz, which an instructor will then be able to duplicate and edit for use with their own classes. 
+We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. They will use the new Google Quiz interface. Either our RA or I will provide access to the quiz, which an instructor will then be able to duplicate and edit for use with their own classes. Though Google quizzes are not yet as powerful as quizzes on Moodle or blackboard, their portability and ease of use suits our needs well for the moment.  
 
 ##Flashcards
-The book has a glossary with all the definitions used in the book. Over the next academic year we hope to turn the definitions into a set of flashcards using [Anki](http://ankisrs.net/). Anki is an open-source flash-card service where the desktop and web-interfaces can be used free of charge, but the iPad and other app versions can be bought for a fee of $25. You will be able to import the flashcard decks to your Anki app when these are made available. They will be provided chapter-by-chapter. 
+The book has a glossary with all the definitions used in the book. Over the next academic year we hope to turn the definitions into a set of flashcards using [Anki](http://ankisrs.net/). Anki is an open-source flash-card service where the desktop and web-interfaces can be used free of charge, as can the Android app. But, the iOS app version needs to be bought for a fee of $25. As the web interface and desktop versions are free of charge and the notebooks are exportable to other formats, we still think it is the best current option. You will be able to import the flashcard decks to your Anki app when these are made available. They will be provided chapter-by-chapter over AY2016-17. 
 
