@@ -14,7 +14,11 @@ library(knitr)
 ```
 
 
-> "Most of the people in the world are poor, so if we knew the economics of being poor, we would know much of the economics that really matters. "
+> "Most of the people in the world are poor, so if we knew the economics of being 
+> poor, we would know much of the economics that really matters ... People who
+> are rich find it hard to understand the behaviour of poor people. Economists
+> are no exception, for they too find it difficult to comprehend the preferences and
+> scarcity constraints that determine the choices that poor people make."
 >
 > `r tufte::quote_footer('--- T. W. Schultz, 1979, Nobel Address')`
 
@@ -29,7 +33,7 @@ knitr::include_graphics('./images/bfh_cover.jpg')
 knitr::include_graphics('./images/bfh_team.jpg')
 ```
 
-If you wish to sign up to be a test teacher of the book, then please provide your details in the following Google form so that we can gather your details. (If you are unable to see the embedded form below, then please click [here](https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform)). 
+If you wish to sign up to be a test-teacher of the book (or even just a test-reader), then please provide your details in the following Google form so that we can gather your details. (If you're unable to see the embedded form below, then please click [here](https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform)). 
 
 <iframe src="https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
@@ -37,29 +41,30 @@ Once we have provided you with draft chapters of the book, I will share a Google
 
 We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you provide feedback to us in another Google Form (to be provided later). 
 
-##What flavor of economics is CCC?
+##What are the flavors and themes of CCC?
 ```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
 knitr::include_graphics('./images/mbie.jpg')
 ```
-CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Behavior, Institutions, and Evolution*](http://press.princeton.edu/titles/7610.html) published by Princeton University Press in 2006. 
+CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Behavior, Institutions, and Evolution*](http://press.princeton.edu/titles/7610.html) published by Princeton University Press in 2006. As an advanced text, though, it is not suitable for many undergraduate classes because of the high level of the math and certain other aspects of its theoretical rigor. 
 
 ```{r fig-margin3, fig.margin = TRUE, fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
 knitr::include_graphics('./images/logo-red-black.png')
 ```
 
-CCC would also be an excellent follow-up text for introductory economics courses that use the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/).  
+CCC would also be an excellent follow-up text for introductory economics courses that use the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/). CORE is based on many similar themes to CCC.   
 
 Here is a non-exhaustive list of important themes in the book: 
 
 - *rents*: gains from trade or rents are produced by social interactions - rents are the benefits obtained by those engaged in social interactions; rents can come from voluntary exchange, or from two neighbors deciding to irrigate their farms
+- *evidence*: economics is an empirical science that relies on rigorous experiments -- from the lab and the field -- and survey and other data to test its theories; theories that don't conform to the data can be revised when confronted with the data and with new ideas that come about from seeing how people, organizations, and economies behave
 - *institutions*: institutions can be laws, norms, and equilibria of games; they affect how social interactions unfold and who gets what and why
-- *inequality*: social interactions create rents, but who gets what share of the rents depends on institutions and history
+- *inequality & power*: social interactions create rents, but who gets what share of the rents depends on institutions and history; often institutions can produce unequal outcomes when one person has power over another
 - *preferences, beliefs and constraints*: people have preferences and beliefs about the world, and they are held back from getting what they want by the constraints -- legal, material and ethical -- from achieving what they want
-- *diversity of preferences*: self-interest, altruism, reciprocity, norms, and process-dependent preferences all exist in the wild and affect how social interactions unfold
-- *external effects*: positive and negative external effects ("externalities") pervade social interactions and people and firms routinely make decisions that affect how well or poorly their counterparts will do
+- *diversity of preferences*: self-interest, altruism, reciprocity, norms, and process-dependent preferences all exist in the wild and affect how social interactions unfold and which equilibrium, among many, people might choose
+- *external effects*: positive and negative external effects ("externalities") pervade social interactions and people and firms routinely make decisions that affect how well or poorly their counterparts will do; as a result, outcomes are *interdependent*
 
 ##Contents
-Below is an abridged table of contents for the first 12 chapters of the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing) and a copy of the preface here. 
+Below is an abridged table of contents for the first 12 chapters of the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing) and a copy of the preface [here](https://drive.google.com/file/d/0B9jjwkjdUJU7dGViNm1MNm15NXc/view?usp=sharing). 
 
 | Chapter  | Title   | Pages  | 
 |---|---|---|
@@ -78,6 +83,23 @@ Below is an abridged table of contents for the first 12 chapters of the book. Cu
 | 10 | Information & Power | 419 |
 | 11 | Employment | 463 |
 | 12 | Credit Markets | 501 |
+
+##Calculus and Graphics
+We use calculus in the book, but almost all of the calculus is contained in boxes (named for Alfred Marshall as you will see). We try to follow Marshall's maxims with the mathematics:  
+
+```{marginfigure}
+Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1966, *Memorials of Alfred Marshall*, pp. 427-428.)
+```
+"I had a growing feeling in the later years of my work at the subject that a good mathematical theorem dealing with economic hypotheses was very unlikely to be good economics: and I went more and more on the rules
+1. Use mathematics as a shorthand language, rather than an engine of inquiry. 
+2. Keep to them till you have done.
+3. Translate into English. 
+4. Then illustrate by examples that are important in real life. 
+5. Burn the mathematics. 
+6. If you can't succeed in (4), burn (3). This last I did often.
+This last I did often."
+We may not have burned the mathematics as much as we ought to, but we try to restrain it to when it is most necessary. For the most part, the economics is conveyed through *graphical* intuition with algebra. 
+
 
 ##Quizzes
 We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. They will use the new Google Quiz interface. I will provide access to the Quiz, which an instructor will then be able to duplicate and edit for use with their own classes. 
