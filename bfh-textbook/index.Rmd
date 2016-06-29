@@ -91,6 +91,7 @@ We use calculus in the book, but almost all of the calculus is contained in boxe
 Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1966, *Memorials of Alfred Marshall*, pp. 427-428.)
 ```
 "I had a growing feeling in the later years of my work at the subject that a good mathematical theorem dealing with economic hypotheses was very unlikely to be good economics: and I went more and more on the rules
+
 1. Use mathematics as a shorthand language, rather than an engine of inquiry. 
 2. Keep to them till you have done.
 3. Translate into English. 
@@ -98,7 +99,8 @@ Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1
 5. Burn the mathematics. 
 6. If you can't succeed in (4), burn (3). This last I did often.
 This last I did often."
-We may not have burned the mathematics as much as we ought to, but we try to restrain it to when it is most necessary. For the most part, the economics is conveyed through *graphical* intuition with algebra. 
+
+We may not have burned as much of the mathematics as much as we ought to have done, but we try to restrain it to when it is most necessary. For the most part, the economics is conveyed through *graphical* intuition with algebra. All of the graphics are also available on github. We hope later to provide interactive versions of the majority of the important graphics.  
 
 
 ##Quizzes
