@@ -127,4 +127,12 @@ See, for example, Brown, Roediger and McDaniel, 2014, *Make It Stick*, Harvard U
 - With our quizzes, we recommend regular *testing* to improve learning and retention; students obtain immediate feedback and the instructor can respond to student needs
 - With in-class worksheets and think-pair-share exercises enabled by the worksheets, students again get *immediate feedback* and can learn by teaching each other
 - We *interleave* the use of economic jargon throughout the book -- students learn a core set of economic ideas and apply them to a diverse array of problems 
+- We recommend that instructors *space out practice* using the quizzes, problem sets and worksheets
+- Attempting a problem *before knowing a solution* provides learning benefits (even when getting to an incorrect solution initially) 
+- *Varied* practice is important to learning, which again motivates our use of the different types of testing and learning work (quizzes, worksheets, problem sets)
+```{marginfigure}
+*Elaboration* is " the process of giving new material meaning by expressing it in your own words and connecting it with what you already know." (Brown, Roediger and McDaniel, 2014, p. 5)
+```
+- I also ask students to engage in a practice where I distribute index cards and students write 3 ideas they remember from the previous class and to explain them in their own words (for a Monday class recalling a Friday class this is particularly useful). I have found this practice to be useful because it involves both practising *recall* and *elaboration*. 
+
 
