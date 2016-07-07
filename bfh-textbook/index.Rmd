@@ -38,8 +38,6 @@ If you wish to sign up to be a test-teacher of the book (or even just a test-rea
 
 We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you provide feedback to us in another Google Form (to be provided later).
 
-Once a significant number have requested the book, we shall publish a list of people who have used or are using the book in their teaching on this website. 
-
 ##What are the flavors CCC?
 ```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
 knitr::include_graphics('./images/mbie.jpg')
