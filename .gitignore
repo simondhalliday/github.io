@@ -1,4 +1,12 @@
 .Rproj.user
 .Rhistory
 .RData
-
+_includes
+_layouts
+_posts
+_sass
+_source
+IND_adm0.rds
+IND_adm1.rds
+IND_adm2.rds
+IND_adm3.rds

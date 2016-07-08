@@ -101,7 +101,8 @@ Below is an abridged table of contents for the first 12 chapters of the book. Cu
 | 12 | Credit Markets | 501 |
 
 ##Calculus and Graphics
-We use calculus in the book, but almost all of the calculus is contained in boxes (named for Alfred Marshall as you will see). We try to follow Marshall's maxims with the mathematics:  
+We use calculus in the book, but almost all of the calculus is contained in boxes (named for Alfred Marshall as you will see). 
+We try to follow Marshall's maxims with the mathematics:  
 
 ```{marginfigure}
 Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1966, *Memorials of Alfred Marshall*, pp. 427-428.
