@@ -18,10 +18,7 @@ knitr::include_graphics('./images/bfh_cover.jpg')
 ```
 
 > "Most of the people in the world are poor, so if we knew the economics of being 
-> poor, we would know much of the economics that really matters ... People who
-> are rich find it hard to understand the behaviour of poor people. Economists
-> are no exception, for they too find it difficult to comprehend the preferences and
-> scarcity constraints that determine the choices that poor people make."
+> poor, we would know much of the economics that really matters ..."
 >
 > `r tufte::quote_footer('--- T. W. Schultz, 1980 [1979], Nobel Address: The Economics of Being Poor, p. 639')`
 
@@ -48,6 +45,16 @@ Though written for undergraduates,  in content CCC has a strong flavor of Sam's 
 knitr::include_graphics('./images/logo-red-black.png')
 ```
 
+
+```{r production intro, fig.margin = TRUE, fig.cap = "Introductory page to Chapter 8: Production: Technology, Costs and Supply", echo = FALSE}
+knitr::include_graphics('./images/BFHMicro_production_intro.jpg')
+```
+
+```{r eos ppf, fig.margin = TRUE, fig.cap = "Chapter 7: Economies of Scale and the Production Possibilities Frontier", echo = FALSE}
+knitr::include_graphics('./images/BFHMicro_eos_ppf.jpg')
+```
+
+
 CCC would also be an excellent follow-up text for introductory economics courses that use the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/) and of which Sam is a co-author. CORE is based on many similar themes to CCC.  
 
 ##What are the themes of CCC?
@@ -56,14 +63,13 @@ We cover many of the standard economic concepts taught to second year economics 
 
 But many of the themes of the book are unlikely to be encountered in most intermediate microeconomics texts. 
 
-- *what is economics about?*  we go beyond the usual focus on markets and deals with the full range of social interactions and how people seek to coordinate their activities so as to secure their well being. 
+- *what is economics about?*  we go beyond the usual focus on markets and deal with the full range of social interactions and how people seek to coordinate their activities so as to secure their well being, including "the wealth and poverty of nations and people," environmental degradation, and conflict over the division of the pie.
 - *evidence*: economics is an empirical science that relies on  experiments -- from the lab and the field -- and survey and other data to test its theories about how people, organizations, and economies behave and to illustrate applications of these theories to public policy
-- *topics*:  we go beyond shopping to include “the wealth and poverty of nations and people,” environmental degradation, and conflict over the division of the pie.
 - *preferences*: people are both generous and self-interested, morally motivated and amoral and we respond to social norms of fairness.
 - *economic actors*: firms, banks, buyers and sellers are often price setters rather than passive price takers. 
 - *rents*: social interactions allow gains from trade, but “the market” alone does not determine how these rents will be distributed
 - *institutions*: institutions -- laws, norms, and mutual expectations -- affect how social interactions unfold and who gets what and why
--*efficiency and fairness*: outcomes are evaluated along these two dimensions rather than solely by the Pareto criterion.
+- *efficiency and fairness*: outcomes are evaluated along these two dimensions rather than solely by the Pareto criterion.
 - *power and social norms*: because contracts are incomplete in labor, credit and other important markets, the terms of an exchange depend on the exercise of power and norms other than the simple pursuit of self interest.
 - *a micro foundation for a new macro*: equilibrium unemployment and wealth constraints on borrowing provide the basis of a modern macroeconomics, without special ad hoc assumptions. 
 - *increasing returns* along with other sources of positive feedbacks result in there being multiple equilibria in many situations, so that history matters. 
@@ -74,13 +80,13 @@ It’s hard to know exactly where your own ideas come from, but  for us, those i
 
 - *Adam Smith*  taught us that people are both selfish and other-regarding and that  markets are  coordination devices that under some conditions  allow socially desirable decentralized solutions to the question of how society's resources should be used. 
 - *Karl Marx* stressed that conflicts over the products of human labor are an intrinsic feature in any economy,  that our preferences are shaped by our circumstances and that capitalism is a moving target that requires dynamic analysis.
--*Augustin Cournot,* the mathematician, taught economics  to formally model how profit maximizing firms interact in situations different from what later came to be called ‘perfect competition’
+- *Augustin Cournot* the mathematician, taught economics  to formally model how profit maximizing firms interact in situations different from what later came to be called ‘perfect competition’
 - *Alfred Marshall* studied markets both  factually and mathematically,  giving us an exemplar of empirically grounded formal reasoning in microeconomics.
 - *Friedrich Hayek* pioneered the idea that markets are information processing mechanisms and that economics is about how changing information results in changes in the economy.
 - *Ronald Coase*  like Marx stressed the importance of power as an economic concept and the importance of firms and other non-market institutions and also taught that market failures and other social problems can be addressed by a combination of private bargaining and governmental intervention.
 - *Elinor Ostrom* the political scientist  was honored with a Nobel in economics for demonstrating the power of a multi-disciplinary and empirical approach to understanding how societies can confront their environmental and other coordination problems. 
 
-We incubated many of these ideas at the Santa Fe Institute (where Duncan and Sam serve on the faculty), a center of interdisciplinary and dynamic problem-centered modelling. 
+We incubated many of these ideas at the Santa Fe Institute (where Duncan and Sam serve on the faculty), a center of interdisciplinary and dynamic problem-centered modeling. 
 
 ##Contents
 Below is an abridged table of contents for the first 12 chapters of the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing) and a copy of the preface [here](https://drive.google.com/file/d/0B9jjwkjdUJU7dGViNm1MNm15NXc/view?usp=sharing). 
@@ -122,20 +128,10 @@ Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1
 >
 > This last I did often."
 
-We may not have burned as much of the mathematics as we ought to have done, but we try to restrain the mathematics to when it is most necessary. For the most part, the economics is conveyed through *graphical* intuition accompanied by algebra. All of the graphics are also available on github (see Simon Halliday's github repo [bfh-textbook](https://github.com/simondhalliday/bfh-textbook/). We hope later to provide interactive versions of the majority of the important graphics programmed either in R with Shiny or Mathematica.   
+We may not have burned as much of the mathematics as we ought to have done, but we try to restrain the mathematics to when it is most necessary. For the most part, the economics is conveyed through *graphical* intuition accompanied by algebra. All of the graphics are also available on github (see Simon Halliday's github repo [bfh-textbook](https://github.com/simondhalliday/bfh-textbook/)). We hope later to provide interactive versions of the majority of the important graphics programmed either in R with Shiny or Mathematica.   
 
 ##Course Materials
 Once we have provided you with draft chapters of the book, I will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. I have test-taught the book at Smith College and much of this content is based on the course I have taught along with content that Duncan Foley has used when teaching at [Eugene Lang College](http://www.newschool.edu/lang/) (the undergraduate liberal arts college attached to the New School for Social Research). We are also working with two RAs over the summer to provide additional content before fall 2016 (e.g. the quizzes explained below). 
-
-##Example Pages 
-Below are two example pages from two chapters mid-way through the book. 
-```{r production intro, fig.cap = "Introductory page to Chapter 8: Production: Technology, Costs and Supply", echo = FALSE}
-knitr::include_graphics('./images/BFHMicro_production_intro.jpg')
-```
-
-```{r eos ppf, fig.cap = "Chapter 7: Economies of Scale and the Production Possibilities Frontier", echo = FALSE}
-knitr::include_graphics('./images/BFHMicro_eos_ppf.jpg')
-```
 
 ##Quizzes
 We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. They will use the new Google Quiz interface. Either our RA or I will provide access to the quiz, which an instructor will then be able to duplicate and edit for use with their own classes. Though Google quizzes are not yet as powerful as quizzes on Moodle, Blackboard or Sakai (for example, Google quizzes currently lack \LaTeX integration for mathematical questions), their portability and ease of use suits our needs well for the moment; especially until we have completed negotiations with publishers.  
@@ -161,6 +157,6 @@ See, for example, Brown, Roediger and McDaniel, 2014, *Make It Stick*, Harvard U
 - Attempting a problem *before knowing a solution* provides learning benefits (even when getting to an incorrect solution initially) 
 - *Varied* practice is important to learning, which again motivates our use of the different types of testing and learning work (quizzes, worksheets, problem sets)
 ```{marginfigure}
-*Elaboration* is " the process of giving new material meaning by expressing it in your own words and connecting it with what you already know." (Brown, Roediger and McDaniel, 2014, p. 5)
+*Elaboration* is "the process of giving new material meaning by expressing it in your own words and connecting it with what you already know." (Brown, Roediger and McDaniel, 2014, p. 5)
 ```
-- I also ask students to engage in a practice where I distribute index cards and students write 3 ideas they remember from the previous class and to explain them in their own words (for a Monday class recalling a Friday class this is particularly useful). I have found this practice to be useful because it involves both practising *recall* and *elaboration*. 
+- I also ask students to engage in a practice where I distribute index cards and students write 3 ideas they remember from the previous class and to explain them in their own words (for a Monday class recalling a Friday class this is particularly useful). I have found this practice to be useful because it involves both practicing *recall* and *elaboration*. 
