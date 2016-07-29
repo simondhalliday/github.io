@@ -33,7 +33,7 @@ If you wish to sign up to be a test-teacher of the book (or even just a test-rea
 
 <iframe src="https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
-We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you provide feedback to us in another Google Form (to be provided later). 
+We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you to provide feedback to us in another Google Form (to be provided later). 
 
 ##What are the flavors CCC?
 ```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
@@ -116,7 +116,7 @@ We use calculus in the book, but almost all of the calculus is contained in boxe
 Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1966, *Memorials of Alfred Marshall*, pp. 427-428.
 ```
 
-> "I had a growing feeling in the later years of my work at the subject that a good mathematical > theorem dealing with economic hypotheses was very unlikely to be good economics: and I 
+> "I had a growing feeling in the later years of my work at the subject that a good mathematical theorem dealing with economic hypotheses was very unlikely to be good economics: and I 
 > went more and more on the rules
 >
 > 1. Use mathematics as a shorthand language, rather than an engine of inquiry. 
