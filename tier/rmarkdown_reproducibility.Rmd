@@ -1,0 +1,50 @@
+---
+title: "R Markdown for Reproducibility"
+author: "Simon Halliday"
+date: "2017-January -6"
+output: 
+  ioslides_presentation:
+    fig_caption: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown & Reproducibility 
+
+- What happens in a traditional research report? 
+- Are traditional research reports easily reproducible? 
+- What gives us *soup to nuts* reproducibility? 
+  - Answer: R Markdown or Scripted LaTeX + STATA
+
+
+##Traditional Reports
+
+```{r, out.width = "400px", fig.cap = "Courtesy of Bray, 2016"}
+knitr::include_graphics("figures/tradreport.png")
+```
+
+- 
+- 
+- 
+
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
