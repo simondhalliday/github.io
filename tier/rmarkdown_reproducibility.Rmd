@@ -7,7 +7,6 @@ output:
     fig_caption: true
 ---
 
-
 <style>
   .col2 {
     columns: 2 200px;         /* number of columns and width in pixels*/
@@ -57,8 +56,8 @@ Please take a couple of minutes to write down a question you have about R Markdo
 Think about the following ideas: 
 
 1. What *problem* could R Markdown (and R Studio) solve for me? 
-2. What is something you're *accustomed to doing* you would want R Markdown (and R Studio) to do for you? 
-3. What is an *expectation* you have about what you want me to deal with? 
+2. What is something I'm *accustomed to doing* that I would want R Markdown (and R Studio) to do for me? 
+3. What is an *expectation* I have about what I want Simon to cover? 
 
 Just take a moment to write down something along these lines for now and put aside your notecard. 
 
@@ -280,7 +279,11 @@ $$Pr(\mbox{Outcome} | \mbox{signal}) = \frac{\theta p}{\theta p - (1 - \theta)(1
 
 R Markdown uses $\LaTeX$ for math and it immediately gets displayed in R Studio.  
 
-Students get the idea pretty quickly (as long as they don't try anything too tough). 
+That is, $\LaTeX$ without the challenges of learning the packages, tables, etc that makes learning $\LaTeX$ so hard.
+
+In-line equations are bracketed by single dollar signs `$`. 
+
+Off-set equations are bracketed by double dollar signs `$$`. 
 
 ##R Link Love? 
 New to R? 
@@ -290,4 +293,13 @@ New to R?
 - Grolemund & Wickham, 2016, *R for Data Science*, [r4ds](r4ds.had.co.nz)
 - Baumer, Horton & Kaplan, forthcoming, [*Modern Data Science with R*](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 
 
+##Notecards again... 
+
+- Go back to your notecards
+- Re-read them 
+- Did I deal with what you wanted me to deal with? 
+- Do you have *other* or *new* concerns or questions? (write them on the back)
+- Chat to someone next to you about what you're thinking about. 
+- Share with the workshop. 
+- Yes, you're doing Think-Pair-Share...
 
