@@ -1,0 +1,18 @@
+---
+title: "TIER Occidental Workshop"
+author: "Simon Halliday"
+output: 
+  html_document:
+    css: ./stylesheets/styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here you'll find  the content [Simon Halliday](simondhalliday.github.io) covered during his part of the TIER faculty workshop at Occidental College, January 2017. 
+
+- Simon's Slides [html](rmarkdown_reproducibility.html) and [Rmd](rmarkdown_reproducibility.Rmd)
+- Activity 1 [html](activity1.html) and [Rmd](activity1.Rmd)
+- Activity 2 [html](activity2.html) and [Rmd](activity2.Rmd)
+
