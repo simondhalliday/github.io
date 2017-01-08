@@ -273,6 +273,15 @@ R Markdown and R Studio together have excellent capabilities.
 - R Studio has *error-detection* and *debugging* assistance for your code (unlike, e.g. STATA or aspects of Excel)
 - R Studio server can be hosted online and your students work with logins there
 
+##Math? 
+How about Bayes' Rule? 
+
+$$Pr(\mbox{Outcome} | \mbox{signal}) = \frac{\theta p}{\theta p - (1 - \theta)(1 - p)}$$
+
+R Markdown uses $\LaTeX$ for math and it immediately gets displayed in R Studio.  
+
+Students get the idea pretty quickly (as long as they don't try anything too tough). 
+
 ##R Link Love? 
 New to R? 
 
