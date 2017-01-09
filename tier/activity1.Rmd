@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Practice what you've learned by creating a brief CV. 
+Practice what you've learned by creating a brief CV of your **fictional alter ego**. 
 The title should be your name, and you should include headings for (at least) education or employment. 
 Each of the sections should include a bulleted list of jobs/degrees. 
 Highlight the year in **bold**.
