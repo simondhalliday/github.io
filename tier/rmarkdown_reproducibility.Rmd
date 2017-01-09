@@ -35,14 +35,14 @@ library(plotly)
 ## Acknowledgments 
 I stole a lot of this work wholesale from people who know more than I do. I thank them and ask their forgiveness.  
 
-- Andrew Bray see [Reproducibility 2.0](https://prezi.com/rtmytpb6iwsw/reproducible-20/)
+- Andrew Bray -- [Reproducibility 2.0](https://prezi.com/rtmytpb6iwsw/reproducible-20/)
 - Nick Horton
 - Mine &Ccedil;etinkaya-Rundel
-- Hadley Wickham 
-- Danny Kaplan 
+- Hadley Wickham & Garrett Grolemund --  [r4ds](r4ds.had.co.nz)
+- Danny Kaplan -- [DataComputing](http://data-computing.org/author/dtkaplan/)
 - Amelia McNamara 
 - Ben Baumer
-- Cosma Shalizi
+- Cosma Shalizi -- [R Markdown for Class Reports](http://www.stat.cmu.edu/~cshalizi/rmarkdown/)
 
 
 ## R Markdown & Reproducibility 
