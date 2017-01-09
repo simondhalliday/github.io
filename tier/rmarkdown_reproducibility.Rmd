@@ -36,12 +36,12 @@ library(plotly)
 I stole a lot of this work wholesale from people who know more than I do. I thank them and ask their forgiveness.  
 
 - Andrew Bray -- [Reproducibility 2.0](https://prezi.com/rtmytpb6iwsw/reproducible-20/)
-- Nick Horton
-- Mine &Ccedil;etinkaya-Rundel
+- Nick Horton -- [Getting Started with R and R Md](https://www.amherst.edu/people/facstaff/nhorton/node/567498)
+- Mine &Ccedil;etinkaya-Rundel -- [website](http://www2.stat.duke.edu/~mc301/)
 - Hadley Wickham & Garrett Grolemund --  [r4ds](r4ds.had.co.nz)
-- Danny Kaplan -- [DataComputing](http://data-computing.org/author/dtkaplan/)
-- Amelia McNamara 
-- Ben Baumer
+- Danny Kaplan --  [DataComputing](http://data-computing.org/author/dtkaplan/)
+- Amelia McNamara -- [website](http://www.science.smith.edu/~amcnamara/)
+- Ben Baumer -- [website](http://www.science.smith.edu/~bbaumer/w/)
 - Cosma Shalizi -- [R Markdown for Class Reports](http://www.stat.cmu.edu/~cshalizi/rmarkdown/)
 
 
