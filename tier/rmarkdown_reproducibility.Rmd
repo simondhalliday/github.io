@@ -35,13 +35,14 @@ library(plotly)
 ## Acknowledgments 
 I stole a lot of this work wholesale from people who know more than I do. I thank them and ask their forgiveness.  
 
-- Andrew Bray
+- Andrew Bray see [Reproducibility 2.0](https://prezi.com/rtmytpb6iwsw/reproducible-20/)
 - Nick Horton
 - Mine &Ccedil;etinkaya-Rundel
 - Hadley Wickham 
 - Danny Kaplan 
 - Amelia McNamara 
 - Ben Baumer
+- Cosma Shalizi
 
 
 ## R Markdown & Reproducibility 
@@ -254,7 +255,7 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
 ```
 
 
-##PlotLy Graphs
+##Plotly Graphs
 
 
 
@@ -335,12 +336,6 @@ summary(m3)
 ```
 
 
-##What else? 
-R Markdown and R Studio together have excellent capabilities. 
-
-- R Studio can show you the output of the commands *within* the R Markdown file
-- R Studio has *error-detection* and *debugging* assistance for your code (unlike, e.g. STATA or aspects of Excel)
-- R Studio server can be hosted online and your students work with logins there
 
 ##Math? 
 How about Bayes' Rule? 
@@ -355,6 +350,14 @@ In-line equations are bracketed by single dollar signs `$`.
 
 Off-set equations are bracketed by double dollar signs `$$`. 
 
+
+##What else? 
+R Markdown and R Studio together have excellent capabilities. 
+
+- R Studio can show you the output of the commands *within* the R Markdown file
+- R Studio has *error-detection* and *debugging* assistance for your code (unlike, e.g. STATA or aspects of Excel)
+- R Studio server can be hosted online and your students work with logins there
+
 ##R Link Love? 
 New to R? 
 
@@ -367,7 +370,7 @@ New to R?
 
 - Go back to your notecards
 - Re-read them 
-- Did I deal with what you wanted me to deal with? 
+- Did I cover what you wanted me to cover? 
 - Do you have *other* or *new* concerns or questions? (write them on the back)
 - Chat to someone next to you about what you're thinking about. 
 - Share with the workshop. 
