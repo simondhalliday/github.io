@@ -23,3 +23,7 @@ Using the R Markdown quick reference, figure out how to:
 - Add a block quote.
 
 Once you've done this, upload the `html` file to the R Markdown workshop folder on OSF that you got access to.
+
+* * * 
+
+[Back to Simon's TIER Occidental Workshop page](./index.html). 
