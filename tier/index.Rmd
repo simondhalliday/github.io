@@ -16,6 +16,6 @@ Here you'll find  the content [Simon Halliday](simondhalliday.github.io) covered
 - Simon's Slides [R Markdown](rmarkdown_reproducibility.html), [Shiny](https://shalliday.shinyapps.io/rmarkdown_reproducibility) (includes the Allen animation) and [Rmd](rmarkdown_reproducibility.Rmd)
 - Activity 1 [html](activity1.html) and [Rmd](activity1.Rmd)
 - Activity 2 [html](activity2.html) and [Rmd](activity2.Rmd)
-- A lab to introduce R Studio [html](lab1.html) and [Rmd](lab1.Rmd)
+- A lab to introduce R Studio [html](Lab1.html) and [Rmd](Lab1.Rmd)
 
 
