@@ -2,9 +2,10 @@
 title: "R Markdown for Reproducibility"
 author: "Simon Halliday, Smith College, Economics"
 date: "2017-January -6"
-output: 
-  ioslides_presentation:
-    fig_caption: true
+output: ioslides_presentation
+runtime: shiny
+self_contained: no
+mathjax: local
 ---
 
 <style>
@@ -30,6 +31,8 @@ library(plm)
 library(dygraphs)
 library(xts)
 library(plotly)
+library(shiny)
+library(ggvis)
 ```
 
 ## Acknowledgments 
@@ -43,14 +46,20 @@ I stole a lot of this work wholesale from people who know more than I do. I than
 - Amelia McNamara -- [website](http://www.science.smith.edu/~amcnamara/)
 - Ben Baumer -- [website](http://www.science.smith.edu/~bbaumer/w/)
 - Cosma Shalizi -- [R Markdown for Class Reports](http://www.stat.cmu.edu/~cshalizi/rmarkdown/)
+- Randy Prium -- [website](https://www.calvin.edu/~rpruim/)
 
+## What will I talk about? 
+
+>- Reproducibility with R Markdown
+
+>- And some things that I think are just cool in Rmd. 
 
 ## R Markdown & Reproducibility 
 
 - What happens in a traditional research report? 
 - Are traditional research reports easily reproducible? 
 - What gives us *soup to nuts* reproducibility? 
-  - Answer: R Markdown or Scripted LaTeX + STATA
+  - Answer: R Markdown or Scripted LaTeX + STATA (StatTag?)
 - Works within the TIER framework
 - I've implemented a variation of this in an upper-level economics elective
 
@@ -234,9 +243,7 @@ Plot1 %>%
 ##Dynamic Graphs 
 
 ```{r dygraph, message = FALSE, echo = FALSE}
-library(xts)
-library(dygraphs)
-Participation <- read.csv("/Users/shalliday/Google Drive/website_backup/eco254/fall_2015/Labs/Lab2/more/labor_force_participation.csv")
+Participation <- read.csv("Data/labor_force_participation.csv")
 Partdate <- as.Date(Participation$date)
 MaleP <- xts(Participation$male, Partdate)
 FemaleP <- xts(Participation$female, Partdate)
@@ -260,7 +267,7 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
 
 
 ```{r ancona, echo = FALSE}
-AnconaBase <- read.csv("/Users/shalliday/Google Drive/github/bfh-textbook/indmarketdemand/ancona.csv")
+AnconaBase <- read.csv("Data/ancona.csv")
 Ancona <- 
   AnconaBase %>%
   rename(date = dTransDataVendita, 
@@ -297,6 +304,41 @@ AnconaPlot <-
 ggplotly(AnconaPlot)
 ```
 
+## Shiny and Animation
+Data are from Allen (2001)
+```{r, echo=FALSE, message=FALSE, error=FALSE}
+londonrealwage <- read.csv("Data/londonrealwage.csv")
+shinyApp(
+ ui = fluidPage(responsive = FALSE,
+     sliderInput("n", "Number of Observations",
+                min = 1,
+                max = nrow(londonrealwage),
+                value = 1,
+                step = 8,
+                animate = animationOptions(interval = 400)
+                ), 
+    ggvisOutput("plot")
+  ),
+
+server = function(input, output, session) {
+  lrw <- reactive({
+           data = londonrealwage[1:input$n, ]
+           })
+  lrw  %>%
+    ggvis(x = ~Year, y = ~London_craftsman_real_wage, stroke := "blue") %>%
+    layer_lines() %>%
+    add_axis("x", title = "Year", properties = axis_props(title = list(fontSize = 20))) %>%
+    add_axis("y", title = "London Craftsmen's Real Wage ", subdivide=1, values = seq(0, 750, by = 50), properties = axis_props(title = list(fontSize = 20))) %>%
+     bind_shiny("plot") 
+})
+```
+
+<div class="notes">
+1349: Plague in London
+1381: The Peasants' Rebellion
+1666: The Great Fire of London with Plague the previous year
+After 1666 wages go into a slump for a while - civil war doesn't help too much
+</div>
 
 ##Alter and check some data
 ```{r create uniqid}
