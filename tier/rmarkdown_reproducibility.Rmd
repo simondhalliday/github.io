@@ -1,6 +1,6 @@
 ---
 title: "R Markdown for Reproducibility"
-author: "Simon Halliday"
+author: "Simon Halliday, Smith College, Economics"
 date: "2017-January -6"
 output: 
   ioslides_presentation:
@@ -21,12 +21,15 @@ output:
 </style>
 
 
-```{r setup, include=FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(dplyr)
 library(tidyr)
 library(ggplot2)
 library(plm)
+library(dygraphs)
+library(xts)
+library(plotly)
 ```
 
 ## Acknowledgments 
@@ -34,7 +37,7 @@ I stole a lot of this work wholesale from people who know more than I do. I than
 
 - Andrew Bray
 - Nick Horton
-- Mine Cetinkaya-Rundel
+- Mine &Ccedil;etinkaya-Rundel
 - Hadley Wickham 
 - Danny Kaplan 
 - Amelia McNamara 
@@ -226,6 +229,73 @@ Plot1 %>%
                          breaks = c("individual", "teamtreat"),
                          labels = c("Indidividuals", "Teams"))
 ```
+
+##Dynamic Graphs 
+
+```{r dygraph, message = FALSE, echo = FALSE}
+library(xts)
+library(dygraphs)
+Participation <- read.csv("/Users/shalliday/Google Drive/website_backup/eco254/fall_2015/Labs/Lab2/more/labor_force_participation.csv")
+Partdate <- as.Date(Participation$date)
+MaleP <- xts(Participation$male, Partdate)
+FemaleP <- xts(Participation$female, Partdate)
+LFPR <- cbind(MaleP, FemaleP)
+colnames(LFPR) <- c("Male", "Female")
+dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
+       dySeries("Male", label="Male")%>%
+       dySeries("Female", label="Female")%>%
+       dyAxis("x", label="Date")%>%
+       dyAxis("y", label="Labor Force Participation")%>%
+       dyHighlight(highlightSeriesOpts = list(strokeWidth = 3), 
+                   highlightCircleSize = 4)%>%
+       dyRangeSelector()
+       #dyOptions(drawGrid = input$showgrid, 
+                 #colors = RColorBrewer::brewer.pal(5, "Set2"))
+```
+
+
+##PlotLy Graphs
+
+
+
+```{r ancona, echo = FALSE}
+AnconaBase <- read.csv("/Users/shalliday/Google Drive/github/bfh-textbook/indmarketdemand/ancona.csv")
+Ancona <- 
+  AnconaBase %>%
+  rename(date = dTransDataVendita, 
+         productid = iProdID, 
+         productdescription = vchClasseProdottoDescrizione, 
+         speciesname = vchSpecieDescrizione, 
+         quantity = nTransQuantita, 
+         unitprice = nTransPrezzoUnitario, 
+         saleprice = nTransPrezzoVendita, 
+         finalprice = nTransPrezzoFinale, 
+         producerid = iProduttoreID, 
+         qualityid = iQualitaID, 
+         qualitydescription = vchQualitaDescrizione,
+         caseid = nNumCasse)
+AnconaAve <- 
+  Ancona %>% 
+  group_by(date) %>%
+  summarise(price = round(mean(unitprice), 2), 
+            meanquantity = mean(quantity), 
+            quantity = round(sum(quantity), 2))
+```
+
+```{r plotly Ancona}
+AnconaPlot <- 
+  AnconaAve %>% 
+  ggplot(aes(x = price, y = quantity)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, se = FALSE, method = "lm") +
+  xlab("Daily average price per kilogram (Euros)") +
+  ylab("Daily quantity (kilograms)") +
+  coord_flip() +  
+  theme_bw() + 
+  theme(axis.title = element_text(size = 16))
+ggplotly(AnconaPlot)
+```
+
 
 ##Alter and check some data
 ```{r create uniqid}

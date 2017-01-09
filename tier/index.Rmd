@@ -16,4 +16,6 @@ Here you'll find  the content [Simon Halliday](simondhalliday.github.io) covered
 - Simon's Slides [html](rmarkdown_reproducibility.html) and [Rmd](rmarkdown_reproducibility.Rmd)
 - Activity 1 [html](activity1.html) and [Rmd](activity1.Rmd)
 - Activity 2 [html](activity2.html) and [Rmd](activity2.Rmd)
+- A lab to introduce R Studio [html](lab1.html) and [Rmd](lab1.Rmd)
+
 

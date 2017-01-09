@@ -31,32 +31,30 @@ library(mosaic)
 ```
 
 
-I picked a name randomly from the workshop and got "Carmel". 
+I picked a name (somewhat) randomly from the workshop and got "Carmel". 
 We shall investigate a little bit about that name using the `BabyNames` datatable provided in `DataComputing`. 
 
-I ran the following command to create a data table called `Carmel` to
-provide a table with the total of all people called Carmel in the `BabyNames` data table.
+I ran the following command to create a data table called `Carmel` to provide a table with the total of all people called Carmel in the `BabyNames` data table.
 
 Copy and paste this command into your console or R markdown in a data chunk and run it. 
 ```{r Carmel}
 Carmel <- 
-  BabyNames %>%
-  filter(name == "Carmel") %>%
-  group_by(year, sex) %>%
-  summarise(yearlytotal = sum(count))
+  BabyNames %>% #This is a "pipe" from the dplyr package
+  filter(name == "Carmel") %>% #We want to filter out non Carmels
+  group_by(year, sex) %>% #We want to group by year and by sex
+  summarise(yearlytotal = sum(count)) #We want a count by year-sex pair
 ```
 
 You should now have an object in your "Environment" tab called "Carmel". 
 
 ###head()
-For the question in the quiz, you need to use the function `head()` to find out how many people are called Carmel at the top of the data table Carmel.
-```{r headCarmel, results = "hide"}
+You need to use the function `head()` to find out how many people are called Carmel at the top of the data table Carmel.
+```{r headCarmel, echo = TRUE}
 head(Carmel)
 ```
 
 ###favstats()
-
-Run the `favstats()` function to find the summary statistics of the variable `yearlytotal` with the data table `Carmel`.
+Run the `favstats()` function to find your *favorite* summary statistics of the variable `yearlytotal` with the data table `Carmel`.
 ```{r, include = FALSE}
 favstats(~yearlytotal, data = Carmel)
 ```
