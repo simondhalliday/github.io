@@ -1,6 +1,7 @@
 ---
-title: "TIER Occidental Workshop"
+title: "TIER, Occidental College Workshop"
 author: "Simon Halliday"
+date: "9 January 2017"
 output: 
   html_document:
     css: ./stylesheets/styles.css
