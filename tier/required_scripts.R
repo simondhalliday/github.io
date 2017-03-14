@@ -1,5 +1,8 @@
-#Script to install packages 
-#We need a variety of packages for this R workshop
+#TItle: Script to install packages 
+#Author: Simon Halliday
+#Date: 2017.03.13
+####################
+#Run this to install the packages for the R 4 Econ workshop
 #People at IT don't know R, so it's easier if we do it. 
 #We first check if the package 'pacman' is installed 
 #and install it if it is not installed
