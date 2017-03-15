@@ -73,7 +73,7 @@ So, as you can see, R is a good calculator.
 Later, we shall also see that R can be used to graph functions and create a variety of interesting graphics. 
 
 ##Reference point
-Next week, I'll talk to you about participation levels. To get a sense of what you can do with data, take a look at this graph at FRED: 
+Later, we'll talk about participation levels. To get a sense of what you can do with data, take a look at this graph at FRED: 
 [research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#](https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#) 
 
 ##R can make a dygraph like FRED
@@ -101,51 +101,76 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
 
 
 ##Loading Data
-We now want to start to work with some data. We shall first download a dataset
-that I have already accessed from the Federal Reserve Bank of St. Louis using
-the FRED database. You can access the `.csv` (comma separated value) file here:
+We now want to start to work with some data. 
+We shall first download a dataset that I have already accessed from the Federal Reserve Bank of St. Louis using the FRED database. 
+You can access the `.csv` (comma separated value) file here:
 [https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing). 
 The file is called `labor_force_levels.csv`. 
 
-Download the file and save it in a logical place. I would recommend that you 
-save it in your Data Computing folder under a folder called Lab1 and then
-create a backup of the file in that folder too. Open the file in MSExcel if
-you want to see what a `csv` looks like in Excel. 
+Download the file and save it in a logical place. 
+I would recommend that you save it in a workshop folder under a folder called Lab1 and then
+create a backup of the file in that folder too. 
+Open the file in MSExcel if you want to see what a `csv` looks like in Excel. 
 Do not save any changes you make to it. 
 
-Now, we are going to open the file in R using RStudio. Use the command below, but be sure to change the filepath to the one where you have put the `labor_force_levels.csv` file. 
+Now, we are going to open the file in R using RStudio. 
+First, we shall ensure that your *working directory* is set to the right place. 
+Your working directory is the folder that contains your current project's files (this is even managed well in R Studio by creating 'Projects' that you sync with version control sites like GitHub).
+
+First, let's check what the current working director is before we change it. Type this into the console: 
+```{r working directory}
+getwd()
+```
+Now, you might already be in the working directory you want to be in, but if you are not, then you may want to change your working directory, e.g.: 
+```{r}
+setwd("/Users/shalliday/Google Drive/simondhalliday.github.io/uct")
+```
+Do note that I'm writing filepaths for a Mac, so this may differ for you if you are working on a Windows, e.g. you'll need to include `C:\\` and use backslashes instead of forward slashes.
+Notice, too, that if the working directory you set in this code chunk is different to the folder for this R Notebook (R Markdown file), then it'll be reset before the next code chunk. 
+You can change the root directory for the Notebook as a whole in an initial setup code chunk using the `knitr` package option `root.dir`.
+
+I have put the file `labor_force_levels.csv` in a folder called `more` in my `uct` folder. 
+You could do something similar or choose an alternative name. 
+Use the command below, but be sure to change the filepath to the one where you have put the `labor_force_levels.csv` file. 
 
 ```{r}
-ParticipationLevels <- read.csv("/Users/shalliday/Google Drive/website_backup/eco254/fall_2015/Labs/Lab1/more/labor_force_levels.csv")
+ParticipationLevels <- read.csv("more/labor_force_levels.csv")
 ```
 
-`read.csv` instructs R to access the csv file and assign it to an object called `ParticipationLevels`. (I would also recommend the command `read_csv()` from the `readr` package. We shall use it later.)
+`read.csv` instructs R to access the csv file and assign it to an object called `ParticipationLevels`. `read.csv` is from Base R and so you can use it whenever you want to, but it is not the fastest function to use for large .csv files. 
+
+As an alternative, we could use `read_csv()` from the `readr` package. 
+First we need to `require()` or `library()` the package `readr`:
+```{r, warning = FALSE, message = FALSE}
+library(readr)
+ParticipationLevelsreadr <- read_csv("more/labor_force_levels.csv")
+```
+
 `ParticipationLevels` is a data table that we shall use to practise some basic analysis. 
+You could use `ParticipationLevelsreadr` instead if you'd prefer. 
 
-The data table contains the Bureau of Labor Statistics' counts for men and
-women participating in the labor force each period. You should see that the
-workspace area in the upper righthand corner of the RStudio window now
-lists a data set called `ParticipationLevels` that has 810 observations of
-3 variables. As you interact with R, you will create a series of
-__objects__. Sometimes you load an object as we have done here, and
+The data table contains the Bureau of Labor Statistics' counts for men and women participating in the labor force each period.
+You should see that the workspace area in the upper righthand corner of the RStudio window now lists a data set called `ParticipationLevels` that has 810 observations of
+3 variables. 
+As you interact with R, you will create a series of
+__objects__. 
+Sometimes you load an object as we have done here, and
 sometimes you create an object yourself as the result of a computation or
-some analysis you have performed. Because you access the data from the web,
-this command (and the entire assignment) will work in a computer lab, in
+some analysis you have performed. 
+Because you access the data from the web, this command (and the entire assignment) will work in a computer lab, in
 the library, or in your dorm room; anywhere you have access to the internet.
-
 
 ## The Data: Bureau of Labor Statistics (BLS) counts of participants in the labor force
 
 The Bureau of Labor Statistics has collected data regularly since 1948 on the 
-numbers of men and women who participate in the labor force. These days, the counts are published monthly. 
-The BLS needs to understand whether someone 
-participates in the labor force to come to judge employment in the US. 
-You might remember from ECO153 or ECO253 that the government measures 
-employment only from those people participating in the labor force, that is, 
-either working or looking for work. Someone who does not have 
-a job and is not actively searching for work is not unemployed. Rather, they 
-are a **discouraged worker**. Discouraged workers do not participate in the 
-labor force. 
+numbers of men and women who participate in the labor force in the US. 
+These days, the counts are published monthly. 
+The BLS needs to understand whether someone participates in the labor force to come to judge employment in the US. 
+You might remember from macro that the government measures 
+employment only from those people participating in the labor force, that is, either working or looking for work. 
+Someone who does not have a job and is not actively searching for work is not unemployed. 
+Rather, they are a **discouraged worker**. 
+Discouraged workers do not participate in the labor force. 
 
 We and the government are interested in understanding what percentages of men 
 and women are working at a given point in time. To calculate those proportions
