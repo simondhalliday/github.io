@@ -1,5 +1,5 @@
 ---
-title: "R For Economics Workshop"
+title: "R For Economics Workshop, UCT, School of Economics"
 author: "Simon Halliday, Smith College"
 date: "17 March 2017"
 output: 
