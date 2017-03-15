@@ -1,0 +1,10 @@
+name: rmarkdown_reproducibility
+title: rmarkdown_reproducibility
+account: shalliday
+server: shinyapps.io
+appId: 150082
+bundleId: 673989
+url: https://shalliday.shinyapps.io/rmarkdown_reproducibility/
+when: 1483987484.12727
+asMultiple: FALSE
+asStatic: FALSE
