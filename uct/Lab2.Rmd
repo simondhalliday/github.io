@@ -36,7 +36,7 @@ You can access the `.csv` (comma separated value) file here:
 The file is called `labor_force_levels.csv`. 
 
 Download the file and save it in a logical place. I would recommend that you 
-save it in your Data Computing folder under a folder called Lab1 and then
+save it in your Workshop folder under a folder called `more` and then
 create a backup of the file in that folder too. Open the file in MSExcel if
 you want to see what a `csv` looks like in Excel. 
 Do not save any changes you make to it. 
@@ -47,12 +47,19 @@ Now, we are going to open the file in R using RStudio. Use the command below, bu
 ParticipationLevels <- read.csv("more/labor_force_levels.csv")
 ```
 
-`read.csv` instructs R to access the csv file and assign it to an object called `ParticipationLevels`. (I would also recommend the command `read_csv()` from the `readr` package. We shall use it later.)
+`read.csv` instructs R to access the csv file and assign it to an object called `ParticipationLevels`. 
+
+Alternative, you can use the command `read_csv()` from the `readr` package. 
+```{r, warning = FALSE, warning = FALSE}
+library(readr)
+ParticipationLevelsRr <- read_csv("more/labor_force_levels.csv")
+```
+
 `ParticipationLevels` is a data table that we shall use to practise some basic analysis. 
 
 The data table contains the Bureau of Labor Statistics' counts for men and
 women participating in the labor force each period. You should see that the
-workspace area in the upper righthand corner of the RStudio window now
+workspace area in the upper righthand corner of the RStudio window (in the *Environment* tab) now
 lists a data set called `ParticipationLevels` that has 810 observations of
 3 variables. As you interact with R, you will create a series of
 __objects__. Sometimes you load an object as we have done here, and
@@ -68,8 +75,7 @@ The Bureau of Labor Statistics has collected data regularly since 1948 on the
 numbers of men and women who participate in the labor force. These days, the counts are published monthly. 
 The BLS needs to understand whether someone 
 participates in the labor force to come to judge employment in the US. 
-You might remember from ECO153 or ECO253 that the government measures 
-employment only from those people participating in the labor force, that is, 
+You might remember that the government measures employment only for those people *participating* in the labor force, that is, 
 either working or looking for work. Someone who does not have 
 a job and is not actively searching for work is not unemployed. Rather, they 
 are a **discouraged worker**. Discouraged workers do not participate in the 
@@ -77,16 +83,18 @@ labor force.
 
 We and the government are interested in understanding what percentages of men 
 and women are working at a given point in time. To calculate those proportions
-we need the counts. We shall use the percentages in later labs. For now, we
+we need the counts. We shall use the percentages in a later lab. For now, we
 want to understand the counts to get a sense of the how the data works. 
 
+Type the following into the console: 
 ```{r view data, eval = FALSE}
 ParticipationLevels
 ```
 
+R will automatically curtail the command. It's trying to show you the majority of the datatable (which is what you requested by naming it). 
 You should see four columns of numbers, each row representing a 
-different date. The first entry in each row, corresponding the first column, 
-is simply the row number. The second column is the date which follows
+different date. 
+The first entry in each row is simply the row number -- note, this number is *not* in the data table itself, its given that row number by R to tell you where in the table that row is. The second column is the date which follows
 international conventions and is written as YYYY-MM-DD (note this is different
 to how many people write dates in the USA, where most people write dates as 
 MM-DD-YYYY. R is used internationally and so adheres to the international 
@@ -108,7 +116,9 @@ You would have seen that looking at the data frame in its entirety is quite
 cumbersome. We would probably rather just take a look at some portion of our
 data, such as the top or the bottom of the data. We can do this with the
 `head` and `tail` commands. Run them now to check out the first few rows 
-of the data. By default, head and tail show you 6 rows. You can change that by
+of the data. 
+
+By default, head and tail show you 6 rows. You can change that by
 adding a command and a number after the the name of the data frame. 
 
 ```{r}
@@ -145,13 +155,14 @@ str(ParticipationLevels)
 As we saw with the `dim` command, the `str` command tells us that the data has
 810 observations and 3 variables. As with the `names` command, `str` also tells
 us the names of the three variables (`date`, `male` and `female`) and the 
-format of these variables. It tells us that `date` has the format of a "Date". 
-It tells us that male and female have the format of "int", which is short for
-"integer".
+format of these variables. It tells us that `date` has the format of a "factor" (categorical variable), this is obviously not what we want to have a date be categorized as, so we'll change that later. 
+`str()` also tells us that male and female have the format of "int", which is short for
+"integer", which makes sense given that they're the numbers of men and women participating in the labor force.
 
 At this point, you might notice that many of the commands in R look a 
-lot like functions from math class. So, invoking R commands means supplying
-a function with some number of arguments that appear in parentheses. For
+lot like functions from mathematics. So, invoking R commands means supplying
+a *function* with some number of *arguments* that appear in parentheses. 
+For
 example, when you say that a variable $y$ is a function of another variable 
 $x$ you write: $y = f(x)$. The `dim`, `names` and `str` commands
 each took a single argument, the name of a data frame `ParticipationLevels`. The idea
@@ -179,8 +190,7 @@ would represent the 33<sup>rd</sup> entry in the vector.-->
 We are often interested in knowing basic summary statistics of 
 variables and also in generating new variables that contain new information. 
 One very useful command in R, using the `mosaic` package, is the `favstats`
-command (read as "fave stats""). What, you might ask, are social scientist's 
-favorite statistics? How about the following? 
+command (read as "fave stats""). What, you might ask, are a social scientist'sfavorite statistics? How about the following? 
 
 - mean
 
@@ -239,17 +249,17 @@ We shall use a variety of data verbs, commands that "do" things(hence "verb") to
 - `gather()` and `spread()`: gather and spread re-shape the data by making the data narrower (for gather) or wider (for spread) depending on what we need. Normally, we need to re-shape data when we want to change the particular cases that we have so that we can draw insights based on alternative cases to those we already have. For example, to draw a graph, we might need to change the case into a summary statistic, such as the average number of people engaged in an activity, rather than having the case be each unique individual in a dataset.  
 
 ##Piping
-Before we do much else, we want to think about how to write good code. One of doing that is by using "pipes". In R, the `%>%` symbol is called a __pipe__. You should read the pipe as saying "Then" or "And then". A pipe "pipes in" an argument so that you are able to use it in a function. 
+Before we do much else, we want to think about how to write good code. 
+One way of doing that is by using "pipes". 
+In R, the `%>%` symbol is called a __pipe__. You should read the pipe as saying "Then" or "And then". 
+A pipe "pipes in" an argument so that you are able to use it in a function. 
+What this means is that an object is `piped' into a position that it would normally have filled, typically the firs position in a function (as we shall see numerous times later).
 
-I like the to think of my programs that 
-include the pipe as stories told by a 6-year-old:
+I like the to think of my programs that include the pipe as stories told by a 6-year-old:
 
 <img src="more/and_then_kid.png" height="400px" width="300px" align="middle"/>
 
-That way, I don't get confused about what it means because I always
-get the functions in the right sequence. 
-
-
+That way, I don't get confused about what it means because I always get the functions in the right sequence. 
 
 So the command we will use to tell R what data to use is the following: 
 ```{r data_pipe, eval = FALSE}
@@ -261,33 +271,44 @@ Participation %>%
 ##Filtering and Mutating
 
 We might be interested in seeing the total number of participants in the labor 
-force each year. First, though, we have to tell R that the variable we have called `date` is, in fact, a date. 
+force each year. 
+
+First, though, we have to tell R that the variable we have called `date` is, in fact, a date. 
 ```{r}
 ParticipationLevels <- 
-  ParticipationLevels %>% mutate(date = as.Date(date))
+  ParticipationLevels %>% 
+  mutate(date = as.Date(date))
 ```
 
-`as.Date()` is a function which lets R know that a variable we are concerned with is a date. 
+Let's intpret what happened above in English:
 
+1. we tell R the *name* we want to assign our data frame. We're going to stick with old name of `ParticipationLevels`. 
+2.  we tell R we want to *pipe in* the data from the existing data frame `ParticipationLevels` to tell it we're using that data in our function. 
+3. we employ the function `mutate()` from the `dplyr` package to mutate (change) or data. 
+4. we tell `mutate()` that we want to change the variable 'date' so that it is treated like a date using the function `as.Date()`. The thing we're changing is the variable `date`, so that's what `as.Date()` takes as an argument to its function. 
+
+We could also have written this as: 
+```{r}
+ParticipationLevels <- mutate(ParticipationLevels, date = as.Date(date))
+```
+Notice the position of ParticipationLevels and the lack of a pipe. As it stands, this is legible code. But, if we were to mutate many variables and change many things, it would be much more legible if we wrote the code on several lines with pipes. 
 
 Now, to undertand a subset of the cases, we could do one of two operations. We will do a 
 simple one first. Let's say we're interested in finding out what the total 
 number of labor force participants was in January of 1948. We shall use the 
 command `filter` to do this. 
 
-
 ```{r}
 Jan1948 <- 
-ParticipationLevels %>%
-filter(date == "1948-01-01") 
+  ParticipationLevels %>%
+  filter(date == "1948-01-01") 
 Jan1948
 ```
 Let's go through a step-by-step interpretation of the string of code: 
 
-- First, we tell R we want to assign the name `Jan1948` to our new variable. 
+- First, we tell R we want to assign the name `Jan1948` to our new object 
 - Second, we tell R to pipe in (to use) the `ParticipationLevels` data. 
-- Third, we then (%>%) tell R to use the filter command where it takes the
-variable `date` and only selects the case(s) for which date is equal to
+- Third, we then (%>%) tell R to use the `filter()` command where it takes the variable `date` and only selects the case(s) for which date is equal to
 "1948-01-01" (the use of two equals signs `==` is very important here! You will
 get an error if you only use one equals sign)
 - Fourth, we tell R to display our new dataframe `Jan1948`. (notice, there's no pipe %>% at the end of the line before `Jan1948`)
@@ -317,8 +338,7 @@ ParticipationLevels <-
 ```
 What does this string of code mean? Let's go through it step-by-step: 
 
-- First, we tell R the name we want to assign our data frame. We're going to stick with old name of `ParticipationLevels`. 
-- Second, we tell R we want to pipe in the data from the existing data frame `ParticipationLevels` to tell it we're using that data in our function. 
+- Go back to the previous use of mutate and consider steps 1 and 2 yourself. 
 - Third, we then (`%>%`) call the mutate function and tell it that we're creating a new variable called `total` which is `male + female`. 
 - We can now `head(ParticipationLevels)` to check what our new variable looks like. Go ahead and do that on your own (it's not included in the code above)
 
