@@ -315,12 +315,12 @@ would represent the 33<sup>rd</sup> entry in the vector.-->
 <span class="st">  </span>ParticipationLevels %&gt;%<span class="st"> </span>
 <span class="st">  </span><span class="kw">mutate</span>(<span class="dt">date =</span> <span class="kw">as.Date</span>(date))</code></pre></div>
 <p>Let’s intpret what happened above in English:</p>
-<ol style="list-style-type: decimal">
+<ul>
 <li>we tell R the <em>name</em> we want to assign our data frame. We’re going to stick with old name of <code>ParticipationLevels</code>.</li>
 <li>we tell R we want to <em>pipe in</em> the data from the existing data frame <code>ParticipationLevels</code> to tell it we’re using that data in our function.</li>
 <li>we employ the function <code>mutate()</code> from the <code>dplyr</code> package to mutate (change) or data.</li>
 <li>we tell <code>mutate()</code> that we want to change the variable ‘date’ so that it is treated like a date using the function <code>as.Date()</code>. The thing we’re changing is the variable <code>date</code>, so that’s what <code>as.Date()</code> takes as an argument to its function.</li>
-</ol>
+</ul>
 <p>We could also have written this as:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ParticipationLevels &lt;-<span class="st"> </span><span class="kw">mutate</span>(ParticipationLevels, <span class="dt">date =</span> <span class="kw">as.Date</span>(date))</code></pre></div>
 <p>Notice the position of ParticipationLevels and the lack of a pipe. As it stands, this is legible code. But, if we were to mutate many variables and change many things, it would be much more legible if we wrote the code on several lines with pipes.</p>
@@ -440,7 +440,7 @@ You will be prompted to save your workspace. If you click <em>save</em>, RStudio
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
-<p>That was an introduction to R and RStudio, but we will provide you with more functions and a more complete sense of the language as the you progress. Feel free to browse around the websites for <a href="http://www.r-project.org">R</a> and <a href="http://rstudio.org">RStudio</a> if you’re interested in learning more, or find more labs for practice at <a href="http://openintro.org" class="uri">http://openintro.org</a>. I also recommend <a href="datacamp.com">DataCamp</a></p>
+<p>That was an introduction to R and RStudio, but we will provide you with more functions and a more complete sense of the language as you progress. Feel free to browse around the websites for <a href="http://www.r-project.org">R</a> and <a href="http://rstudio.org">RStudio</a> if you’re interested in learning more, or find more labs for practice at <a href="http://openintro.org" class="uri">http://openintro.org</a>. I also recommend <a href="datacamp.com">DataCamp</a></p>
 <div id="license">
 <p>This is a product of OpenIntro that is released under a <a href="http://creativecommons.org/licenses/by-sa/3.0">Creative Commons Attribution-ShareAlike 3.0 Unported</a>. This lab was adapted by Simon Halliday. From a lab written by Andrew Bray and Mine Çetinkaya-Rundel from a lab written by Mark Hansen of UCLA Statistics.</p>
 </div>

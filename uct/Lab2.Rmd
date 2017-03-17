@@ -282,10 +282,10 @@ ParticipationLevels <-
 
 Let's intpret what happened above in English:
 
-1. we tell R the *name* we want to assign our data frame. We're going to stick with old name of `ParticipationLevels`. 
-2.  we tell R we want to *pipe in* the data from the existing data frame `ParticipationLevels` to tell it we're using that data in our function. 
-3. we employ the function `mutate()` from the `dplyr` package to mutate (change) or data. 
-4. we tell `mutate()` that we want to change the variable 'date' so that it is treated like a date using the function `as.Date()`. The thing we're changing is the variable `date`, so that's what `as.Date()` takes as an argument to its function. 
+- we tell R the *name* we want to assign our data frame. We're going to stick with old name of `ParticipationLevels`. 
+- we tell R we want to *pipe in* the data from the existing data frame `ParticipationLevels` to tell it we're using that data in our function. 
+-  we employ the function `mutate()` from the `dplyr` package to mutate (change) or data. 
+-  we tell `mutate()` that we want to change the variable 'date' so that it is treated like a date using the function `as.Date()`. The thing we're changing is the variable `date`, so that's what `as.Date()` takes as an argument to its function. 
 
 We could also have written this as: 
 ```{r}
@@ -447,9 +447,6 @@ This command will only show the number of females in the labor force during each
 [exercise number] What command would you use to extract just the counts of __males__ in the 
 labor force? Try it! 
 
-
-
-
 __Tip__: If you use the up and down arrow keys, you can scroll through your previous 
 commands, your so-called command history. You can also access it by clicking on 
 the history tab in the upper right panel.  This will save you a lot of typing in
@@ -467,7 +464,7 @@ then re-start RStudio.
 
 ## Conclusion
 That was an introduction to R and RStudio, but we will provide you with more
-functions and a more complete sense of the language as the you progress. 
+functions and a more complete sense of the language as you progress. 
 Feel free to browse around the websites for [R](http://www.r-project.org) and 
 [RStudio](http://rstudio.org) if you're interested in learning more, or find 
 more labs for practice at http://openintro.org. I also recommend [DataCamp](datacamp.com)
