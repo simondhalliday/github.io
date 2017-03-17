@@ -11,9 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Here you'll find  the content [Simon Halliday](simondhalliday.github.io) covered during the R for Economics workshop, March 2017. 
+Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io) covered during the R for Economics workshop, March 2017. 
 
-We shall start with a presentation by me on R Markdown and some of the uses of R broadly. We will then do a lab exercise, perhaps followed by more activities that employ R Notebooks. 
+We shall start with a presentation by me on R Markdown and some of the uses of R broadly. We will then do some lab exercises, perhaps followed by more activities that employ R Notebooks. 
 
 - Simon's Slides [R Markdown](rmarkdown_reproducibility.html), [Shiny](https://shalliday.shinyapps.io/rmarkdown_reproducibility) (includes the Allen animation) and [Rmd](rmarkdown_reproducibility.Rmd) (no animation)
 - Lab 1: A lab to introduce R Studio and R Markdown [html](Lab1.html) and [Rmd](Lab1.Rmd)
