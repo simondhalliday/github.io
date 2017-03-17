@@ -10,8 +10,9 @@ output:
 
 Before you start, be sure to load these packages, you could also use the function `library()` instead of the function `require()`:
 ```{r requirements, message = FALSE, warning = FALSE}
-require(DataComputing)
 require(mosaic)
+require(tidyverse)
+require(dplyr)
 ```
 
 ##Learning Outcomes
@@ -43,7 +44,7 @@ Do not save any changes you make to it.
 Now, we are going to open the file in R using RStudio. Use the command below, but be sure to change the filepath to the one where you have put the `labor_force_levels.csv` file. 
 
 ```{r}
-ParticipationLevels <- read.csv("/Users/shalliday/Google Drive/website_backup/eco254/fall_2015/Labs/Lab1/more/labor_force_levels.csv")
+ParticipationLevels <- read.csv("more/labor_force_levels.csv")
 ```
 
 `read.csv` instructs R to access the csv file and assign it to an object called `ParticipationLevels`. (I would also recommend the command `read_csv()` from the `readr` package. We shall use it later.)

@@ -1,7 +1,7 @@
 ---
 title: "R Markdown for Reproducibility"
 author: "Simon Halliday, Smith College, Economics"
-date: "Occidental, 9 January 2017"
+date: "UCT, 17 March 2017"
 output: ioslides_presentation
 runtime: shiny
 self_contained: no
@@ -53,6 +53,8 @@ I stole a lot of this work wholesale from people who know more than I do. I than
 >- Reproducibility with R Markdown
 
 >- And some things that I think are just cool in Rmd. 
+
+>- BIG Thank you to Project TIER and the Alfred P. Sloan Foundation
 
 ## R Markdown & Reproducibility 
 
@@ -403,7 +405,7 @@ R Markdown and R Studio together have excellent capabilities.
 ##R Link Love? 
 New to R? 
 
-- Check out the Computation and Visualization Consortium's week-long [workshop](https://www.macalester.edu/hhmi/curricularinnovation/cvc/) over the summer (dates TBC - Kaplan, Prium & Horton)
+- Check out the Computation and Visualization Consortium's week-long [workshop](https://www.macalester.edu/hhmi/curricularinnovation/cvc/) over the summer (dates June 12-16, Macalaster College - Kaplan, Prium & Horton)
 - Consider subscribing to classes at [Datacamp.com](www.datacamp.com) (take the intro free of charge)
 - Grolemund & Wickham, 2016, *R for Data Science*, [r4ds](r4ds.had.co.nz)
 - Baumer, Horton & Kaplan, forthcoming, [*Modern Data Science with R*](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 

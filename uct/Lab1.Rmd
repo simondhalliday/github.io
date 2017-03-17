@@ -66,12 +66,12 @@ So, as you can see, R is a good calculator.
 Later, we shall also see that R can be used to graph functions and create a variety of interesting graphics. 
 
 ##Reference point
-Next week, I'll talk to you about participation levels. To get a sense of what you can do with data, take a look at this graph at FRED: 
+Later, I'll talk to you about participation levels. To get a sense of what you can do with data and interactivity in R and R Markdown with HTML, take a look at this graph at FRED: 
 [research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#](https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#) 
 
 ##R can make a dygraph like FRED
-We'll leave it at that for now, but here you can see a lovely `dygraph` that can be generated using htmlwidgets (go to
-[www.htmlwidgets.org](http://www.htmlwidgets.org/) to see a variety of other advanced options for what you can do when you become and R Champion). 
+Here you can see a lovely `dygraph` that can be generated using htmlwidgets (go to
+[www.htmlwidgets.org](http://www.htmlwidgets.org/) to see a variety of other advanced options for what you can do when you become and R Champion). You saw this graph in my presentation, but I wanted also to show you that it can be produced in an html documen that would be online.  
 
 ```{r dygraph, message = FALSE, echo = FALSE, warning = FALSE}
 library(xts)
@@ -93,7 +93,7 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
 ```
 
 ##R Markdown and R Notebooks
-This document is based on an R Notebook. 
+This document is based on an R Notebook or R Markdown document. 
 R notebooks are meant to be like Lab Notebooks in the sciences where you ``do (data) science'' by: 
 
 - use code chunks to perform an activity
@@ -106,18 +106,30 @@ We shall see this in action several times during the workshop.
 
 
 * * * 
-Practice what you've learned by creating a brief CV of your **fictional alter ego**. 
-The title of the file should be your name, and you should include headings for (at least) education or employment. 
-Each of the sections should include a bulleted list of jobs/degrees. 
-Highlight the year in **bold**.
+Practice what you've learned by creating a brief CV of your **fictional alter ego** in an R Markdown document. 
 
-Using the R Markdown quick reference, figure out how to:
 
+First, open an R Markdown document: 
+
+* Go to File -> New File -> R Notebook 
+* The file will be pre-populated with some content. Ignore it for the moment. 
+* You will only lightly edit the top of the page between the `---` lines (you'll only change the title)
+* You'll mostly edit after that in the body of the document
+
+Using the R Markdown quick reference (In R Studio navigate to Help -> Cheatsheets -> R Markdown Reference Guide), figure out how to ensure the following:
+
+- The title of the file (and the document itself) should be your name
+- You should include headings for (at least) education or employment
+- Each of the sections should include a bulleted list of jobs/degrees
+- Highlight the year in **bold**
 - Include an image of yourself (either a local file or url).
-- Add a horizontal rule.
-- Add a block quote.
+- Add a horizontal rule
+- Add a block quote
+- Having done this, go to the top of the page where it says 'Preview' on the arrow next to preview click on the arrow and select 'Knit to HTML.' It will then produce an html document you can compare with other people. 
 
-Once you've done this, show the `html` file to your compatriots around you and I'll come around and check what people have done. 
+I'll come around and check what people have done. 
+
+See an example here: [simonhalliday](simonhalliday.html). 
 
 * * * 
 
