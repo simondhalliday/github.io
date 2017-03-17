@@ -92,8 +92,6 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
        dyRangeSelector()
 ```
 
-
-
 ##R Markdown and R Notebooks
 This document is based on an R Notebook. 
 R notebooks are meant to be like Lab Notebooks in the sciences where you ``do (data) science'' by: 
@@ -119,7 +117,7 @@ Using the R Markdown quick reference, figure out how to:
 - Add a horizontal rule.
 - Add a block quote.
 
-Once you've done this, upload the `html` file to the R Markdown workshop folder on OSF that you got access to.
+Once you've done this, show the `html` file to your compatriots around you and I'll come around and check what people have done. 
 
 * * * 
 
