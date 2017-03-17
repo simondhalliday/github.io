@@ -16,8 +16,9 @@ Here you'll find  the content [Simon Halliday](simondhalliday.github.io) covered
 We shall start with a presentation by me on R Markdown and some of the uses of R broadly. We will then do a lab exercise, perhaps followed by more activities that employ R Notebooks. 
 
 - Simon's Slides [R Markdown](rmarkdown_reproducibility.html), [Shiny](https://shalliday.shinyapps.io/rmarkdown_reproducibility) (includes the Allen animation) and [Rmd](rmarkdown_reproducibility.Rmd) (no animation)
-- A lab to introduce R Studio [html](Lab1.html) and [Rmd](Lab1.Rmd)
+- A lab to introduce R Studio and R Markdown [html](Lab1.html) and [Rmd](Lab1.Rmd)
 - A lab to introduce the tidyverse [html](Lab2.html) and [Rmd](Lab2.Rmd)
+- A lab to introduce the plotting [html](Lab3.html) and [Rmd](Lab3.Rmd)
 - Name Activity [html](activity2.html) and [Rmd](activity2.Rmd)
 
 
