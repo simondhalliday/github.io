@@ -8,10 +8,10 @@ output:
   pdf_document: default
 ---
 
-Before you start, be sure to load these packages, you could also use the function `library()` instead of the function `require()`:
+Before you start, be sure to load the packages you need. I always do this in an initial 'set up' code chunk at the top of a page. You could also use the function `library()` instead of the function `require()`:
 ```{r requirements, message = FALSE, warning = FALSE}
-require(DataComputing)
 require(mosaic)
+require(tidyverse)
 ```
 
 ##Learning Outcomes
@@ -129,7 +129,7 @@ Using the R Markdown quick reference (In R Studio navigate to Help -> Cheatsheet
 
 I'll come around and check what people have done. 
 
-See an example here: [simonhalliday](simonhalliday.html). 
+See an example here: [simonhalliday](./simonhalliday.html). 
 
 * * * 
 

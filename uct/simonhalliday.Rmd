@@ -14,9 +14,11 @@ output:
 - **2006-2010 ** Spent too long on my undergraduate degree at Nameless U. Why? See below. 
 
 * * * 
+
 >"You shall not pass!" Gandalf The Grey, MAM1000
+
 * * * 
-(Yes, that's a block quote)
+
 
 ##Experience
 
@@ -27,6 +29,7 @@ output:
 
 
 * * *
+And here's the original content of the file that I didn't delete...
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
