@@ -24,6 +24,7 @@ library(plm)
 ```
 
 
+
 ##Data Import
 We now need to import the data. You can download the csv of the file from Google drive here: [https://drive.google.com/file/d/0B9jjwkjdUJU7cElvcVI5U3hhdEU/view?usp=sharing](https://drive.google.com/file/d/0B9jjwkjdUJU7cElvcVI5U3hhdEU/view?usp=sharing). 
 
@@ -35,6 +36,13 @@ When you call on `read.csv()` or `read_csv()` be sure to include the file extens
 ```{r import data}
 SutExp <- read.csv("more/sutterexperiment.csv")
 ```
+
+Or alternatively, using `readr()`:
+```{r}
+library(readr)
+SutExp <- read_csv("~/Google Drive/simondhalliday.github.io/uct/more/sutterexperiment.csv")
+```
+
 
 ##Using rename to have consistent variable names
 We want to have consistent naming protocols. 
@@ -74,6 +82,11 @@ Now we need narrow data to plot
 narrowAve <- 
   groupAves %>%
   gather(round, average, r1:r9)
+```
+
+This would be equivalent to: 
+```{r}
+narrowAve <- gather(groupAves, round, average, r1:r9)
 ```
 
 
