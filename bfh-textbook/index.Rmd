@@ -91,23 +91,26 @@ We incubated many of these ideas at the Santa Fe Institute (where Duncan and Sam
 ##Contents
 Below is an abridged table of contents for the first 12 chapters of the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing) and a copy of the preface [here](https://drive.google.com/file/d/0B9jjwkjdUJU7dGViNm1MNm15NXc/view?usp=sharing). 
 
-| Chapter  | Title   | Page  | 
+| Chapter  | Title   |
 |---|---|---|
-| Preface | - | 13 |
-| Part 1 | People, Economy & Society | 23 |
-| 1 | Society | 27 |
-| 2 | People & Preferences | 69 |
-| 3 | Doing the Best You can | 105 |
-| 4 | An Uncertain & Risky World | 145 | 
-| 5 | Property & Exchange | 189 | 
-| 6 | Coordination Failures | 233 |
-| Part 2 | Markets | 273 |
-| 7 | Specialization, Exchange & Market Demand | 277 |
-| 8 | Production: Technologies, Costs & Supply | 329 |
-| 9 | Competition, Rent-Seeking & Market Equilibrium | 373 |
-| 10 | Information, Contracts & Power | 419 |
-| 11 | Jobs, Unemployment, and Wages | 463 |
-| 12 | Credit Markets | 501 |
+| Preface | - |
+| Part I | People, Economy & Society |
+| 1 | Society: Coordination Problems & Economic Institutions |
+| 2 | People & Preferences |
+| 3 | Constrained optimization: Doing the Best You Can | 
+| 4 | A Risky & Unequal World |
+| 5 | Property & Exchange: Mutual Gains & Conflicts | 
+| 6 | Coordination Failures & Institutional Responses| 
+| Part II | Markets | 
+| 7 | Specialization, Exchange & Market Demand | 
+| 8 | Production: Technologies, Costs & Supply | 
+| 9 | Competition, Rent-Seeking & Market Equilibrium |
+| 10 | Information, Contracts & Power |
+| 11 | Jobs, Unemployment, & Wages |
+| 12 | Credit Markets & Wealth Inequality |
+| Part III | Economic Systems: Coordination, Competition, and Conflict | 
+| 13 | Perfect Competition & The Invisible Hand |
+| 14 | Capitalism in the 21st Century | 
 
 ##Calculus and Graphics
 We use calculus in the book, but almost all of the calculus is contained in boxes (named for Alfred Marshall as you will see). We try to follow Marshall's maxims with the mathematics:  
@@ -131,19 +134,19 @@ Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1
 We may not have burned as much of the mathematics as we ought to have done, but we try to restrain the mathematics to when it is most necessary. For the most part, the economics is conveyed through *graphical* intuition accompanied by algebra. All of the graphics are also available on github (see Simon Halliday's github repo [bfh-textbook](https://github.com/simondhalliday/bfh-textbook/)). We hope later to provide interactive versions of the majority of the important graphics programmed either in R with Shiny or Mathematica.   
 
 ##Course Materials
-Once we have provided you with draft chapters of the book, I will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. I have test-taught the book at Smith College and much of this content is based on the course I have taught along with content that Duncan Foley has used when teaching at [Eugene Lang College](http://www.newschool.edu/lang/) (the undergraduate liberal arts college attached to the New School for Social Research). We are also working with two RAs over the summer to provide additional content before fall 2016 (e.g. the quizzes explained below). 
+Once we have provided you with draft chapters of the book, I will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. I have test-taught the book at Smith College and much of this content is based on the course I have taught along with content that Duncan Foley has used when teaching at [Eugene Lang College](http://www.newschool.edu/lang/) (the undergraduate liberal arts college attached to the New School for Social Research). In the fall of 2016, the book was used by Stephen Kinsella at the University of Limerick, Ireland and Arjun Jayadev of Azim Premji University, India. In the spring of 2017, the book was taught in large intermediate micro classes at the University of Massachusetts at Amherst, USA by Daniele Girardi, Azim Premji by Anand Shrivastava, and the University of Cape Town, South Africa by Justine Burns. This classroom experience is the basis of a rapidly expanding set of problems, quizzes, lecture slides and other teaching aids.
 
 ##Quizzes
 We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. They will use the new Google Quiz interface. Either our RA or I will provide access to the quiz, which an instructor will then be able to duplicate and edit for use with their own classes. Though Google quizzes are not yet as powerful as quizzes on Moodle, Blackboard or Sakai (for example, Google quizzes currently lack \LaTeX integration for mathematical questions), their portability and ease of use suits our needs well for the moment; especially until we have completed negotiations with publishers.  
 
 ##Flashcards
-The book has a glossary with all the definitions used in the book. Over the next academic year we hope to turn the definitions into a set of flashcards using [Anki](http://ankisrs.net/). Anki is an open-source flash-card service where the desktop and web-interfaces can be used free of charge, as can the Android app. But, the iOS app version needs to be bought for a fee of $25. As the web interface and desktop versions are free of charge and the notebooks are exportable to other formats, we still think it is the best current option. You will be able to import the flashcard decks to your Anki app when these are made available. They will be provided chapter-by-chapter over AY2016-17. 
+The book has a glossary with all the definitions used in the book. Over the next academic year we hope to turn the definitions into a set of flashcards using [Anki](http://ankisrs.net/). Anki is an open-source flash-card service where the desktop and web-interfaces can be used free of charge, as can the Android app. But, the iOS app version needs to be bought for a fee of $25. As the web interface and desktop versions are free of charge and the notebooks are exportable to other formats, we still think it is the best current option. You will be able to import the flashcard decks to your Anki app when these are made available. They will be provided chapter-by-chapter over AY2017-18. 
 
 ##Pedagogical Approach
 
-Our objective is not simply to teach students “how economists think” by training in algorithmic training using toy models, but to to teach economics as a social science: an inquiry into the main problems facing society and the policy options available.
+Our objective is not simply to teach students “how economists think” by algorithmic training using toy models, but to to teach economics as a social science: an inquiry into the main challenges our society faces and the policy options available to us to confront the challenges.
 
-To do this we begin each chapter with one or more empirical puzzles or historical episodes that that economic theory should be able to illuminate. Models are taught as a way of addressing real world problems and questions. 
+To do this we begin each chapter with one or more empirical puzzles or historical episodes that economic theory should be able to illuminate. Models are taught as a way of addressing real world problems and questions. 
 
 Our approach is informed by the latest ideas in the learning sciences. 
 ```{marginfigure}
