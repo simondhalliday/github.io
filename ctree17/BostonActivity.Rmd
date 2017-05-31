@@ -1,10 +1,7 @@
 ---
-title: 'CTREE Workshop Activity: Replicating (some of) the Harrison and Rubinfeld
-  results'
-author: "Aaron Swoboda"
-output:
-  html_document: default
-  html_notebook: default
+title: "CTREE Workshop Activity: Replicating (some of) the Harrison and Rubinfeld results"
+author: Aaron Swoboda
+output: html_notebook
 bibliography: ReplicationBib.bib
 ---
 
@@ -48,12 +45,12 @@ str(Boston)
 ## Replicating the @Harrison1978 Results
 
 Let's use the `stargazer` command from the `stargazer` package to calculate and present the summary statistics for the dataset.
-```{r, warning=FALSE, message=FALSE}
+```{r, message=FALSE, warning=FALSE}
 library(stargazer)
 stargazer(Boston, type = "text")
 ```
 
-A comparison of Table V and the results above shows that some of the variables are not in the approporiate units to replicate the summary statistics. Let's using the `dlpyr` package to create a modified dataset with renamed and appropriately rescaled values.
+A comparison of Table V and the results above shows that some of the variables are not in the approporiate units to replicate the summary statistics. Let's use the `dplyr` package to create a modified dataset with renamed and appropriately rescaled values.
 
 ```{r, warning=FALSE, message=FALSE}
 library(dplyr)
