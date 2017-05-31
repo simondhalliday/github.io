@@ -22,6 +22,8 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 #Slides and Activities
 
 - Slides for the presentation [R Markdown](rmarkdown_reproducibility.html), [Shiny](https://shalliday.shinyapps.io/rmarkdown_reproducibility) (includes the Allen animation) and [Rmd](rmarkdown_reproducibility.Rmd) (no animation)
+- Aaron Swoboda's Activity: [html](BostonActivity.html) and [rmd](BostonActivity.Rmd) 
+- Michael O'Hara's plotting activity [html](SimplePlot.html) and [Rmd](SimplePlot.Rmd)
 
 #Related Documents
 
@@ -52,3 +54,11 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 - [Computer Exercise 2](http://rpubs.com/dvorakt/216160) - Computer Exercise 2: Loading in data, computing descriptive statistics and estimating regressions
 - [Computer Exercise 3](http://rpubs.com/dvorakt/219848) -  Multiple regression and omitted variable bias.
 - A variety of Tomas's other R-related documents are available on his rpubs site: [rpubs.com/dvorakt](http://rpubs.com/dvorakt). 
+
+
+```{r}
+library(readr)
+GroupedData <- read_csv("http://simondhalliday.github.io/ctree17/data/GroupedbyType.csv")
+quantity <- read_csv("http://simondhalliday.github.io/ctree17/data/quantity.csv")
+```
+
