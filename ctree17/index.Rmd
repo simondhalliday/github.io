@@ -19,6 +19,12 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 - Progress to collaborative lab exercises and activities that employ R Notebooks (.Rmd). 
 - We conclude with a reflection & FAQ
 
+#How do I access RStudio? 
+
+- Go to the following url: [104.236.95.197/rstudio](104.236.95.197/rstudio)
+- Use the login credentials that we have provided for you to log in. 
+- If we need more logins... we'll sort you out. 
+
 #Slides and Activities
 
 - Slides for the presentation [R Markdown](rmarkdown_reproducibility.html), [Shiny](https://shalliday.shinyapps.io/rmarkdown_reproducibility) (includes the Allen animation) and [Rmd](rmarkdown_reproducibility.Rmd) (no animation)
