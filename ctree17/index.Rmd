@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io), [Michael 0'Hara]() and [Aaron Swoboda]() covered during the "Efficient Empiricism" workshop, 1 June 2017. 
+Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io), [Michael O'Hara]() and [Aaron Swoboda]() covered during the "Efficient Empiricism" workshop, 1 June 2017. 
 
 #Outline
 
@@ -21,6 +21,7 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 
 #How do I access RStudio? 
 
+- Connect to the WestinMeetingRooms wireless using password ctree2017
 - Go to the following url: [104.236.95.197/rstudio](104.236.95.197/rstudio)
 - Use the login credentials that we have provided for you to log in. 
 - If we need more logins... we'll sort you out. 
@@ -57,6 +58,6 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 
 ##Michael O'Hara 
 
-- Links...
-
+- Michael's Senior Seminar [repository](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton)
+- Additional activity on data manipulation [html](gender_code.html) and [Rmd](gender_code.Rmd)
 
