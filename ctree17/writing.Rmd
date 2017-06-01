@@ -90,6 +90,17 @@ knitr::include_graphics('more/reactions.png')
 knitr::include_graphics('more/education.jpg')
 ```
 
+##Reading guides? 
+```{r, fig.cap = "Reading guide? - Olney", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/guide1.png')
+```
+
+##Reading guides? 
+```{r, fig.cap = "Reading guide? - Olney", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/guide2.png')
+```
+
+
 ##Other points
 
 Grading
