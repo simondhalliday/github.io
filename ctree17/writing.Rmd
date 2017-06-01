@@ -1,0 +1,90 @@
+---
+title: "Writing Assignments"
+author: "Simon Halliday, Smith College"
+date: "CTREE 2017"
+output:
+  slidy_presentation:
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+---
+
+## So... 
+
+What have we:
+ - read? 
+ - seen? 
+ - heard? 
+
+## Writing assignment
+
+```{r, fig.cap = "A typical student response", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/writing.jpg')
+```
+
+## Scaffolded
+
+```{r, fig.cap = "Scaffolding", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/scaffold.jpg')
+```
+
+
+## Large class
+```{r, fig.cap = "Large Class", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/class.jpeg')
+```
+
+## Output: Opinion Piece
+
+```{r, fig.cap = "Large Class", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/opinion.jpeg')
+```
+
+
+## Objectives? 
+
+
+- Goals
+- Efficiency
+- Scalability
+
+
+## How? 
+
+- Critical Reading
+- Good rubrics 
+- Revision & Peer editing
+
+## Resources? 
+
+```{r, fig.cap = "Peer Scholar", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/peerscholar.png')
+```
+
+## Op-ed as RE-action (helps grading too)
+```{r, fig.cap = "Reactions", out.width='80%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/reactions.png')
+```
+
+
+## Main criticism...? 
+ > "It would be useful to analyze student writing more systematically to see in what areas student most and least improve and how we can adapt the assignments and activities accordingly" (p. 20)
+
+- What about analyzing student reading first too? 
+- Pre- and post-test? 
+- Follow-up next semester? 
+
+## Inciting rebellion at my school...
+ > "We have eliminated in-person office hours for lack of demand, and there are no tutorials for these courses" (p. 19)
+
+- Totally infeasible for me
+- Have your students been coached on *how* to use office hours? 
+
+```{r, fig.cap = "No office hours? Hell no!", out.width='60%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/education.jpg')
+```
+
+##Grading policies
+- Institutional differences: LAC/Uni
+
+
