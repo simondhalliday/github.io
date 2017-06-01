@@ -112,6 +112,11 @@ Syllabus?
 - do they read it? 
 - do you have a syllabus quiz?
 
+Upper level courses?
+
+- How do we adapt this to intermediate courses? 
+- Higher courses? Seminars? How to make more ambitious?
+
 ##Plagiarism bites again...as paraphrasing tools
 ```{r, fig.cap = "New ways to plagiarize", out.width='60%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/paraphrasing.png')
