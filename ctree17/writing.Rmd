@@ -71,6 +71,7 @@ knitr::include_graphics('more/reactions.png')
 
 - Good to give a baseline 
 - How different to a response paper?
+- Knowledge-building & half-formed thoughts
 
 ## Main criticism...? 
  > "It would be useful to analyze student writing more systematically to see in what areas student most and least improve and how we can adapt the assignments and activities accordingly" (p. 20)
@@ -90,12 +91,12 @@ knitr::include_graphics('more/reactions.png')
 knitr::include_graphics('more/education.jpg')
 ```
 
-##Reading guides? 
+## Reading guides? 
 ```{r, fig.cap = "Reading guide? - Olney", out.width='80%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/guide1.png')
 ```
 
-##Reading guides? 
+## Reading guides? 
 ```{r, fig.cap = "Reading guide? - Olney", out.width='80%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/guide2.png')
 ```
