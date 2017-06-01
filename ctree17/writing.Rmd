@@ -19,25 +19,25 @@ What have we:
 
 ## Writing assignment
 
-```{r, fig.cap = "A typical student response", out.width='80%', echo = FALSE, fig.align = 'center'}
+```{r, fig.cap = "A typical student response", out.width='60%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/writing.jpg')
 ```
 
 ## Scaffolded
 
-```{r, fig.cap = "Scaffolding", out.width='80%', echo = FALSE, fig.align = 'center'}
+```{r, fig.cap = "Scaffolding", out.width='60%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/scaffold.jpg')
 ```
 
 
 ## Large class
-```{r, fig.cap = "Large Class", out.width='80%', echo = FALSE, fig.align = 'center'}
+```{r, fig.cap = "Large Class", out.width='60%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/class.jpeg')
 ```
 
 ## Output: Opinion Piece
 
-```{r, fig.cap = "I can haz opinions...?", out.width='80%', echo = FALSE, fig.align = 'center'}
+```{r, fig.cap = "I can haz opinions...?", out.width='60%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/opinion.jpeg')
 ```
 
