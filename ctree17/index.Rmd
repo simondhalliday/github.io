@@ -41,18 +41,11 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 - Lab 4: A lab to reproduce the output of a paper in the AER (Sutter, 2009) [html](Lab4.html) and [Rmd](Lab4.Rmd)
 - Name Activity [html](activity2.html) and [Rmd](activity2.Rmd)
 
-##Michael O'Hara 
-
-- D1
-- D2
-- D3
-
-
 ##Aaron Swoboda 
 
-- D1
-- D2
-- D3
+- Taxes and externalities [shiny](https://aswoboda.shinyapps.io/InteractiveTaxGraph/)
+- Hypothesis testing [shiny](https://aswoboda.shinyapps.io/BasketSimulator/)
+- Variance [shiny](https://aswoboda.shinyapps.io/VarianceOfBetaHat/VarianceDemo.Rmd)
 
 ##Tomas Dvorak (could not attend, but docs here)
 
@@ -61,10 +54,8 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 - [Computer Exercise 3](http://rpubs.com/dvorakt/219848) -  Multiple regression and omitted variable bias.
 - A variety of Tomas's other R-related documents are available on his rpubs site: [rpubs.com/dvorakt](http://rpubs.com/dvorakt). 
 
+##Michael O'Hara 
 
-```{r}
-library(readr)
-GroupedData <- read_csv("http://simondhalliday.github.io/ctree17/data/GroupedbyType.csv")
-quantity <- read_csv("http://simondhalliday.github.io/ctree17/data/quantity.csv")
-```
+- Links...
+
 
