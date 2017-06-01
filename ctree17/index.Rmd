@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io), [Michael O'Hara]() and [Aaron Swoboda]() covered during the "Efficient Empiricism" workshop, 1 June 2017. 
+Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io), [Michael O'Hara](https://github.com/michaeleohara/) and [Aaron Swoboda](https://aswoboda.github.io/) covered during the "Efficient Empiricism" workshop, 1 June 2017. 
 
 #Outline
 
