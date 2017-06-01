@@ -70,14 +70,12 @@ Senior thesis seminar with 9 students
     + Presentations 
     + Final paper
 
-## How we have used R Markdown
-
-Michael: 
+## How we have used R Markdown: Michael
 
 Advantages: 
 
 * To students
-    + Only one environment to deal with for everything
+    + One environment for everything
     
 * To me
     + Full reproducibility of all 9 papers (one award)
@@ -88,14 +86,21 @@ Cost
 
 * Somewhat higher startup cost in teaching them R and R Studio
 
-## How we have used R Markdown
-
-Aaron:
+## How we have used R Markdown: Aaron
 
 * Create slides in an Econometrics course
 * Final project in senior research seminar 
 * Create custom progress reports for students
 * Interactive shiny apps for micro students
+
+## How we have used R Markdown: Simon
+
+* A course in Behavioral Economics
+* Slides, notes and assignments 
+* Students do a reproducible research project
+* They reproduce the results of a published paper and propose a new experimental design to test a new hypothesis
+
+
 
 ## R Markdown & Reproducibility 
 
@@ -105,17 +110,6 @@ Aaron:
   - Answer: R Markdown or Scripted LaTeX + STATA (StatTag?)
 - Works within the TIER framework
 - I've implemented a variation of this in an upper-level economics elective
-
-##Questions on your notecard
-Please take a couple of minutes to write down a question you have about R Markdown and Reproducibility. 
-
-Think about the following ideas: 
-
-1. What *problem* could R Markdown (and R Studio) solve for me? 
-2. What is something I'm *accustomed to doing* that I would want R Markdown (and R Studio) to do for me? 
-3. What is an *expectation* I have about what I want Simon et al. to cover? 
-
-Just take a moment to write down something along these lines for now and put aside your notecard. 
 
 
 ## Traditional Reports
@@ -416,8 +410,6 @@ That is, $\LaTeX$ without the challenges of learning the packages, tables, etc t
 In-line equations are bracketed by single dollar signs `$`. 
 
 Off-set equations are bracketed by double dollar signs `$$`. 
-
-
 ##What else? 
 R Markdown and R Studio together have excellent capabilities. 
 
@@ -435,6 +427,25 @@ Aaron:
 
 Students can struggle with basic computing (working directory, etc.)
 
+## Lessons from Simon
+Students have to adjust to getting the Basics Right
+
+- File paths - many students haven’t had to specify a file path before (``drag-and-dropitis'') (initial inequality in baselines can be tough)
+- Difference between a script (.R file - like a .do file) and a markdown document/notebook (.Rmd) (medium adjustment)
+- Difference between the .Rmd and the exported file: pdf, html, etc (quick adjustment)
+
+Students like (or are used to) WYSIWYG, which Rmd is not
+ - Students are accustomed to MS Word & G docs which are WYSIWYG, but RMD is not. 
+
+Installing packages
+
+- analogy: you have to install apps (packages) to do different things on your (RStudio & R)
+- Chrome extensions
+
+Server = GOOD
+
+
+
 ##R Link Love? 
 New to R? 
 
@@ -442,14 +453,4 @@ New to R?
 - Consider subscribing to classes at [Datacamp.com](www.datacamp.com) (take the intro free of charge)
 - Grolemund & Wickham, 2016, *R for Data Science*, [r4ds](r4ds.had.co.nz)
 - Baumer, Horton & Kaplan, forthcoming, [*Modern Data Science with R*](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 
-
-##Notecards again... 
-
-- Go back to your notecards
-- Re-read them 
-- Did I cover what you wanted me to cover? 
-- Do you have *other* or *new* concerns or questions? (write them on the back)
-- Chat to someone next to you about what you're thinking about. 
-- Share with the workshop. 
-- Yes, you're doing Think-Pair-Share...
 

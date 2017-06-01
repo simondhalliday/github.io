@@ -40,6 +40,7 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 - Lab 3: A lab to introduce the plotting [html](Lab3.html) and [Rmd](Lab3.Rmd)
 - Lab 4: A lab to reproduce the output of a paper in the AER (Sutter, 2009) [html](Lab4.html) and [Rmd](Lab4.Rmd)
 - Name Activity [html](activity2.html) and [Rmd](activity2.Rmd)
+- Solow Growth (simplified) [shiny](https://shalliday.shinyapps.io/solow_growth/)
 
 ##Aaron Swoboda 
 
