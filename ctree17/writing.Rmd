@@ -12,6 +12,7 @@ output:
 ## So... 
 
 What have we:
+
  - read? 
  - seen? 
  - heard? 
@@ -61,6 +62,8 @@ knitr::include_graphics('more/opinion.jpeg')
 knitr::include_graphics('more/peerscholar.png')
 ```
 
+I look forward to testing this, even in smaller classes. 
+
 ## Op-ed as RE-action (helps grading too)
 ```{r, fig.cap = "Reactions", out.width='80%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/reactions.png')
@@ -84,7 +87,33 @@ knitr::include_graphics('more/reactions.png')
 knitr::include_graphics('more/education.jpg')
 ```
 
-##Grading policies
-- Institutional differences: LAC/Uni
+##Other points
 
+Grading
+
+- Institutional differences: LAC/Uni
+- Hard for me to implement a 'zero' for late policy
+
+Distribution across articles they react to? 
+
+- how many per article? 
+- inequality in grading for TAs? 
+
+##Other points 2
+
+Grading rubric? 
+
+- can a student get full points? 
+
+Syllabus?
+
+- do they read it? 
+- do you have a syllabus quiz?
+
+##Plagiarism bites again...as paraphrasing tools
+```{r, fig.cap = "New ways to plagiarize", out.width='60%', echo = FALSE, fig.align = 'center'}
+knitr::include_graphics('more/paraphrasing.png')
+```
+
+## Thank you!
 
