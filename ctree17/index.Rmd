@@ -22,7 +22,7 @@ Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io)
 #How do I access RStudio? 
 
 - Connect to the WestinMeetingRooms wireless using password ctree2017
-- Go to the following url: [104.236.95.197/rstudio](104.236.95.197/rstudio)
+- Go to the following url: [104.236.95.197/rstudio](http://104.236.95.197/rstudio)
 - Use the login credentials that we have provided for you to log in. 
 - If we need more logins... we'll sort you out. 
 
