@@ -37,7 +37,7 @@ knitr::include_graphics('more/class.jpeg')
 
 ## Output: Opinion Piece
 
-```{r, fig.cap = "Large Class", out.width='80%', echo = FALSE, fig.align = 'center'}
+```{r, fig.cap = "I can haz opinions...?", out.width='80%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/opinion.jpeg')
 ```
 
@@ -65,10 +65,12 @@ knitr::include_graphics('more/peerscholar.png')
 I look forward to testing this, even in smaller classes. 
 
 ## Op-ed as RE-action (helps grading too)
-```{r, fig.cap = "Reactions", out.width='80%', echo = FALSE, fig.align = 'center'}
+```{r, fig.cap = "Reactions?", out.width='100%', echo = FALSE, fig.align = 'center'}
 knitr::include_graphics('more/reactions.png')
 ```
 
+- Good to give a baseline 
+- How different to a response paper?
 
 ## Main criticism...? 
  > "It would be useful to analyze student writing more systematically to see in what areas student most and least improve and how we can adapt the assignments and activities accordingly" (p. 20)
