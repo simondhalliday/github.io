@@ -78,6 +78,7 @@ knitr::include_graphics('more/reactions.png')
 - What about analyzing student reading first too? 
 - Pre- and post-test? 
 - Follow-up next semester? 
+- Compare to 'standard' Intro course students?
 
 ## Inciting rebellion at my school...
  > "We have eliminated in-person office hours for lack of demand, and there are no tutorials for these courses" (p. 19)
