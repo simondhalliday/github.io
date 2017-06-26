@@ -1,0 +1,60 @@
+---
+title: "SAIRR Check"
+author: "Simon Halliday"
+date: "2017-June -25"
+output: html_document
+---
+
+```{r setup, include=FALSE, message = FALSE, warnings = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(mosaic)
+library(stargazer)
+```
+
+Import the data from the GHS 2015:
+```{r data_import, warnings = FALSE, message = FALSE}
+ghs15 <- read_csv("uct/csv/ghs_2015_person_v1.1_20160608.csv")
+```
+
+##Wrangling 
+Wrangle the data and select the sample of 20 and older. 
+Generate a variable that checks the proportion of people of each race that has Matric or higher. 
+Also try to find out their error with another variable. 
+Couldn't quite get the same proportions they did, but I wasn't trying too hard. 
+```{r}
+educ20 <- 
+  ghs15 %>%
+  filter(Age > 19) %>%
+  mutate(matricmore = ifelse(Q15HIEDU %in% c(12, 13, 16,
+                                             17, 18, 19,
+                                             21, 22, 23,
+                                             24, 25, 26,
+                                             27, 28, 29),
+                             1, 0), 
+         matriconly = ifelse(Q15HIEDU %in% c(12, 13, 23)
+                             , 1, 0), 
+         race = factor(race, labels = c("Black/African",
+                                        "Coloured",
+                                        "Indian/Asian",
+                                        "White")))
+```
+
+Generate summary data frame. 
+```{r}
+raceSum <- 
+  educ20 %>%
+  group_by(race) %>%
+  summarise(matricprop = round(mean(matricmore), 3))
+stargazer(raceSum, type = "text", summary = FALSE)
+```
+
+Screwing around with some other tallies to check my work above. 
+```{r}
+mosaic::tally(~Q15HIEDU, data = educ20)
+mosaic::tally(~race, data = educ20)
+mosaic::tally(~matricmore, data = educ20)
+mosaic::tally(~matricmore | race, data = educ20, format = "percent")
+```
+
+
