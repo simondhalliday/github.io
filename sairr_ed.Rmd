@@ -67,6 +67,76 @@ mosaic::tally(~matricmore, data = educ20)
 mosaic::tally(~matricmore | race, data = educ20, format = "percent")
 ```
 
+
+##Housing 
+For housing I need to read in the household data.
+
+```{r}
+ghs15hh <- read_csv("uct/csv/ghs_2015_house_v1.1_20160608.csv")
+```
+
+```{r}
+mosaic::tally(~Q56Owner | head_popgrp, data = ghs15hh, format = "percent")
+```
+
+```{r}
+mosaic::tally(~Q58Val | head_popgrp, data = ghs15hh, format = "percent")
+```
+
+##Wrangling HH data 
+I need to generate new variables to create the proportions of the different home values by race. 
+```{r}
+ghshhval <- 
+  ghs15hh %>% 
+  filter(Q58Val != 99) %>% 
+  select(head_popgrp, Q58Val) 
+hhcounts <- 
+  ghshhval %>%
+  group_by(head_popgrp) %>% 
+  summarise(n = n())
+hhval <- 
+  ghshhval %>%
+  group_by(Q58Val, head_popgrp) %>% 
+  summarise(count = count(head_popgrp)) %>%
+  left_join(hhcounts) %>%
+  ungroup %>%
+  mutate(freq = count / n, 
+         Q58Val = factor(Q58Val, 
+                         labels = c("Less than R50k", "R50 001 - R250 000", "R250 001 - R500
+                                    000", " R500 001 - R1 000 000", "R1 000 001 - R1 500 000",
+                                    "R1 500 001 - R2 000 000", "R2 000 001 - R3 000 000",
+                                    "More than R3 000 000", "Do not know")), 
+         head_popgrp = factor(head_popgrp, labels = c("Black", "Coloured", "Indian/Asian",
+                                                      "White")))
+```
+
+
+##Plotting the hh values
+I now plot the wrangled data in `ggplot()`:
+```{r}
+hhplot <- 
+  hhval %>% 
+  ggplot(aes(x = Q58Val, y = freq, group = head_popgrp, fill = head_popgrp)) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  xlab("Home value estimate") + 
+  ylab("Frequency") + 
+  scale_fill_discrete(name = "Ethnic group of HH Head") +
+  labs(title = "Home value frequencies by ethnicity in South Africa", 
+       subtitle = "Source: SA GHS, 2015") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1), 
+        text = element_text(size = 16))
+hhplot
+```
+
+I need to export the file to jpeg to post to FB. 
+```{r}
+jpeg(file = "hhplot_sa_ghs15.jpg", width = 640, height = 480, units = "px")
+hhplot
+dev.off()
+```
+
+
 ##License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
