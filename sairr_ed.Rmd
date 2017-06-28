@@ -1,7 +1,7 @@
 ---
 title: "SAIRR Check"
 author: "Simon Halliday"
-date: "2017-June -25"
+date: "2017-June -27"
 output: oilabs::lab_report
 bibliography: uct/sairr_bib.bib
 ---
@@ -106,7 +106,7 @@ hhval <-
                                     000", " R500 001 - R1 000 000", "R1 000 001 - R1 500 000",
                                     "R1 500 001 - R2 000 000", "R2 000 001 - R3 000 000",
                                     "More than R3 000 000", "Do not know")), 
-         head_popgrp = factor(head_popgrp, labels = c("Black", "Coloured", "Indian/Asian",
+         head_popgrp = factor(head_popgrp, labels = c("Black/African", "Coloured", "Indian/Asian",
                                                       "White")))
 ```
 
@@ -135,6 +135,34 @@ jpeg(file = "hhplot_sa_ghs15.jpg", width = 640, height = 480, units = "px")
 hhplot
 dev.off()
 ```
+
+```{r}
+hhplot2 <- 
+  hhval %>% 
+  filter(Q58Val != "Do not know") %>%
+  ggplot(aes(x = Q58Val, y = freq, fill = head_popgrp)) + 
+  geom_bar(stat = "identity", position = "dodge") + 
+  xlab("Home value estimate") + 
+  ylab("Frequency") + 
+  #facet_grid(. ~head_popgrp, scales = "free") +
+  facet_wrap(~ head_popgrp) +
+  scale_fill_discrete(guide = FALSE) +
+  #scale_fill_discrete(name = "Ethnic group of HH Head") +
+  labs(title = "Home value frequencies by ethnicity in South Africa", 
+       subtitle = "Source: SA GHS, 2015 (Response \"Don't know\" Excluded)") +
+  theme_bw() +
+  theme(text = element_text(size = 16), 
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 10)
+        )
+hhplot2
+```
+
+```{r}
+jpeg(file = "hhplot_sa_ghs15_facet.jpg", width = 640, height = 480, units = "px")
+hhplot2
+dev.off()
+```
+
 
 
 ##License
