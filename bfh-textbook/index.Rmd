@@ -54,26 +54,26 @@ knitr::include_graphics('./images/BFHMicro_production_intro.jpg')
 knitr::include_graphics('./images/BFHMicro_eos_ppf.jpg')
 ```
 
-CCC would also be an excellent follow-up text for introductory economics courses that use the *The Economy* produced by Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/) and of which Sam is a co-author. 
+CCC would also be an excellent follow-up text for introductory economics courses that use the *The Economy* produced by the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/) and of which Sam is a co-author. 
 CORE's *The Economy* is based on many similar themes to CCC.  
 
 ##What are the themes of CCC?
 
-We cover many of the standard economic concepts taught to second year economics students including constrained optimization, opportunity costs, trade-offs, complements and substitutes, Nash equilibrium, Pareto efficiency and risk. 
+We cover many of the standard economic concepts taught to second-year or intermediate-level economics students including constrained optimization, opportunity costs, trade-offs, complements and substitutes, Nash equilibrium, Pareto efficiency and risk. 
 
 But many of the themes of the book are unlikely to be encountered in most intermediate microeconomics texts. 
 
-- *what is economics about?*  we go beyond the usual focus on markets and deal with the full range of social interactions and how people seek to coordinate their activities so as to secure their well being, including "the wealth and poverty of nations and people," environmental degradation, and conflict over the division of mutual gains from trade.
-- *evidence*: economics is an empirical science that relies on  experiments -- from the lab and the field -- and survey and other data to test its theories about how people, organizations, and economies behave and to illustrate applications of these theories to public policy
-- *preferences*: people are both generous and self-interested, morally motivated and amoral and we respond to social norms of fairness.
-- *economic actors*: firms, banks, buyers and sellers are often price-makers rather than passive price-takers. 
-- *rents*: social interactions allow gains from trade, but "the market" alone does not determine how these rents will be distributed.
-- *institutions*: institutions -- laws, norms, and mutual expectations -- affect how social interactions unfold and who gets what and why.
-- *efficiency and fairness*: outcomes are evaluated along the dimensions  of efficiency and fairness rather than solely by the Pareto criterion.
-- *power and social norms*: because contracts are incomplete in labor, credit and other important markets, the terms of an exchange depend on the exercise of power and norms other than the simple pursuit of self-interest.
-- *a micro-foundation for a new macro*: equilibrium unemployment and wealth constraints on borrowing provide the basis of a modern macroeconomics, without special *ad hoc* assumptions. 
-- *increasing returns*: along with other sources of positive feedbacks, result in multiple equilibria in many situations, so that history matters because history may determine which equilibrium prevails. 
-- *external effects*: positive and negative external effects ("externalities") pervade social interactions and people and firms routinely make decisions that affect how well or how poorly their counterparts will do.
+- *What is economics about?*  we go beyond the usual focus on markets and deal with the full range of social interactions and how people seek to coordinate their activities so as to secure their well being, including "the wealth and poverty of nations and people," environmental degradation, and conflict over the division of mutual gains from trade.
+- *Evidence*: economics is an empirical science that relies on  experiments -- from the lab and the field -- and survey and other data to test its theories about how people, organizations, and economies behave and to illustrate applications of these theories to public policy.
+- *Preferences*: people are both generous and self-interested, morally motivated and amoral and we respond to social norms of fairness.
+- *Economic actors*: firms, banks, buyers and sellers are often price-makers rather than passive price-takers. 
+- *Rents*: social interactions allow gains from trade, but "the market" alone does not determine how these rents will be distributed.
+- *Institutions*: institutions -- laws, norms, and mutual expectations -- affect how social interactions unfold and who gets what and why.
+- *Efficiency and fairness*: outcomes are evaluated along the dimensions  of efficiency and fairness rather than solely by the Pareto criterion.
+- *Power and social norms*: because contracts are incomplete in labor, credit and other important markets, the terms of an exchange depend on the exercise of power and norms other than the simple pursuit of self-interest.
+- *A micro-foundation for a new macro*: equilibrium unemployment and wealth constraints on borrowing provide the basis of a modern macroeconomics, without special *ad hoc* assumptions. 
+- *Increasing returns*: along with other sources of positive feedbacks, result in multiple equilibria in many situations, so that history matters because history may determine which equilibrium prevails. 
+- *External effects*: positive and negative external effects ("externalities") pervade social interactions and people and firms routinely make decisions that affect how well or how poorly their counterparts will do.
 
 ##Provenance
 It’s hard to know exactly where your own ideas come from, but  for us, those implicated certainly include:
@@ -113,7 +113,8 @@ Below is an abridged table of contents for the first 12 chapters of the book. Cu
 | 14 | Capitalism: Innovation & Inequality | 
 
 ##Calculus and Graphics
-We use calculus in the book, but almost all of the calculus is contained in boxes (named for Alfred Marshall as you will see). We try to follow Marshall's maxims with the mathematics:  
+We use calculus in the book, but almost all of the calculus is contained in boxes (named for Alfred Marshall as you will see). 
+We try to follow Marshall's maxims with the mathematics:  
 
 ```{marginfigure}
 Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1966, *Memorials of Alfred Marshall*, pp. 427-428.
@@ -136,8 +137,10 @@ For the most part, the economics is conveyed through *graphical* intuition accom
 All of the graphics are also available on github (see Simon Halliday's github repo [bfh-textbook](https://github.com/simondhalliday/bfh-textbook/)). 
 We hope later to provide interactive versions of the majority of the important graphics programmed either in R with Shiny or Mathematica.   
 
+Note, too, that although we do not use Lagrangians in the book to teach constrained optimization, we do cover them in an appendix and provide examples and worksheets using Lagrangians for those instructors who chose to teach them in their courses.
+
 ##Course Materials
-Once we have provided you with draft chapters of the book, Simon will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. Simon has test-taught the book at Smith College and much of this content is based on the course he taught along with content that Duncan Foley has used when teaching at [Eugene Lang College](http://www.newschool.edu/lang/) (the undergraduate liberal arts college attached to the New School for Social Research). In the fall of 2016, the book was used by Stephen Kinsella at the University of Limerick, Ireland and Arjun Jayadev of Azim Premji University, India. In the spring of 2017, the book was taught in large intermediate micro classes at the University of Massachusetts at Amherst, USA by Daniele Girardi and Sai Madhurika Mamunuru, Azim Premji by Anand Shrivastava, and the University of Cape Town, South Africa by Justine Burns. 
+Once we have provided you with draft chapters of the book, Simon will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. Simon has test-taught the book at Smith College and much of this content is based on the course he taught along with content that Duncan Foley has used when teaching at [Eugene Lang College](http://www.newschool.edu/lang/) (the undergraduate liberal arts college attached to the New School for Social Research). In the fall of 2016, the book was used by [Stephen Kinsella](http://www.stephenkinsella.net/) at the University of Limerick, Ireland and [Arjun Jayadev](http://azimpremjiuniversity.edu.in/SitePages/arjun-jayadev.aspx) of Azim Premji University, India. In the spring of 2017, the book was taught in large intermediate micro classes at the University of Massachusetts at Amherst, USA by [Daniele Girardi](https://www.umass.edu/economics/girardi) and Sai Madhurika Mamunuru, Azim Premji by [Anand Shrivastava](https://sites.google.com/site/anandshrivastava1984/), and the University of Cape Town, South Africa by [Justine Burns](https://sites.google.com/site/justinecburns/). 
 This classroom experience is the basis of a rapidly expanding set of problems, quizzes, lecture slides and other teaching aids.
 
 ##Quizzes
