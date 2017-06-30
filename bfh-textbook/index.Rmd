@@ -1,6 +1,6 @@
 ---
-title: "Coordination, Conflict and Competition"
-subtitle: "A Text in Microeconomics"
+title: "Microeconomics: Competition, Conflict and Coordination"
+#subtitle: "A Text in Microeconomics"
 author: "Samuel Bowles, Duncan Foley and Simon Halliday"
 date: "`r Sys.Date()`"
 output: tufte::tufte_html 
